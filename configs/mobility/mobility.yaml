@@ -1,0 +1,36 @@
+server:
+  type: BAP/BPP
+  port: 5500
+  sync_mode: false
+  bpp_uri: https://mobility-staging.ondc.org/seller/
+  protocol_server:
+    uri: http://localhost:81/createPayload
+security:
+  subscriber_id: mock-api-service
+  ukId: 584
+  publickey: 5RF/CSTd5Cksh7xKNE/vr9IlwrV9LT1ZPR8RDeOpWjs=
+log:
+  level: DEBUG
+  output_type: file
+  out_file: log_file.log
+
+path:
+  getallstationcode:
+    callbacks:
+      $ref: ./getallstationcode.yaml
+
+  getonestationcodetrips:
+    callbacks:
+      $ref: ./getonestationcodetrips.yaml
+
+  getfare:
+    callbacks:
+      $ref: ./getfare.yaml
+
+  confirmticket:
+    callbacks:
+      $ref: ./confirmticket.yaml
+
+  status:
+    callbacks:
+      $ref: ./status.yaml
