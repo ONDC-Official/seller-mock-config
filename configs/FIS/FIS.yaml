@@ -1,6 +1,6 @@
 server:
   type: BAP/BPP
-  port: 5500
+  port: 5502
   sync_mode: false
   protocol_server:
     uri: http://localhost:5500/createPayload
