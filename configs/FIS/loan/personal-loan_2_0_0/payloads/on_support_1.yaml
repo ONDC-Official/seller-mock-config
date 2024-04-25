@@ -1,0 +1,23 @@
+context:
+  domain: ONDC:FIS12
+  location:
+    country:
+      code: IND
+    city:
+      code: "*"
+  version: 2.0.0
+  action: on_support
+  bap_id: '{{bap_id}}'
+  bap_uri: '{{bap_uri}}'
+  transaction_id: '{{transaction_id}}'
+  message_id: '{{message_id}}'
+  ttl: PT30M
+  timestamp: '{{timestamp}}'
+  bpp_id: '{{bpp_id}}'
+  bpp_uri: '{{bpp_uri}}'
+message:
+  support:
+    order_id: '{{order_id}}'
+    phone: 1800 1080
+    email: customer.care@icicibank.com
+    url: https://www.icicibank.com/helpdesk

@@ -1,0 +1,82 @@
+server:
+  type: BAP/BPP
+  port: 5500
+  sync_mode: false
+  protocol_server:
+    uri: http://localhost:81/createPayload
+security:
+  verify_sign: false
+  lookup_uri: https://staging.registry.ondc.org/lookup
+  generate_sign: false
+  subscriber_id: fis-staging.ondc.org/ondc-seller
+  ukId: 590
+  publickey: wSehOno+MMJqq9Ysw25pHKu5ig5fbHSNjT/dN0Ukt5E=
+  privatekey:
+
+log:
+  level: DEBUG
+  output_type: file
+  out_file: log_file.log
+path:
+  search:
+    callbacks:
+      $ref: ./search.yaml
+
+  select:
+    callbacks:
+      $ref: ./select.yaml
+
+  init:
+    callbacks:
+      $ref: ./init.yaml
+
+  confirm:
+    callbacks:
+      $ref: ./confirm.yaml
+
+  update:
+    callbacks:
+      $ref: ./update.yaml
+
+  status:
+    callbacks:
+      $ref: ./status.yaml
+
+  #personal_loan 2.0.0
+  form_personal-loan_old_personal-info:
+    callbacks:
+      $ref: ./loan/personal-loan_2_0_0/forms/form_personal-info.yaml
+  form_personal-loan_old_submission_personal-info:
+    callbacks:
+      $ref: ./loan/personal-loan_2_0_0/forms/form_submission_personal-info.yaml
+  form_personal-loan_old_required-loan:
+    callbacks:
+      $ref: ./loan/personal-loan_2_0_0/forms/form_required-loan.yaml
+  form_personal-loan_old_submission_required-loan:
+    callbacks:
+      $ref: ./loan/personal-loan_2_0_0/forms/form_submission_required-loan.yaml
+  form_personal-loan_old_kyc:
+    callbacks:
+      $ref: ./loan/personal-loan_2_0_0/forms/form_KYC.yaml
+  form_personal-loan_old_submission_kyc:
+    callbacks:
+      $ref: ./loan/personal-loan_2_0_0/forms/form_submission_KYC.yaml
+  form_personal-loan_old_bank-account-mandate:
+    callbacks:
+      $ref: ./loan/personal-loan_2_0_0/forms/form_bank-account-mandate.yaml
+  form_personal-loan_old_submission_bank-account-mandate:
+    callbacks:
+      $ref: ./loan/personal-loan_2_0_0/forms/form_submission_bank-account-mandate.yaml
+  form_personal-loan_old_loan-agreement:
+    callbacks:
+      $ref: ./loan/personal-loan_2_0_0/forms/form_loan-agreement.yaml
+  form_personal-loan_old_submission_loan-agreement:
+    callbacks:
+      $ref: ./loan/personal-loan_2_0_0/forms/form_submission_loan-agreement.yaml
+  form_old_render:
+    callbacks:
+      $ref: ./loan/personal-loan_2_0_0/forms/form_render.yaml
+  form_old_render_submission:
+    callbacks:
+      $ref: ./loan/personal-loan_2_0_0/forms/form_render_submission.yaml
+

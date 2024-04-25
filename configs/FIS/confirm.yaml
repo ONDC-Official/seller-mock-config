@@ -1,0 +1,46 @@
+default:
+  callback: "on_confirm"
+  uri:
+    $ref: ""
+  delay: 300
+  payload:
+    $ref: "./default/template/error.yaml"
+
+#v2.0.0
+personal-loan_old:
+  condition:
+    operation:
+      type: AND
+      input:
+        value:
+          - operation:
+              type: EQUAL
+              title: Check search message code
+              input:
+                value:
+                  - operation:
+                      type: READ
+                      input:
+                        value: "req_body.message.order.items.0.id"
+                  - "ITEM_ID_1_PERSONAL-LOAN"
+          - operation:
+              type: EQUAL
+              title: Check search message code
+              input:
+                value:
+                  - operation:
+                      type: READ
+                      input:
+                        value: "req_body.context.version"
+                  - "2.0.0"
+  callbacks:
+    - callback: "on_confirm"
+      uri: ""
+      delay: 300
+      payload:
+        $ref: "./loan/personal-loan_2_0_0/template/on_confirm.yaml"
+    - callback: "on_update"
+      uri: ""
+      delay: 500
+      payload:
+        $ref: "./loan/personal-loan_2_0_0/template/on_confirm_update.yaml"
