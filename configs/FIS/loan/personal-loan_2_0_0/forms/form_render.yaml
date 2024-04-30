@@ -21,7 +21,7 @@ default:
 
                 const data = {context:{transaction_id:transaction_id}}
                 try {
-                  const response = await fetch("/ondc-seller/form/old/render/submission", {
+                  const response = await fetch("/seller-engine/form/old/render/submission", {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/json",

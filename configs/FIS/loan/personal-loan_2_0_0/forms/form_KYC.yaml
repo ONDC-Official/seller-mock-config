@@ -21,7 +21,7 @@ default:
 
                 const data = {context:{transaction_id:transaction_id}}
                 try {
-                  const response = await fetch("/ondc-seller/form/personal-loan/old/submission/kyc", {
+                  const response = await fetch("/seller-engine/form/personal-loan/old/submission/kyc", {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/json",

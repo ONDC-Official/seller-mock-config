@@ -104,7 +104,7 @@ loan_offers:
       id: FO2
       mime_type: text/html
       url: >-
-          {{bpp_uri}}form/personal-loan/old/required-loan
+          {{form_url}}form/personal-loan/old/required-loan
       resubmit: false
       multiple_sumbissions: false
     required: true

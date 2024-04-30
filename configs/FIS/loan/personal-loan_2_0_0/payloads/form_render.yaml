@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form action="/ondc-seller/form/old/render/submission" method="post">
+    <form action="/seller-engine/form/old/render/submission" method="post">
        <label>This will redirected to different html page helo worrld
 </label>
 

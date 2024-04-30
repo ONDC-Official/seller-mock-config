@@ -115,7 +115,7 @@ loan_offers:
     form: 
       id: "F05"
       mime_type: "application/html"
-      url: '{{bpp_uri}}form/old/render?transaction_id={{transaction_id}}'
+      url: '{{form_url}}form/old/render?transaction_id={{transaction_id}}'
       resubmit: false
       multiple_sumbissions: false
     required: true

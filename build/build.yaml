@@ -200,13 +200,14 @@ path:
                     form:
                       id: F01
                       mime_type: text/html
-                      url: '{{bpp_uri}}form/personal-loan/old/personal-info'
+                      url: '{{form_url}}form/personal-loan/old/personal-info'
                       resubmit: false
                       multiple_sumbissions: false
                     required: true
             dict:
               bpp_uri: https://fis-staging.ondc.org/ondc-seller/
               bpp_id: fis-staging.ondc.org/ondc-seller
+              form_url: https://fis-staging.ondc.org/seller-engine/
               city_code: &ref_1
                 operation:
                   type: READ
@@ -352,6 +353,7 @@ path:
             dict:
               bpp_uri: https://fis-staging.ondc.org/ondc-seller/
               bpp_id: fis-staging.ondc.org/ondc-seller
+              form_url: https://fis-staging.ondc.org/seller-engine/
               city_code: *ref_1
               bap_id: *ref_2
               bap_uri: hlloworld
@@ -527,7 +529,7 @@ path:
                     form:
                       id: FO2
                       mime_type: text/html
-                      url: '{{bpp_uri}}form/personal-loan/old/required-loan'
+                      url: '{{form_url}}form/personal-loan/old/required-loan'
                       resubmit: false
                       multiple_sumbissions: false
                     required: true
@@ -566,6 +568,7 @@ path:
             dict:
               bpp_uri: https://fis-staging.ondc.org/ondc-seller/
               bpp_id: fis-staging.ondc.org/ondc-seller
+              form_url: https://fis-staging.ondc.org/seller-engine/
               city_code: *ref_1
               bap_id: *ref_2
               bap_uri: *ref_7
@@ -734,7 +737,7 @@ path:
                       multiple_sumbissions: false
                       resubmit: false
                       url: >-
-                        {{bpp_uri}}form/personal-loan/old/kyc?transaction_id={{transaction_id}}
+                        {{form_url}}form/personal-loan/old/kyc?transaction_id={{transaction_id}}
                     head:
                       descriptor:
                         name: Customer Information
@@ -749,6 +752,7 @@ path:
             dict:
               bpp_uri: https://fis-staging.ondc.org/ondc-seller/
               bpp_id: fis-staging.ondc.org/ondc-seller
+              form_url: https://fis-staging.ondc.org/seller-engine/
               city_code: *ref_1
               bap_id: *ref_2
               bap_uri: *ref_7
@@ -944,7 +948,7 @@ path:
                     form:
                       id: F04
                       mime_type: text/html
-                      url: '{{bpp_uri}}form/personal-loan/old/bank-account-mandate'
+                      url: '{{form_url}}form/personal-loan/old/bank-account-mandate'
                       resubmit: false
                       multiple_sumbissions: false
                     required: true
@@ -964,6 +968,7 @@ path:
             dict:
               bpp_uri: https://fis-staging.ondc.org/ondc-seller/
               bpp_id: fis-staging.ondc.org/ondc-seller
+              form_url: https://fis-staging.ondc.org/seller-engine/
               city_code: *ref_1
               bap_id: *ref_2
               bap_uri: *ref_7
@@ -1152,7 +1157,7 @@ path:
                       id: F05
                       mime_type: application/html
                       url: >-
-                        {{bpp_uri}}form/old/render?transaction_id={{transaction_id}}
+                        {{form_url}}form/old/render?transaction_id={{transaction_id}}
                       resubmit: false
                       multiple_sumbissions: false
                     required: true
@@ -1169,6 +1174,7 @@ path:
             dict:
               bpp_uri: https://fis-staging.ondc.org/ondc-seller/
               bpp_id: fis-staging.ondc.org/ondc-seller
+              form_url: https://fis-staging.ondc.org/seller-engine/
               city_code: *ref_1
               bap_id: *ref_2
               bap_uri: *ref_7
@@ -1356,7 +1362,7 @@ path:
                     form:
                       id: F06
                       mime_type: application/html
-                      url: '{{bpp_uri}}form/personal-loan/old/loan-agreement'
+                      url: '{{form_url}}form/personal-loan/old/loan-agreement'
                       resubmit: false
                       multiple_sumbissions: false
                     required: true
@@ -1457,6 +1463,7 @@ path:
             dict:
               bpp_uri: https://fis-staging.ondc.org/ondc-seller/
               bpp_id: fis-staging.ondc.org/ondc-seller
+              form_url: https://fis-staging.ondc.org/seller-engine/
               city_code: *ref_1
               bap_id: *ref_2
               bap_uri: *ref_7
@@ -1631,6 +1638,7 @@ path:
                 dict:
                   bpp_uri: https://fis-staging.ondc.org/ondc-seller/
                   bpp_id: fis-staging.ondc.org/ondc-seller
+                  form_url: https://fis-staging.ondc.org/seller-engine/
                   city_code: *ref_1
                   bap_id: *ref_2
                   bap_uri: *ref_7
@@ -1779,6 +1787,7 @@ path:
                 dict:
                   bpp_uri: https://fis-staging.ondc.org/ondc-seller/
                   bpp_id: fis-staging.ondc.org/ondc-seller
+                  form_url: https://fis-staging.ondc.org/seller-engine/
                   city_code: *ref_1
                   bap_id: *ref_2
                   bap_uri: *ref_7
@@ -1973,6 +1982,7 @@ path:
             dict:
               bpp_uri: https://fis-staging.ondc.org/ondc-seller/
               bpp_id: fis-staging.ondc.org/ondc-seller
+              form_url: https://fis-staging.ondc.org/seller-engine/
               city_code: *ref_1
               bap_id: *ref_2
               bap_uri: *ref_7
@@ -2344,6 +2354,7 @@ path:
             dict:
               bpp_uri: https://fis-staging.ondc.org/ondc-seller/
               bpp_id: fis-staging.ondc.org/ondc-seller
+              form_url: https://fis-staging.ondc.org/seller-engine/
               city_code: *ref_1
               bap_id: *ref_2
               bap_uri: *ref_7
@@ -2389,7 +2400,7 @@ path:
           Details</title> </head>
 
           <body> <form
-          action="/ondc-seller/form/personal-loan/old/submission/personal-info"
+          action="/seller-engine/form/personal-loan/old/submission/personal-info"
           method="post"> <label for="firstName">First Name</label> <input
           type="text" id="firstName" name="firstName" required /> <label
           for="lastName">Last Name</label> <input type="text" id="lastName"
@@ -2444,7 +2455,7 @@ path:
           Required Loan Value</title> </head>
 
           <body> <form
-          action="/ondc-seller/form/personal-loan/old/submission/required-loan"
+          action="/seller-engine/form/personal-loan/old/submission/required-loan"
           method="post"> <label for="requestAmount">Requested Loan
           Amount</label> <input type="text" id="requestAmount"
           name="requestAmount" /> <label for="requestTerm">Requested Loan
@@ -2486,7 +2497,7 @@ path:
 
                       const data = {context:{transaction_id:transaction_id}}
                       try {
-                        const response = await fetch("/ondc-seller/form/personal-loan/old/submission/kyc", {
+                        const response = await fetch("/seller-engine/form/personal-loan/old/submission/kyc", {
                           method: "POST",
                           headers: {
                             "Content-Type": "application/json",
@@ -2661,6 +2672,7 @@ path:
             dict:
               bpp_uri: https://fis-staging.ondc.org/ondc-seller/
               bpp_id: fis-staging.ondc.org/ondc-seller
+              form_url: https://fis-staging.ondc.org/seller-engine/
               city_code: *ref_1
               bap_id: *ref_2
               bap_uri: *ref_7
@@ -2709,7 +2721,7 @@ path:
           </head>
 
           <body>
-            <form action="/form/personal-loan/old_submission/bank-account-mandate" method="POST">
+            <form action="/seller-engine/form/personal-loan/old_submission/bank-account-mandate" method="POST">
               <label for="adhrNo">Aadhaar Number </label>
               <input type="text" id="adhrNo" name="adhrNo" />
               <label for="tnc">I agree to fetch the necessary information using my Aadhaar</a></label>
@@ -2859,6 +2871,7 @@ path:
             dict:
               bpp_uri: https://fis-staging.ondc.org/ondc-seller/
               bpp_id: fis-staging.ondc.org/ondc-seller
+              form_url: https://fis-staging.ondc.org/seller-engine/
               city_code: *ref_1
               bap_id: *ref_2
               bap_uri: *ref_7
@@ -2894,7 +2907,7 @@ path:
           Agreement</title> </head>
 
           <body> <form
-          action="/ondc-seller/form/personal-loan/old/submission/loan-agreement"
+          action="/seller-engine/form/personal-loan/old/submission/loan-agreement"
           method="POST"> <label for="tnc">I have read the <a
           href="https://icicibank.co.in/loans/agreement.html">Loan
           Agreement</a></label> <input type="checkbox" id="tnc" name="tnc" />
@@ -2939,7 +2952,7 @@ path:
 
                       const data = {context:{transaction_id:transaction_id}}
                       try {
-                        const response = await fetch("/ondc-seller/form/old/render/submission", {
+                        const response = await fetch("/seller-engine/form/old/render/submission", {
                           method: "POST",
                           headers: {
                             "Content-Type": "application/json",

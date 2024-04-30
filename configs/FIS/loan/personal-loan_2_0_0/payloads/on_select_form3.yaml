@@ -93,7 +93,7 @@ loan_offers:
         mime_type: application/html
         multiple_sumbissions: false
         resubmit: false
-        url: '{{bpp_uri}}form/personal-loan/old/kyc?transaction_id={{transaction_id}}'
+        url: '{{form_url}}form/personal-loan/old/kyc?transaction_id={{transaction_id}}'
       head:
         descriptor:
           name: Customer Information
