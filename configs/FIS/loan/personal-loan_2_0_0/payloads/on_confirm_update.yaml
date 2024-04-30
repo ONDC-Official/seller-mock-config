@@ -2,7 +2,7 @@ context:
   transaction_id: '{{transaction_id}}'
   action: on_update
   timestamp: '{{timestamp}}'
-  message_id: '{{message_id}}'
+  message_id: '{{msg_id}}'
 order_id: ORDER_ID_1_PERSONAL_LOAN
 
 loan_offers:
