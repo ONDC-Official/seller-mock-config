@@ -209,7 +209,7 @@ trips:
         id: "22"
         parent_stop_id: "21"
     vehicle:
-      category: METRO
+      category: BUS
   - id: F2
     type: TRIP
     stops:
@@ -248,7 +248,7 @@ trips:
               code: UTILIZED_TRIPS
             value: "0"
     vehicle:
-      category: METRO
+      category: BUS
 
 metro_items:
   - id: ITEM_ID_1_INTERCITY_BUS

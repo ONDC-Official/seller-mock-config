@@ -238,7 +238,7 @@ trips:
         id: "22"
         parent_stop_id: "21"
     vehicle:
-      category: METRO
+      category: BUS
     tags:
       - descriptor:
           code: TICKET_INFO
@@ -453,7 +453,7 @@ trips:
         id: "22"
         parent_stop_id: "21"
     vehicle:
-      category: METRO
+      category: BUS
     tags:
       - descriptor:
           code: TICKET_INFO

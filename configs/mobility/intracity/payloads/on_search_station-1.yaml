@@ -352,7 +352,7 @@ trips:
         id: "37"
         parent_stop_id: "36"
     vehicle:
-      category: METRO
+      category: BUS
   - id: F2
     type: ROUTE
     stops:
