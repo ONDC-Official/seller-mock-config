@@ -97,7 +97,7 @@ trips:
           descriptor:
             name: Bangalore
             code: std:080
-        gps: "12.979759, 77.590427"
+          gps: "12.979759, 77.590427"
         time:
           label: DATE_TIME
           timestamp: "2023-09-06T20:00:00.000Z"
@@ -127,7 +127,7 @@ trips:
           descriptor:
             name: Hyderabad
             code: std:040
-        gps: "17.399832, 78.505532"
+          gps: "17.399832, 78.505532"
         time:
           label: DATE_TIME
           timestamp: "2023-09-07T06:00:00.000Z"
