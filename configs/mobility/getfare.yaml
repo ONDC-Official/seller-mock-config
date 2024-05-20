@@ -7,6 +7,7 @@ default:
     $ref: "./default/template/error.yaml"
 
 getfare_select:
+  name: getfare_select
   condition:
     operation:
       type: AND
@@ -70,6 +71,7 @@ getfare_select:
     $ref: "./metro/template/on_select.yaml"
 
 intracity_getfare_select:
+  name: intracity_getfare_select
   condition:
     operation:
       type: AND
@@ -133,6 +135,7 @@ intracity_getfare_select:
     $ref: "./intracity/template/on_select.yaml"
 
 intracity_getfare_init:
+  name: intracity_getfare_init
   condition:
     operation:
       type: AND
@@ -194,3 +197,131 @@ intracity_getfare_init:
   delay: 300
   payload:
     $ref: "./intracity/template/on_init.yaml"
+
+intercity_getfare_select:
+  name: intercity_getfare_select
+  condition:
+    operation:
+      type: AND
+      input:
+        value:
+          - operation:
+              type: EQUAL
+              title: Check search message code
+              input:
+                value:
+                  - operation:
+                      type: READ
+                      input:
+                        value: "req_body.message.order.items.0.id"
+                  - INTERCITY_BUS_ITEM_ID
+          - operation:
+              type: EQUAL
+              title: Check search message code
+              input:
+                value:
+                  - operation:
+                      type: READ
+                      input:
+                        value: "req_body.context.domain"
+                  - "ONDC:TRV12"
+          - operation:
+              type: EQUAL
+              title: Check search message code
+              input:
+                value:
+                  - operation:
+                      type: READ
+                      input:
+                        value: "req_body.context.location.city.code"
+                  - std:011
+          - operation:
+              type: EQUAL
+              title: Check search message code
+              input:
+                value:
+                  - operation:
+                      type: READ
+                      input:
+                        value: "req_body.context.action"
+                  - select
+          - operation:
+              type: EQUAL
+              title: Check search message code
+              input:
+                value:
+                  - operation:
+                      type: READ
+                      input:
+                        value: "req_body.context.version"
+                  - 2.0.0
+  callback: "on_select"
+  uri:
+    $ref: ""
+  delay: 300
+  payload:
+    $ref: "./intercity/template/on_select.yaml"
+
+intercity_getfare_init:
+  name: intercity_getfare_init
+  condition:
+    operation:
+      type: AND
+      input:
+        value:
+          - operation:
+              type: EQUAL
+              title: Check search message code
+              input:
+                value:
+                  - operation:
+                      type: READ
+                      input:
+                        value: "req_body.message.order.items.0.id"
+                  - INTERCITY_BUS_ITEM_ID
+          - operation:
+              type: EQUAL
+              title: Check search message code
+              input:
+                value:
+                  - operation:
+                      type: READ
+                      input:
+                        value: "req_body.context.domain"
+                  - "ONDC:TRV12"
+          - operation:
+              type: EQUAL
+              title: Check search message code
+              input:
+                value:
+                  - operation:
+                      type: READ
+                      input:
+                        value: "req_body.context.location.city.code"
+                  - std:011
+          - operation:
+              type: EQUAL
+              title: Check search message code
+              input:
+                value:
+                  - operation:
+                      type: READ
+                      input:
+                        value: "req_body.context.action"
+                  - init
+          - operation:
+              type: EQUAL
+              title: Check search message code
+              input:
+                value:
+                  - operation:
+                      type: READ
+                      input:
+                        value: "req_body.context.version"
+                  - 2.0.0
+  callback: "on_init"
+  uri:
+    $ref: ""
+  delay: 300
+  payload:
+    $ref: "./intercity/template/on_init.yaml"
