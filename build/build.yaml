@@ -4362,7 +4362,7 @@ path:
                           value: ANY
                         - descriptor:
                             code: SINGLE_SEAT
-                          value: true
+                          value: 'true'
                         - descriptor:
                             code: SEAT_PRICE
                           value: '50'
@@ -4564,7 +4564,7 @@ path:
                           value: ANY
                         - descriptor:
                             code: SINGLE_SEAT
-                          value: true
+                          value: 'true'
                         - descriptor:
                             code: SEAT_PRICE
                           value: '50'

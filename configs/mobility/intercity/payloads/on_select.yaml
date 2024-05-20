@@ -73,7 +73,7 @@ trips:
             value: ANY
           - descriptor:
               code: SINGLE_SEAT
-            value: TRUE
+            value: "true"
           - descriptor:
               code: SEAT_PRICE
             value: "50"
