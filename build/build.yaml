@@ -1,10 +1,10 @@
 server:
   type: BAP/BPP
-  port: 5500
+  port: 5502
   sync_mode: false
   bpp_uri: https://mobility-staging.ondc.org/seller/
   protocol_server:
-    uri: http://localhost:81/createPayload
+    uri: http://localhost:5500/createPayload
 security:
   subscriber_id: mock-api-service
   ukId: 584
@@ -1212,6 +1212,214 @@ path:
                   type: READ
                   input:
                     value: req_body.context.message_id
+      get_all_station_codes_intercity1:
+        condition:
+          operation:
+            type: AND
+            input:
+              value:
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: >-
+                                req_body.message.intent.fulfillment.stops.0.location.gps
+                        - undefined
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: >-
+                                req_body.message.intent.fulfillment.vehicle.category
+                        - BUS
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.domain
+                        - ONDC:TRV12
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.location.city.code
+                        - std:011
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.version
+                        - 2.0.0
+        callback: on_search
+        uri:
+          $ref: ''
+        delay: 300
+        payload:
+          template:
+            name: on_search_1_stationcode_flow
+            data:
+              context:
+                transaction_id: '{{transaction_id}}'
+                action: on_search
+                timestamp: '{{timestamp}}'
+                message_id: '{{message_id}}'
+              name: ABC Bus Services Solutions
+              images:
+                - url: https://abc-bus.in/logos/logo.ico
+              trips:
+                - id: F1
+                  type: TRIP
+                  stops:
+                    - type: START
+                      location:
+                        descriptor:
+                          name: Bangalore
+                          code: std:080
+                        gps: 12.979759, 77.590427
+                    - type: PICKUP
+                      location:
+                        descriptor:
+                          name: Agara
+                          code: std:080-pincode:560034
+                        gps: 12.924479, 77.648999
+                    - type: PICKUP
+                      location:
+                        descriptor:
+                          name: Bellandur
+                          code: std:080-pincode:560103
+                        gps: 12.930839, 77.677941
+                    - type: END
+                      location:
+                        descriptor:
+                          name: Hyderabad
+                          code: std:040
+                        gps: 17.399832, 78.505532
+                    - type: DROP
+                      location:
+                        descriptor:
+                          name: Ameerpet
+                          code: std:040-pincode:500016
+                        gps: 17.441586, 78.441581
+                    - type: DROP
+                      location:
+                        descriptor:
+                          name: Central Bus Station
+                          code: std:040-pincode:500012
+                        gps: 17.379024, 78.482443
+                  vehicle:
+                    category: BUS
+                - id: F2
+                  type: TRIP
+                  stops:
+                    - type: START
+                      location:
+                        descriptor:
+                          name: Bangalore
+                          code: std:080
+                        gps: 12.979759, 77.590427
+                    - type: PICKUP
+                      location:
+                        descriptor:
+                          name: Agara
+                          code: std:080-pincode:560034
+                        gps: 12.924479, 77.648999
+                    - type: PICKUP
+                      location:
+                        descriptor:
+                          name: Bellandur
+                          code: std:080-pincode:560103
+                        gps: 12.930839, 77.677941
+                    - type: END
+                      location:
+                        descriptor:
+                          name: CHENNAI
+                          code: std:040
+                        gps: 17.399832, 78.505532
+                    - type: DROP
+                      location:
+                        descriptor:
+                          name: Ameerpet
+                          code: std:040-pincode:500016
+                        gps: 17.441586, 78.441581
+                    - type: DROP
+                      location:
+                        descriptor:
+                          name: Central Bus Station
+                          code: std:040-pincode:500012
+                        gps: 17.379024, 78.482443
+                  vehicle:
+                    category: BUS
+            dict:
+              bpp_uri: ../../mobility.yaml#/server/bpp_uri
+              bpp_id: ../../mobility.yaml#/security/subscriber_id
+              city_code: &ref_15
+                operation:
+                  type: READ
+                  input:
+                    value: req_body.context.location.city.code
+              bap_id: &ref_16
+                operation:
+                  type: READ
+                  input:
+                    value: req_body.context.bap_id
+              bap_uri: &ref_17
+                operation:
+                  type: READ
+                  input:
+                    value: req_body.context.bap_uri
+              txn_id: &ref_18
+                operation:
+                  type: READ
+                  input:
+                    value: req_body.context.transaction_id
+              msg_id:
+                operation:
+                  type: GENERATE_UUID
+                  input:
+                    value: req_body.context.message_id
+              timestamp:
+                operation:
+                  type: GENERATE_TIMESTAMP
+              country: &ref_19
+                operation:
+                  type: READ
+                  input:
+                    value: req_body.context.country
+              domain: &ref_20
+                operation:
+                  type: READ
+                  input:
+                    value: req_body.context.domain
+              transaction_id: &ref_21
+                operation:
+                  type: READ
+                  input:
+                    value: req_body.context.transaction_id
+              message_id:
+                operation:
+                  type: READ
+                  input:
+                    value: req_body.context.message_id
   getonestationcodetrips:
     callbacks:
       default:
@@ -1938,6 +2146,459 @@ path:
                   type: READ
                   input:
                     value: req_body.context.message_id
+      intercity-station-code-2:
+        condition:
+          operation:
+            type: AND
+            input:
+              value:
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: >-
+                                req_body.message.intent.fulfillment.stops.0.location.gps
+                        - undefined
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: >-
+                                req_body.message.intent.fulfillment.vehicle.category
+                        - BUS
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.domain
+                        - ONDC:TRV12
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.location.city.code
+                        - std:011
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.version
+                        - 2.0.0
+        callback: on_search
+        uri:
+          $ref: ''
+        delay: 300
+        payload:
+          template:
+            name: on_search_2_stationcode_flow
+            data:
+              context:
+                transaction_id: '{{transaction_id}}'
+                action: on_search
+                timestamp: '{{timestamp}}'
+                message_id: '{{message_id}}'
+              name: ABC Bus Services Solutions
+              images:
+                - url: https://abc-bus.in/logos/logo.ico
+              trips:
+                - id: F1
+                  type: TRIP
+                  stops:
+                    - id: S1
+                      type: START
+                      location:
+                        descriptor:
+                          name: Bangalore
+                          code: std:080
+                    - id: S2
+                      type: PICKUP
+                      location:
+                        descriptor:
+                          name: Agara
+                          code: std:080-pincode:560034
+                        gps: 12.924479, 77.648999
+                      time:
+                        label: DATE_TIME
+                        timestamp: '2023-09-06T06:30:00.000Z'
+                    - id: S3
+                      type: PICKUP
+                      location:
+                        descriptor:
+                          name: Bellandur
+                          code: std:080-pincode:560103
+                        gps: 12.930839, 77.677941
+                      time:
+                        label: DATE_TIME
+                        timestamp: '2023-09-06T06:45:00.000Z'
+                    - id: S4
+                      type: END
+                      location:
+                        descriptor:
+                          name: Hyderabad
+                          code: std:040
+                  vehicle:
+                    category: BUS
+                  tags:
+                    - descriptor:
+                        code: VEHICLE_GRID
+                      display: false
+                      list:
+                        - descriptor:
+                            code: X_MAX
+                          value: '14'
+                        - descriptor:
+                            code: Y_MAX
+                          value: '3'
+                        - descriptor:
+                            code: Z_MAX
+                          value: '1'
+                        - descriptor:
+                            code: X_LOBBY_START
+                          value: '0'
+                        - descriptor:
+                            code: X_LOBBY_SIZE
+                          value: '12'
+                        - descriptor:
+                            code: Y_LOBBY_START
+                          value: '1'
+                        - descriptor:
+                            code: Y_LOBBY_SIZE
+                          value: '1'
+                        - descriptor:
+                            code: SEAT_SELECTION
+                          value: mandatory
+                    - descriptor:
+                        code: VEHICLE_AVAIBALITY
+                      display: false
+                      list:
+                        - descriptor:
+                            code: AVALIABLE_SEATS
+                          value: '20'
+                    - descriptor:
+                        code: VEHICLE_AMENITIES
+                      list:
+                        - value: WATER_BOTTLE
+                        - value: WIFI
+                        - value: BLANKET
+                        - value: CCTV
+                - id: F2
+                  type: TRIP
+                  stops:
+                    - id: S7
+                      type: START
+                      location:
+                        descriptor:
+                          name: Bangalore
+                          code: std:080
+                        gps: 12.979759, 77.590427
+                      time:
+                        label: DATE_TIME
+                        timestamp: '2023-09-06T20:00:00.000Z'
+                    - id: S8
+                      type: PICKUP
+                      location:
+                        descriptor:
+                          name: Agara
+                          code: std:080-pincode:560034
+                        gps: 12.924479, 77.648999
+                      time:
+                        label: DATE_TIME
+                        timestamp: '2023-09-06T20:30:00.000Z'
+                    - id: S9
+                      type: PICKUP
+                      location:
+                        descriptor:
+                          name: Bellandur
+                          code: std:080-pincode:560103
+                        gps: 12.930839, 77.677941
+                      time:
+                        label: DATE_TIME
+                        timestamp: '2023-09-06T20:50:00.000Z'
+                    - id: S10
+                      type: END
+                      location:
+                        descriptor:
+                          name: Hyderabad
+                          code: std:040
+                        gps: 17.399832, 78.505532
+                      time:
+                        label: DATE_TIME
+                        timestamp: '2023-09-07T06:00:00.000Z'
+                    - id: S11
+                      type: DROP
+                      location:
+                        descriptor:
+                          name: Ameerpet
+                          code: std:040-pincode:500016
+                        gps: 17.441586, 78.441581
+                      time:
+                        label: DATE_TIME
+                        timestamp: '2023-09-07T06:10:00.000Z'
+                    - id: S12
+                      type: DROP
+                      location:
+                        descriptor:
+                          name: Central Bus Station
+                          code: std:040-pincode:500012
+                        gps: 17.379024, 78.482443
+                      time:
+                        label: DATE_TIME
+                        timestamp: '2023-09-07T06:30:00.000Z'
+                  vehicle:
+                    category: BUS
+                  tags:
+                    - descriptor:
+                        code: VEHICLE_GRID
+                      display: false
+                      list:
+                        - descriptor:
+                            code: X_MAX
+                          value: '14'
+                        - descriptor:
+                            code: Y_MAX
+                          value: '3'
+                        - descriptor:
+                            code: Z_MAX
+                          value: '1'
+                        - descriptor:
+                            code: X_LOBBY_START
+                          value: '0'
+                        - descriptor:
+                            code: X_LOBBY_SIZE
+                          value: '12'
+                        - descriptor:
+                            code: Y_LOBBY_START
+                          value: '1'
+                        - descriptor:
+                            code: Y_LOBBY_SIZE
+                          value: '1'
+                        - descriptor:
+                            code: SEAT_SELECTION
+                          value: mandatory
+                    - descriptor:
+                        code: VEHICLE_AVAIBALITY
+                      display: false
+                      list:
+                        - descriptor:
+                            code: AVALIABLE_SEATS
+                          value: '22'
+                    - descriptor:
+                        code: VEHICLE_AMENITIES
+                      list:
+                        - value: WIFI
+                        - value: BLANKET
+                        - value: CCTV
+            dict:
+              bpp_uri: ../../mobility.yaml#/server/bpp_uri
+              bpp_id: ../../mobility.yaml#/security/subscriber_id
+              city_code: *ref_15
+              bap_id: *ref_16
+              bap_uri: *ref_17
+              txn_id: *ref_18
+              msg_id:
+                operation:
+                  type: GENERATE_UUID
+                  input:
+                    value: req_body.context.message_id
+              timestamp:
+                operation:
+                  type: GENERATE_TIMESTAMP
+              country: *ref_19
+              domain: *ref_20
+              transaction_id: *ref_21
+              message_id:
+                operation:
+                  type: READ
+                  input:
+                    value: req_body.context.message_id
+  getbusservice:
+    callbacks:
+      default:
+        callback: on_search
+        uri:
+          $ref: ''
+        delay: 300
+        payload: *ref_0
+      get_bus_service:
+        condition:
+          operation:
+            type: AND
+            input:
+              value:
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.domain
+                        - ONDC:TRV12
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.location.city.code
+                        - std:011
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.version
+                        - 2.0.0
+        callback: on_search
+        uri:
+          $ref: ''
+        delay: 300
+        payload:
+          template:
+            name: on_search_3_stationcode_flow
+            data:
+              context:
+                transaction_id: '{{transaction_id}}'
+                action: on_search
+                timestamp: '{{timestamp}}'
+                message_id: '{{message_id}}'
+              name: ABC Bus Services Solutions
+              images:
+                - url: https://abc-bus.in/logos/logo.ico
+              trips:
+                - id: F1
+                  type: TRIP
+                  stops:
+                    - id: S1
+                      type: START
+                      location:
+                        descriptor:
+                          name: Bangalore
+                          code: std:080
+                    - id: S2
+                      type: PICKUP
+                      location:
+                        descriptor:
+                          name: Agara
+                          code: std:080-pincode:560034
+                        gps: 12.924479, 77.648999
+                      time:
+                        label: DATE_TIME
+                        timestamp: '2023-09-06T06:30:00.000Z'
+                    - id: S3
+                      type: PICKUP
+                      location:
+                        descriptor:
+                          name: Bellandur
+                          code: std:080-pincode:560103
+                        gps: 12.930839, 77.677941
+                      time:
+                        label: DATE_TIME
+                        timestamp: '2023-09-06T06:45:00.000Z'
+                    - id: S4
+                      type: END
+                      location:
+                        descriptor:
+                          name: Hyderabad
+                          code: std:040
+                  vehicle:
+                    category: BUS
+                  tags:
+                    - descriptor:
+                        code: VEHICLE_GRID
+                      display: false
+                      list:
+                        - descriptor:
+                            code: X_MAX
+                          value: '14'
+                        - descriptor:
+                            code: Y_MAX
+                          value: '3'
+                        - descriptor:
+                            code: Z_MAX
+                          value: '1'
+                        - descriptor:
+                            code: X_LOBBY_START
+              intercity_items:
+                - id: INTERCITY_BUS_ITEM_ID
+                  descriptor:
+                    name: Seater Ticket
+                    code: SEAT
+                  price:
+                    currency: INR
+                    value: '899'
+                  quantity:
+                    available:
+                      count: 1
+                    maximum:
+                      count: 1
+                  fulfillment_ids:
+                    - F1
+                  category_ids:
+                    - C1
+                - id: I2
+                  descriptor:
+                    name: Sleeper Ticket
+                    code: SEAT
+                  price:
+                    currency: INR
+                    value: '1899'
+                  quantity:
+                    available:
+                      count: 1
+                  fulfillment_ids:
+                    - F1
+                  category_ids:
+                    - C2
+            dict:
+              bpp_uri: ../../mobility.yaml#/server/bpp_uri
+              bpp_id: ../../mobility.yaml#/security/subscriber_id
+              city_code: *ref_15
+              bap_id: *ref_16
+              bap_uri: *ref_17
+              txn_id: *ref_18
+              msg_id:
+                operation:
+                  type: GENERATE_UUID
+                  input:
+                    value: req_body.context.message_id
+              timestamp:
+                operation:
+                  type: GENERATE_TIMESTAMP
+              country: *ref_19
+              domain: *ref_20
+              transaction_id: *ref_21
+              message_id:
+                operation:
+                  type: READ
+                  input:
+                    value: req_body.context.message_id
   getfare:
     callbacks:
       default:
@@ -1947,6 +2608,7 @@ path:
         delay: 300
         payload: *ref_0
       getfare_select:
+        name: getfare_select
         condition:
           operation:
             type: AND
@@ -2472,6 +3134,7 @@ path:
                   input:
                     value: req_body.context.action
       intracity_getfare_select:
+        name: intracity_getfare_select
         condition:
           operation:
             type: AND
@@ -3017,6 +3680,7 @@ path:
                   input:
                     value: req_body.context.action
       intracity_getfare_init:
+        name: intracity_getfare_init
         condition:
           operation:
             type: AND
@@ -3561,10 +4225,412 @@ path:
                   type: READ
                   input:
                     value: req_body.context.action
+      intercity_getfare_select:
+        name: intercity_getfare_select
+        condition:
+          operation:
+            type: AND
+            input:
+              value:
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.message.order.items.0.id
+                        - INTERCITY_BUS_ITEM_ID
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.domain
+                        - ONDC:TRV12
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.location.city.code
+                        - std:011
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.action
+                        - select
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.version
+                        - 2.0.0
+        callback: on_select
+        uri:
+          $ref: ''
+        delay: 300
+        payload:
+          template:
+            data:
+              context:
+                transaction_id: '{{transaction_id}}'
+                action: on_select
+                timestamp: '{{timestamp}}'
+                message_id: '{{message_id}}'
+              intercity_items:
+                - id: INTERCITY_BUS_ITEM_ID
+                  descriptor:
+                    name: Seater Ticket
+                    code: SEAT
+                  price:
+                    currency: INR
+                    value: '800'
+                  quantity:
+                    selected:
+                      count: 1
+                  fulfillment_ids:
+                    - F1
+                  category_ids:
+                    - C1
+              trips:
+                - id: F1
+                  type: TRIP
+                  stops:
+                    - id: S2
+                      type: PICKUP
+                      location:
+                        descriptor:
+                          name: Agara
+                          code: std:080-pincode:560034
+                        gps: 12.924479, 77.648999
+                      time:
+                        label: DATE_TIME
+                        timestamp: '2023-09-06T06:30:00.000Z'
+                    - id: S5
+                      type: DROP
+                      location:
+                        descriptor:
+                          name: Ameerpet
+                          code: std:040-pincode:500016
+                        gps: 17.441586, 78.441581
+                      time:
+                        label: DATE_TIME
+                        timestamp: '2023-09-06T15:10:00.000Z'
+                  vehicle:
+                    category: BUS
+                  tags:
+                    - descriptor:
+                        code: SEAT_GRID
+                      list:
+                        - descriptor:
+                            code: X
+                          value: '0'
+                        - descriptor:
+                            code: 'Y'
+                          value: '0'
+                        - descriptor:
+                            code: Z
+                          value: '0'
+                        - descriptor:
+                            code: X_SIZE
+                          value: '1'
+                        - descriptor:
+                            code: Y_SIZE
+                          value: '1'
+                        - descriptor:
+                            code: NUMBER
+                          value: A1
+                        - descriptor:
+                            code: RESTRICTED_GENDER
+                          value: ANY
+                        - descriptor:
+                            code: SINGLE_SEAT
+                          value: 'true'
+                        - descriptor:
+                            code: SEAT_PRICE
+                          value: '50'
+                        - descriptor:
+                            code: SELECTED
+                          value: 'true'
+                        - descriptor:
+                            code: SELECTED_SEAT
+                          value: A1
+                        - descriptor:
+                            code: ITEM_ID
+                          value: I1
+              price: '949'
+              breakup:
+                - title: BASE_FARE
+                  price:
+                    currency: INR
+                    value: '800'
+                - title: CGST @ 5%
+                  price:
+                    currency: INR
+                    value: '40'
+                - title: SGST @ 5%
+                  price:
+                    currency: INR
+                    value: '40'
+                - title: CONVENIENCE_FEE
+                  price:
+                    currency: INR
+                    value: '19'
+                - title: Seat Fare
+                  price:
+                    currency: INR
+                    value: '50'
+            dict:
+              bpp_uri: ../../mobility.yaml#/server/bpp_uri
+              bpp_id: ../../mobility.yaml#/security/subscriber_id
+              city_code: *ref_15
+              bap_id: *ref_16
+              bap_uri: *ref_17
+              txn_id: *ref_18
+              msg_id:
+                operation:
+                  type: GENERATE_UUID
+                  input:
+                    value: req_body.context.message_id
+              timestamp:
+                operation:
+                  type: GENERATE_TIMESTAMP
+              country: *ref_19
+              domain: *ref_20
+              transaction_id: *ref_21
+              message_id:
+                operation:
+                  type: READ
+                  input:
+                    value: req_body.context.message_id
+              method:
+                operation:
+                  type: READ
+                  input:
+                    value: req_body.context.action
+      intercity_getfare_init:
+        name: intercity_getfare_init
+        condition:
+          operation:
+            type: AND
+            input:
+              value:
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.message.order.items.0.id
+                        - INTERCITY_BUS_ITEM_ID
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.domain
+                        - ONDC:TRV12
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.location.city.code
+                        - std:011
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.action
+                        - init
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.version
+                        - 2.0.0
+        callback: on_init
+        uri:
+          $ref: ''
+        delay: 300
+        payload:
+          template:
+            data:
+              context:
+                transaction_id: '{{transaction_id}}'
+                action: on_init
+                timestamp: '{{timestamp}}'
+                message_id: '{{message_id}}'
+              intercity_items:
+                - id: INTERCITY_BUS_ITEM_ID
+                  descriptor:
+                    name: Seater Ticket
+                    code: SEAT
+                  price:
+                    currency: INR
+                    value: '800'
+                  quantity:
+                    selected:
+                      count: 1
+                  fulfillment_ids:
+                    - F1
+                  category_ids:
+                    - C1
+              payment_id: PAYMENT_ID_1
+              payment_status: NOT-PAID
+              trips:
+                - id: F1
+                  type: TRIP
+                  stops:
+                    - id: S2
+                      type: PICKUP
+                      location:
+                        descriptor:
+                          name: Agara
+                          code: std:080-pincode:560034
+                        gps: 12.924479, 77.648999
+                      time:
+                        label: DATE_TIME
+                        timestamp: '2023-09-06T06:30:00.000Z'
+                    - id: S5
+                      type: DROP
+                      location:
+                        descriptor:
+                          name: Ameerpet
+                          code: std:040-pincode:500016
+                        gps: 17.441586, 78.441581
+                      time:
+                        label: DATE_TIME
+                        timestamp: '2023-09-06T15:10:00.000Z'
+                  vehicle:
+                    category: BUS
+                  tags:
+                    - descriptor:
+                        code: SEAT_GRID
+                      list:
+                        - descriptor:
+                            code: X
+                          value: '0'
+                        - descriptor:
+                            code: 'Y'
+                          value: '0'
+                        - descriptor:
+                            code: Z
+                          value: '0'
+                        - descriptor:
+                            code: X_SIZE
+                          value: '1'
+                        - descriptor:
+                            code: Y_SIZE
+                          value: '1'
+                        - descriptor:
+                            code: NUMBER
+                          value: A1
+                        - descriptor:
+                            code: RESTRICTED_GENDER
+                          value: ANY
+                        - descriptor:
+                            code: SINGLE_SEAT
+                          value: 'true'
+                        - descriptor:
+                            code: SEAT_PRICE
+                          value: '50'
+                        - descriptor:
+                            code: SELECTED
+                          value: 'true'
+                        - descriptor:
+                            code: SELECTED_SEAT
+                          value: A1
+                        - descriptor:
+                            code: ITEM_ID
+                          value: I1
+              price: '949'
+              breakup:
+                - title: BASE_FARE
+                  price:
+                    currency: INR
+                    value: '800'
+                - title: CGST @ 5%
+                  price:
+                    currency: INR
+                    value: '40'
+                - title: SGST @ 5%
+                  price:
+                    currency: INR
+                    value: '40'
+                - title: CONVENIENCE_FEE
+                  price:
+                    currency: INR
+                    value: '19'
+                - title: Seat Fare
+                  price:
+                    currency: INR
+                    value: '50'
+            dict:
+              bpp_uri: ../../mobility.yaml#/server/bpp_uri
+              bpp_id: ../../mobility.yaml#/security/subscriber_id
+              city_code: *ref_15
+              bap_id: *ref_16
+              bap_uri: *ref_17
+              txn_id: *ref_18
+              msg_id:
+                operation:
+                  type: GENERATE_UUID
+                  input:
+                    value: req_body.context.message_id
+              timestamp:
+                operation:
+                  type: GENERATE_TIMESTAMP
+              country: *ref_19
+              domain: *ref_20
+              transaction_id: *ref_21
+              message_id:
+                operation:
+                  type: READ
+                  input:
+                    value: req_body.context.message_id
+              method:
+                operation:
+                  type: READ
+                  input:
+                    value: req_body.context.action
   confirmticket:
     callbacks:
       default:
-        callback: on_search
+        callback: on_confirm
         uri:
           $ref: ''
         delay: 300
@@ -4696,6 +5762,203 @@ path:
               country: *ref_12
               domain: *ref_13
               transaction_id: *ref_14
+              message_id:
+                operation:
+                  type: READ
+                  input:
+                    value: req_body.context.message_id
+      confirm_ticket_intercity:
+        name: intercity_confirm
+        condition:
+          operation:
+            type: AND
+            input:
+              value:
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.message.order.items.0.id
+                        - INTERCITY_BUS_ITEM_ID
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.domain
+                        - ONDC:TRV12
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.location.city.code
+                        - std:011
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.version
+                        - 2.0.0
+        callback: on_confirm
+        uri:
+          $ref: ''
+        delay: 300
+        payload:
+          template:
+            data:
+              context:
+                transaction_id: '{{transaction_id}}'
+                action: on_confirm
+                timestamp: '{{timestamp}}'
+                message_id: '{{message_id}}'
+              order_id: INTERCITY_ORDER_ID
+              order_status: ACTIVE
+              intercity_items:
+                - id: INTERCITY_BUS_ITEM_ID
+                  descriptor:
+                    name: Seater Ticket
+                    code: SEAT
+                  price:
+                    currency: INR
+                    value: '800'
+                  quantity:
+                    selected:
+                      count: 1
+                  fulfillment_ids:
+                    - F1
+                  category_ids:
+                    - C1
+              payment_id: PAYMENT_ID_1
+              payment_status: NOT-PAID
+              trips:
+                - id: F1
+                  type: TRIP
+                  stops:
+                    - id: S2
+                      type: PICKUP
+                      location:
+                        descriptor:
+                          name: Agara
+                          code: std:080-pincode:560034
+                        gps: 12.924479, 77.648999
+                      time:
+                        label: DATE_TIME
+                        timestamp: '2023-09-06T06:30:00.000Z'
+                      authorization:
+                        type: QR
+                        token: >-
+                          iVBORw0KGgoAAAANSUhEUgAAAH0AAAB9AQAAAACn+1GIAAAApklEQVR4Xu2UMQ4EMQgD/QP+/0vK6zjsvayUMmavWxQpMAUBkwS12wcveAAkgNSCD3rR5Lkgoai3GUCMgWqbAEYR3HxAkZlzU/0MyBisYRsgI1ERFfcpBpA+ze6k56Cj7KTdXNigFWZvSOpsgqLfd18i2aAukXh9TXBNmdWt5gzA/oqzWkkN8HtA7G8CNOwYAiZt3wZixUfkA32OHNQq7Bxs9oI/gC/9fV8AVCkPjQAAAABJRU5ErkJggg==
+                    - id: S5
+                      type: DROP
+                      location:
+                        descriptor:
+                          name: Ameerpet
+                          code: std:040-pincode:500016
+                        gps: 17.441586, 78.441581
+                      time:
+                        label: DATE_TIME
+                        timestamp: '2023-09-06T15:10:00.000Z'
+                  customer:
+                    person:
+                      name: Joe Adams
+                      age: '30'
+                      gender: MALE
+                    contact:
+                      phone: +91-9988776655
+                  vehicle:
+                    category: BUS
+                  tags:
+                    - descriptor:
+                        code: SEAT_GRID
+                      list:
+                        - descriptor:
+                            code: X
+                          value: '0'
+                        - descriptor:
+                            code: 'Y'
+                          value: '0'
+                        - descriptor:
+                            code: Z
+                          value: '0'
+                        - descriptor:
+                            code: X_SIZE
+                          value: '1'
+                        - descriptor:
+                            code: Y_SIZE
+                          value: '1'
+                        - descriptor:
+                            code: NUMBER
+                          value: A1
+                        - descriptor:
+                            code: RESTRICTED_GENDER
+                          value: ANY
+                        - descriptor:
+                            code: SINGLE_SEAT
+                          value: 'TRUE'
+                        - descriptor:
+                            code: SEAT_PRICE
+                          value: '50'
+                        - descriptor:
+                            code: SELECTED_SEAT
+                          value: A1
+                        - descriptor:
+                            code: ITEM_ID
+                          value: I1
+              price: '949'
+              breakup:
+                - title: BASE_FARE
+                  price:
+                    currency: INR
+                    value: '800'
+                - title: CGST @ 5%
+                  price:
+                    currency: INR
+                    value: '40'
+                - title: SGST @ 5%
+                  price:
+                    currency: INR
+                    value: '40'
+                - title: CONVENIENCE_FEE
+                  price:
+                    currency: INR
+                    value: '19'
+                - title: Seat Fare
+                  price:
+                    currency: INR
+                    value: '50'
+            dict:
+              bpp_uri: ../../mobility.yaml#/server/bpp_uri
+              bpp_id: ../../mobility.yaml#/security/subscriber_id
+              city_code: *ref_15
+              bap_id: *ref_16
+              bap_uri: *ref_17
+              txn_id: *ref_18
+              msg_id:
+                operation:
+                  type: GENERATE_UUID
+                  input:
+                    value: req_body.context.message_id
+              timestamp:
+                operation:
+                  type: GENERATE_TIMESTAMP
+              country: *ref_19
+              domain: *ref_20
+              transaction_id: *ref_21
               message_id:
                 operation:
                   type: READ
