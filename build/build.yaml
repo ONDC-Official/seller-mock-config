@@ -21,7 +21,7 @@ path:
         uri:
           $ref: ''
         delay: 300
-        payload: &ref_0
+        payload: &ref_7
           template:
             data:
               context:
@@ -614,22 +614,22 @@ path:
             dict:
               bpp_uri: ../../mobility.yaml#/server/bpp_uri
               bpp_id: ../../mobility.yaml#/security/subscriber_id
-              city_code: &ref_1
+              city_code: &ref_0
                 operation:
                   type: READ
                   input:
                     value: req_body.context.location.city.code
-              bap_id: &ref_2
+              bap_id: &ref_1
                 operation:
                   type: READ
                   input:
                     value: req_body.context.bap_id
-              bap_uri: &ref_3
+              bap_uri: &ref_2
                 operation:
                   type: READ
                   input:
                     value: req_body.context.bap_uri
-              txn_id: &ref_4
+              txn_id: &ref_3
                 operation:
                   type: READ
                   input:
@@ -642,21 +642,380 @@ path:
               timestamp:
                 operation:
                   type: GENERATE_TIMESTAMP
-              country: &ref_5
+              country: &ref_4
                 operation:
                   type: READ
                   input:
                     value: req_body.context.country
-              domain: &ref_6
+              domain: &ref_5
                 operation:
                   type: READ
                   input:
                     value: req_body.context.domain
-              transaction_id: &ref_7
+              transaction_id: &ref_6
                 operation:
                   type: READ
                   input:
                     value: req_body.context.transaction_id
+              message_id:
+                operation:
+                  type: READ
+                  input:
+                    value: req_body.context.message_id
+      get_all_station_codes_metro2:
+        condition:
+          operation:
+            type: AND
+            input:
+              value:
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: >-
+                                req_body.message.intent.fulfillment.stops.0.location.gps
+                        - undefined
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: >-
+                                req_body.message.intent.fulfillment.vehicle.category
+                        - METRO
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.domain
+                        - ONDC:TRV11
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.location.city.code
+                        - std:011
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.version
+                        - 2.0.0
+        callback: on_search
+        uri:
+          $ref: ''
+        delay: 300
+        payload: &ref_8
+          template:
+            name: on_search_2_stationcode_flow
+            data:
+              context:
+                transaction_id: '{{transaction_id}}'
+                action: on_search
+                timestamp: '{{timestamp}}'
+                message_id: '{{message_id}}'
+              name: Transit Solutions
+              images:
+                - url: https://transitsolutions.in/logos/logo.ico
+              trips:
+                - id: F1
+                  type: TRIP
+                  stops:
+                    - type: START
+                      location:
+                        descriptor:
+                          name: Shaheed Sthal(New Bus Adda)
+                          code: SHAHEED_STHAL
+                        gps: 28.686576, 77.441632
+                      id: '1'
+                    - type: INTERMEDIATE_STOP
+                      instructions:
+                        name: Stop 1
+                      location:
+                        descriptor:
+                          name: Hindon River
+                          code: HINDON_RIVER
+                        gps: 28.686176, 77.442632
+                      id: '2'
+                      parent_stop_id: '1'
+                    - type: INTERMEDIATE_STOP
+                      instructions:
+                        name: Stop 2
+                      location:
+                        descriptor:
+                          name: Arthala
+                        gps: 28.181276, 77.442332
+                      id: '3'
+                      parent_stop_id: '2'
+                    - type: INTERMEDIATE_STOP
+                      instructions:
+                        name: Stop 3
+                      location:
+                        descriptor:
+                          name: Mohan Nagar
+                        gps: 28.981276, 77.772332
+                      id: '4'
+                      parent_stop_id: '3'
+                    - type: INTERMEDIATE_STOP
+                      instructions:
+                        name: Stop 4
+                      location:
+                        descriptor:
+                          name: Shyam Park
+                        gps: 28.620976, 77.046732
+                      id: '5'
+                      parent_stop_id: '4'
+                    - type: INTERMEDIATE_STOP
+                      instructions:
+                        name: Stop 5
+                      location:
+                        descriptor:
+                          name: Major Mohit Sharma Rajendra Nagar
+                        gps: 28.120976, 77.946732
+                      id: '6'
+                      parent_stop_id: '5'
+                    - type: INTERMEDIATE_STOP
+                      instructions:
+                        name: Stop 6
+                      location:
+                        descriptor:
+                          name: Raj Bagh
+                        gps: 28.677076, 77.346632
+                      id: '7'
+                      parent_stop_id: '6'
+                    - type: INTERMEDIATE_STOP
+                      instructions:
+                        name: Stop 7
+                      location:
+                        descriptor:
+                          name: Shaheed Nagar
+                        gps: 28.617076, 77.146632
+                      id: '8'
+                      parent_stop_id: '7'
+                    - type: INTERMEDIATE_STOP
+                      instructions:
+                        name: Stop 8
+                      location:
+                        descriptor:
+                          name: Dilshad Garden
+                        gps: 28.917076, 77.146632
+                      id: '9'
+                      parent_stop_id: '8'
+                    - type: INTERMEDIATE_STOP
+                      instructions:
+                        name: Stop 9
+                      location:
+                        descriptor:
+                          name: Jhilmil
+                        gps: 28.897076, 77.146632
+                      id: '10'
+                      parent_stop_id: '9'
+                    - type: INTERMEDIATE_STOP
+                      instructions:
+                        name: Stop 10
+                      location:
+                        descriptor:
+                          name: Mansarovar Park
+                        gps: 28.117076, 77.116632
+                      id: '11'
+                      parent_stop_id: '10'
+                    - type: INTERMEDIATE_STOP
+                      instructions:
+                        name: Stop 11
+                      location:
+                        descriptor:
+                          name: Shahdara
+                        gps: 28.127076, 77.416632
+                      id: '12'
+                      parent_stop_id: '11'
+                    - type: INTERMEDIATE_STOP
+                      instructions:
+                        name: Stop 12
+                      location:
+                        descriptor:
+                          name: Welcome
+                        gps: 28.217076, 77.216632
+                      id: '13'
+                      parent_stop_id: '12'
+                    - type: INTERMEDIATE_STOP
+                      instructions:
+                        name: Stop 13
+                      location:
+                        descriptor:
+                          name: Seelampur
+                        gps: 28.327076, 77.416632
+                      id: '14'
+                      parent_stop_id: '13'
+                    - type: INTERMEDIATE_STOP
+                      instructions:
+                        name: Stop 14
+                      location:
+                        descriptor:
+                          name: Shastri Park
+                        gps: 28.427076, 77.446632
+                      id: '15'
+                      parent_stop_id: '14'
+                    - type: TRANSIT_STOP
+                      instructions:
+                        name: Stop 15
+                        short_desc: Please Change here for Yellow Line
+                      location:
+                        descriptor:
+                          name: Kashmere Gate
+                        gps: 28.738426, 77.139922
+                      id: '16'
+                      parent_stop_id: '15'
+                    - type: INTERMEDIATE_STOP
+                      instructions:
+                        name: Stop 16
+                      location:
+                        descriptor:
+                          name: Civil Lines
+                        gps: 28.627076, 77.646632
+                      id: '17'
+                      parent_stop_id: '16'
+                    - type: INTERMEDIATE_STOP
+                      instructions:
+                        name: Stop 17
+                      location:
+                        descriptor:
+                          name: Vidhan Sabha
+                        gps: 28.727076, 77.746632
+                      id: '18'
+                      parent_stop_id: '17'
+                    - type: INTERMEDIATE_STOP
+                      instructions:
+                        name: Stop 18
+                      location:
+                        descriptor:
+                          name: Vishwavidyalaya
+                        gps: 28.827076, 77.846632
+                      id: '19'
+                      parent_stop_id: '18'
+                    - type: INTERMEDIATE_STOP
+                      instructions:
+                        name: Stop 19
+                      location:
+                        descriptor:
+                          name: Guru Tegh Bahadur Nagar
+                        gps: 28.927076, 77.946632
+                      id: '20'
+                      parent_stop_id: '19'
+                    - type: INTERMEDIATE_STOP
+                      instructions:
+                        name: Stop 20
+                      location:
+                        descriptor:
+                          name: Model Town
+                        gps: 28.217076, 77.496632
+                      id: '21'
+                      parent_stop_id: '20'
+                    - type: END
+                      location:
+                        descriptor:
+                          name: Azadpur
+                          code: AZADPUR
+                        gps: 28.707358, 77.180910
+                      id: '22'
+                      parent_stop_id: '21'
+                  vehicle:
+                    category: METRO
+                - id: F2
+                  type: TRIP
+                  stops:
+                    - type: START
+                      location:
+                        descriptor:
+                          name: Shaheed Sthal(New Bus Adda)
+                          code: SHAHEED_STHAL
+                        gps: 28.686576, 77.441632
+                      id: '1'
+                    - type: TRANSIT_STOP
+                      instructions:
+                        short_desc: Please Change here for Yellow Line
+                      location:
+                        descriptor:
+                          name: Kashmere Gate
+                        gps: 28.738426, 77.139922
+                      id: '2'
+                      parent_stop_id: '1'
+                    - type: END
+                      location:
+                        descriptor:
+                          name: Azadpur
+                          code: AZADPUR
+                        gps: 28.707358, 77.180910
+                      id: '3'
+                      parent_stop_id: '2'
+                  tags:
+                    - descriptor:
+                        code: TRIP_DETAILS
+                      list:
+                        - descriptor:
+                            code: AVAILABLE_TRIPS
+                          value: '30'
+                        - descriptor:
+                            code: UTILIZED_TRIPS
+                          value: '0'
+                  vehicle:
+                    category: METRO
+              metro_items:
+                - id: ITEM_ID_1_METRO
+                  category_ids:
+                    - C1
+                  descriptor:
+                    name: Single Journey Ticket
+                    code: SJT
+                  price:
+                    currency: INR
+                    value: '60'
+                  quantity:
+                    maximum:
+                      count: 6
+                    minimum:
+                      count: 1
+                  fulfillment_ids:
+                    - F1
+                  time:
+                    label: Validity
+                    duration: PT2D
+            dict:
+              bpp_uri: ../../mobility.yaml#/server/bpp_uri
+              bpp_id: ../../mobility.yaml#/security/subscriber_id
+              city_code: *ref_0
+              bap_id: *ref_1
+              bap_uri: *ref_2
+              txn_id: *ref_3
+              msg_id:
+                operation:
+                  type: GENERATE_UUID
+                  input:
+                    value: req_body.context.message_id
+              timestamp:
+                operation:
+                  type: GENERATE_TIMESTAMP
+              country: *ref_4
+              domain: *ref_5
+              transaction_id: *ref_6
               message_id:
                 operation:
                   type: READ
@@ -1164,22 +1523,22 @@ path:
             dict:
               bpp_uri: ../../mobility.yaml#/server/bpp_uri
               bpp_id: ../../mobility.yaml#/security/subscriber_id
-              city_code: &ref_8
+              city_code: &ref_9
                 operation:
                   type: READ
                   input:
                     value: req_body.context.location.city.code
-              bap_id: &ref_9
+              bap_id: &ref_10
                 operation:
                   type: READ
                   input:
                     value: req_body.context.bap_id
-              bap_uri: &ref_10
+              bap_uri: &ref_11
                 operation:
                   type: READ
                   input:
                     value: req_body.context.bap_uri
-              txn_id: &ref_11
+              txn_id: &ref_12
                 operation:
                   type: READ
                   input:
@@ -1192,17 +1551,17 @@ path:
               timestamp:
                 operation:
                   type: GENERATE_TIMESTAMP
-              country: &ref_12
+              country: &ref_13
                 operation:
                   type: READ
                   input:
                     value: req_body.context.country
-              domain: &ref_13
+              domain: &ref_14
                 operation:
                   type: READ
                   input:
                     value: req_body.context.domain
-              transaction_id: &ref_14
+              transaction_id: &ref_15
                 operation:
                   type: READ
                   input:
@@ -1372,22 +1731,22 @@ path:
             dict:
               bpp_uri: ../../mobility.yaml#/server/bpp_uri
               bpp_id: ../../mobility.yaml#/security/subscriber_id
-              city_code: &ref_15
+              city_code: &ref_16
                 operation:
                   type: READ
                   input:
                     value: req_body.context.location.city.code
-              bap_id: &ref_16
+              bap_id: &ref_17
                 operation:
                   type: READ
                   input:
                     value: req_body.context.bap_id
-              bap_uri: &ref_17
+              bap_uri: &ref_18
                 operation:
                   type: READ
                   input:
                     value: req_body.context.bap_uri
-              txn_id: &ref_18
+              txn_id: &ref_19
                 operation:
                   type: READ
                   input:
@@ -1400,17 +1759,17 @@ path:
               timestamp:
                 operation:
                   type: GENERATE_TIMESTAMP
-              country: &ref_19
+              country: &ref_20
                 operation:
                   type: READ
                   input:
                     value: req_body.context.country
-              domain: &ref_20
+              domain: &ref_21
                 operation:
                   type: READ
                   input:
                     value: req_body.context.domain
-              transaction_id: &ref_21
+              transaction_id: &ref_22
                 operation:
                   type: READ
                   input:
@@ -1427,7 +1786,7 @@ path:
         uri:
           $ref: ''
         delay: 300
-        payload: *ref_0
+        payload: *ref_7
       metro-station-code-2:
         condition:
           operation:
@@ -1490,303 +1849,7 @@ path:
         uri:
           $ref: ''
         delay: 300
-        payload:
-          template:
-            name: on_search_2_stationcode_flow
-            data:
-              context:
-                transaction_id: '{{transaction_id}}'
-                action: on_search
-                timestamp: '{{timestamp}}'
-                message_id: '{{message_id}}'
-              name: Transit Solutions
-              images:
-                - url: https://transitsolutions.in/logos/logo.ico
-              trips:
-                - id: F1
-                  type: TRIP
-                  stops:
-                    - type: START
-                      location:
-                        descriptor:
-                          name: Shaheed Sthal(New Bus Adda)
-                          code: SHAHEED_STHAL
-                        gps: 28.686576, 77.441632
-                      id: '1'
-                    - type: INTERMEDIATE_STOP
-                      instructions:
-                        name: Stop 1
-                      location:
-                        descriptor:
-                          name: Hindon River
-                          code: HINDON_RIVER
-                        gps: 28.686176, 77.442632
-                      id: '2'
-                      parent_stop_id: '1'
-                    - type: INTERMEDIATE_STOP
-                      instructions:
-                        name: Stop 2
-                      location:
-                        descriptor:
-                          name: Arthala
-                        gps: 28.181276, 77.442332
-                      id: '3'
-                      parent_stop_id: '2'
-                    - type: INTERMEDIATE_STOP
-                      instructions:
-                        name: Stop 3
-                      location:
-                        descriptor:
-                          name: Mohan Nagar
-                        gps: 28.981276, 77.772332
-                      id: '4'
-                      parent_stop_id: '3'
-                    - type: INTERMEDIATE_STOP
-                      instructions:
-                        name: Stop 4
-                      location:
-                        descriptor:
-                          name: Shyam Park
-                        gps: 28.620976, 77.046732
-                      id: '5'
-                      parent_stop_id: '4'
-                    - type: INTERMEDIATE_STOP
-                      instructions:
-                        name: Stop 5
-                      location:
-                        descriptor:
-                          name: Major Mohit Sharma Rajendra Nagar
-                        gps: 28.120976, 77.946732
-                      id: '6'
-                      parent_stop_id: '5'
-                    - type: INTERMEDIATE_STOP
-                      instructions:
-                        name: Stop 6
-                      location:
-                        descriptor:
-                          name: Raj Bagh
-                        gps: 28.677076, 77.346632
-                      id: '7'
-                      parent_stop_id: '6'
-                    - type: INTERMEDIATE_STOP
-                      instructions:
-                        name: Stop 7
-                      location:
-                        descriptor:
-                          name: Shaheed Nagar
-                        gps: 28.617076, 77.146632
-                      id: '8'
-                      parent_stop_id: '7'
-                    - type: INTERMEDIATE_STOP
-                      instructions:
-                        name: Stop 8
-                      location:
-                        descriptor:
-                          name: Dilshad Garden
-                        gps: 28.917076, 77.146632
-                      id: '9'
-                      parent_stop_id: '8'
-                    - type: INTERMEDIATE_STOP
-                      instructions:
-                        name: Stop 9
-                      location:
-                        descriptor:
-                          name: Jhilmil
-                        gps: 28.897076, 77.146632
-                      id: '10'
-                      parent_stop_id: '9'
-                    - type: INTERMEDIATE_STOP
-                      instructions:
-                        name: Stop 10
-                      location:
-                        descriptor:
-                          name: Mansarovar Park
-                        gps: 28.117076, 77.116632
-                      id: '11'
-                      parent_stop_id: '10'
-                    - type: INTERMEDIATE_STOP
-                      instructions:
-                        name: Stop 11
-                      location:
-                        descriptor:
-                          name: Shahdara
-                        gps: 28.127076, 77.416632
-                      id: '12'
-                      parent_stop_id: '11'
-                    - type: INTERMEDIATE_STOP
-                      instructions:
-                        name: Stop 12
-                      location:
-                        descriptor:
-                          name: Welcome
-                        gps: 28.217076, 77.216632
-                      id: '13'
-                      parent_stop_id: '12'
-                    - type: INTERMEDIATE_STOP
-                      instructions:
-                        name: Stop 13
-                      location:
-                        descriptor:
-                          name: Seelampur
-                        gps: 28.327076, 77.416632
-                      id: '14'
-                      parent_stop_id: '13'
-                    - type: INTERMEDIATE_STOP
-                      instructions:
-                        name: Stop 14
-                      location:
-                        descriptor:
-                          name: Shastri Park
-                        gps: 28.427076, 77.446632
-                      id: '15'
-                      parent_stop_id: '14'
-                    - type: TRANSIT_STOP
-                      instructions:
-                        name: Stop 15
-                        short_desc: Please Change here for Yellow Line
-                      location:
-                        descriptor:
-                          name: Kashmere Gate
-                        gps: 28.738426, 77.139922
-                      id: '16'
-                      parent_stop_id: '15'
-                    - type: INTERMEDIATE_STOP
-                      instructions:
-                        name: Stop 16
-                      location:
-                        descriptor:
-                          name: Civil Lines
-                        gps: 28.627076, 77.646632
-                      id: '17'
-                      parent_stop_id: '16'
-                    - type: INTERMEDIATE_STOP
-                      instructions:
-                        name: Stop 17
-                      location:
-                        descriptor:
-                          name: Vidhan Sabha
-                        gps: 28.727076, 77.746632
-                      id: '18'
-                      parent_stop_id: '17'
-                    - type: INTERMEDIATE_STOP
-                      instructions:
-                        name: Stop 18
-                      location:
-                        descriptor:
-                          name: Vishwavidyalaya
-                        gps: 28.827076, 77.846632
-                      id: '19'
-                      parent_stop_id: '18'
-                    - type: INTERMEDIATE_STOP
-                      instructions:
-                        name: Stop 19
-                      location:
-                        descriptor:
-                          name: Guru Tegh Bahadur Nagar
-                        gps: 28.927076, 77.946632
-                      id: '20'
-                      parent_stop_id: '19'
-                    - type: INTERMEDIATE_STOP
-                      instructions:
-                        name: Stop 20
-                      location:
-                        descriptor:
-                          name: Model Town
-                        gps: 28.217076, 77.496632
-                      id: '21'
-                      parent_stop_id: '20'
-                    - type: END
-                      location:
-                        descriptor:
-                          name: Azadpur
-                          code: AZADPUR
-                        gps: 28.707358, 77.180910
-                      id: '22'
-                      parent_stop_id: '21'
-                  vehicle:
-                    category: METRO
-                - id: F2
-                  type: TRIP
-                  stops:
-                    - type: START
-                      location:
-                        descriptor:
-                          name: Shaheed Sthal(New Bus Adda)
-                          code: SHAHEED_STHAL
-                        gps: 28.686576, 77.441632
-                      id: '1'
-                    - type: TRANSIT_STOP
-                      instructions:
-                        short_desc: Please Change here for Yellow Line
-                      location:
-                        descriptor:
-                          name: Kashmere Gate
-                        gps: 28.738426, 77.139922
-                      id: '2'
-                      parent_stop_id: '1'
-                    - type: END
-                      location:
-                        descriptor:
-                          name: Azadpur
-                          code: AZADPUR
-                        gps: 28.707358, 77.180910
-                      id: '3'
-                      parent_stop_id: '2'
-                  tags:
-                    - descriptor:
-                        code: TRIP_DETAILS
-                      list:
-                        - descriptor:
-                            code: AVAILABLE_TRIPS
-                          value: '30'
-                        - descriptor:
-                            code: UTILIZED_TRIPS
-                          value: '0'
-                  vehicle:
-                    category: METRO
-              metro_items:
-                - id: ITEM_ID_1_METRO
-                  category_ids:
-                    - C1
-                  descriptor:
-                    name: Single Journey Ticket
-                    code: SJT
-                  price:
-                    currency: INR
-                    value: '60'
-                  quantity:
-                    maximum:
-                      count: 6
-                    minimum:
-                      count: 1
-                  fulfillment_ids:
-                    - F1
-                  time:
-                    label: Validity
-                    duration: PT2D
-            dict:
-              bpp_uri: ../../mobility.yaml#/server/bpp_uri
-              bpp_id: ../../mobility.yaml#/security/subscriber_id
-              city_code: *ref_1
-              bap_id: *ref_2
-              bap_uri: *ref_3
-              txn_id: *ref_4
-              msg_id:
-                operation:
-                  type: GENERATE_UUID
-                  input:
-                    value: req_body.context.message_id
-              timestamp:
-                operation:
-                  type: GENERATE_TIMESTAMP
-              country: *ref_5
-              domain: *ref_6
-              transaction_id: *ref_7
-              message_id:
-                operation:
-                  type: READ
-                  input:
-                    value: req_body.context.message_id
+        payload: *ref_8
       intracity-station-code-2:
         condition:
           operation:
@@ -2126,10 +2189,10 @@ path:
             dict:
               bpp_uri: ../../mobility.yaml#/server/bpp_uri
               bpp_id: ../../mobility.yaml#/security/subscriber_id
-              city_code: *ref_8
-              bap_id: *ref_9
-              bap_uri: *ref_10
-              txn_id: *ref_11
+              city_code: *ref_9
+              bap_id: *ref_10
+              bap_uri: *ref_11
+              txn_id: *ref_12
               msg_id:
                 operation:
                   type: GENERATE_UUID
@@ -2138,9 +2201,9 @@ path:
               timestamp:
                 operation:
                   type: GENERATE_TIMESTAMP
-              country: *ref_12
-              domain: *ref_13
-              transaction_id: *ref_14
+              country: *ref_13
+              domain: *ref_14
+              transaction_id: *ref_15
               message_id:
                 operation:
                   type: READ
@@ -2411,10 +2474,10 @@ path:
             dict:
               bpp_uri: ../../mobility.yaml#/server/bpp_uri
               bpp_id: ../../mobility.yaml#/security/subscriber_id
-              city_code: *ref_15
-              bap_id: *ref_16
-              bap_uri: *ref_17
-              txn_id: *ref_18
+              city_code: *ref_16
+              bap_id: *ref_17
+              bap_uri: *ref_18
+              txn_id: *ref_19
               msg_id:
                 operation:
                   type: GENERATE_UUID
@@ -2423,9 +2486,9 @@ path:
               timestamp:
                 operation:
                   type: GENERATE_TIMESTAMP
-              country: *ref_19
-              domain: *ref_20
-              transaction_id: *ref_21
+              country: *ref_20
+              domain: *ref_21
+              transaction_id: *ref_22
               message_id:
                 operation:
                   type: READ
@@ -2438,7 +2501,7 @@ path:
         uri:
           $ref: ''
         delay: 300
-        payload: *ref_0
+        payload: *ref_7
       get_bus_service:
         condition:
           operation:
@@ -2579,10 +2642,10 @@ path:
             dict:
               bpp_uri: ../../mobility.yaml#/server/bpp_uri
               bpp_id: ../../mobility.yaml#/security/subscriber_id
-              city_code: *ref_15
-              bap_id: *ref_16
-              bap_uri: *ref_17
-              txn_id: *ref_18
+              city_code: *ref_16
+              bap_id: *ref_17
+              bap_uri: *ref_18
+              txn_id: *ref_19
               msg_id:
                 operation:
                   type: GENERATE_UUID
@@ -2591,9 +2654,9 @@ path:
               timestamp:
                 operation:
                   type: GENERATE_TIMESTAMP
-              country: *ref_19
-              domain: *ref_20
-              transaction_id: *ref_21
+              country: *ref_20
+              domain: *ref_21
+              transaction_id: *ref_22
               message_id:
                 operation:
                   type: READ
@@ -2606,7 +2669,7 @@ path:
         uri:
           $ref: ''
         delay: 300
-        payload: *ref_0
+        payload: *ref_7
       getfare_select:
         name: getfare_select
         condition:
@@ -3108,10 +3171,10 @@ path:
             dict:
               bpp_uri: ../../mobility.yaml#/server/bpp_uri
               bpp_id: ../../mobility.yaml#/security/subscriber_id
-              city_code: *ref_1
-              bap_id: *ref_2
-              bap_uri: *ref_3
-              txn_id: *ref_4
+              city_code: *ref_0
+              bap_id: *ref_1
+              bap_uri: *ref_2
+              txn_id: *ref_3
               msg_id:
                 operation:
                   type: GENERATE_UUID
@@ -3120,9 +3183,9 @@ path:
               timestamp:
                 operation:
                   type: GENERATE_TIMESTAMP
-              country: *ref_5
-              domain: *ref_6
-              transaction_id: *ref_7
+              country: *ref_4
+              domain: *ref_5
+              transaction_id: *ref_6
               message_id:
                 operation:
                   type: READ
@@ -3654,10 +3717,10 @@ path:
             dict:
               bpp_uri: ../../mobility.yaml#/server/bpp_uri
               bpp_id: ../../mobility.yaml#/security/subscriber_id
-              city_code: *ref_8
-              bap_id: *ref_9
-              bap_uri: *ref_10
-              txn_id: *ref_11
+              city_code: *ref_9
+              bap_id: *ref_10
+              bap_uri: *ref_11
+              txn_id: *ref_12
               msg_id:
                 operation:
                   type: GENERATE_UUID
@@ -3666,9 +3729,9 @@ path:
               timestamp:
                 operation:
                   type: GENERATE_TIMESTAMP
-              country: *ref_12
-              domain: *ref_13
-              transaction_id: *ref_14
+              country: *ref_13
+              domain: *ref_14
+              transaction_id: *ref_15
               message_id:
                 operation:
                   type: READ
@@ -4200,10 +4263,10 @@ path:
             dict:
               bpp_uri: ../../mobility.yaml#/server/bpp_uri
               bpp_id: ../../mobility.yaml#/security/subscriber_id
-              city_code: *ref_8
-              bap_id: *ref_9
-              bap_uri: *ref_10
-              txn_id: *ref_11
+              city_code: *ref_9
+              bap_id: *ref_10
+              bap_uri: *ref_11
+              txn_id: *ref_12
               msg_id:
                 operation:
                   type: GENERATE_UUID
@@ -4212,9 +4275,9 @@ path:
               timestamp:
                 operation:
                   type: GENERATE_TIMESTAMP
-              country: *ref_12
-              domain: *ref_13
-              transaction_id: *ref_14
+              country: *ref_13
+              domain: *ref_14
+              transaction_id: *ref_15
               message_id:
                 operation:
                   type: READ
@@ -4400,10 +4463,10 @@ path:
             dict:
               bpp_uri: ../../mobility.yaml#/server/bpp_uri
               bpp_id: ../../mobility.yaml#/security/subscriber_id
-              city_code: *ref_15
-              bap_id: *ref_16
-              bap_uri: *ref_17
-              txn_id: *ref_18
+              city_code: *ref_16
+              bap_id: *ref_17
+              bap_uri: *ref_18
+              txn_id: *ref_19
               msg_id:
                 operation:
                   type: GENERATE_UUID
@@ -4412,9 +4475,9 @@ path:
               timestamp:
                 operation:
                   type: GENERATE_TIMESTAMP
-              country: *ref_19
-              domain: *ref_20
-              transaction_id: *ref_21
+              country: *ref_20
+              domain: *ref_21
+              transaction_id: *ref_22
               message_id:
                 operation:
                   type: READ
@@ -4602,10 +4665,10 @@ path:
             dict:
               bpp_uri: ../../mobility.yaml#/server/bpp_uri
               bpp_id: ../../mobility.yaml#/security/subscriber_id
-              city_code: *ref_15
-              bap_id: *ref_16
-              bap_uri: *ref_17
-              txn_id: *ref_18
+              city_code: *ref_16
+              bap_id: *ref_17
+              bap_uri: *ref_18
+              txn_id: *ref_19
               msg_id:
                 operation:
                   type: GENERATE_UUID
@@ -4614,9 +4677,9 @@ path:
               timestamp:
                 operation:
                   type: GENERATE_TIMESTAMP
-              country: *ref_19
-              domain: *ref_20
-              transaction_id: *ref_21
+              country: *ref_20
+              domain: *ref_21
+              transaction_id: *ref_22
               message_id:
                 operation:
                   type: READ
@@ -4634,7 +4697,7 @@ path:
         uri:
           $ref: ''
         delay: 300
-        payload: *ref_0
+        payload: *ref_7
       confirm_ticket_metro:
         condition:
           operation:
@@ -5181,10 +5244,10 @@ path:
             dict:
               bpp_uri: ../../mobility.yaml#/server/bpp_uri
               bpp_id: ../../mobility.yaml#/security/subscriber_id
-              city_code: *ref_1
-              bap_id: *ref_2
-              bap_uri: *ref_3
-              txn_id: *ref_4
+              city_code: *ref_0
+              bap_id: *ref_1
+              bap_uri: *ref_2
+              txn_id: *ref_3
               msg_id:
                 operation:
                   type: GENERATE_UUID
@@ -5193,9 +5256,9 @@ path:
               timestamp:
                 operation:
                   type: GENERATE_TIMESTAMP
-              country: *ref_5
-              domain: *ref_6
-              transaction_id: *ref_7
+              country: *ref_4
+              domain: *ref_5
+              transaction_id: *ref_6
               message_id:
                 operation:
                   type: READ
@@ -5747,10 +5810,10 @@ path:
             dict:
               bpp_uri: ../../mobility.yaml#/server/bpp_uri
               bpp_id: ../../mobility.yaml#/security/subscriber_id
-              city_code: *ref_8
-              bap_id: *ref_9
-              bap_uri: *ref_10
-              txn_id: *ref_11
+              city_code: *ref_9
+              bap_id: *ref_10
+              bap_uri: *ref_11
+              txn_id: *ref_12
               msg_id:
                 operation:
                   type: GENERATE_UUID
@@ -5759,9 +5822,9 @@ path:
               timestamp:
                 operation:
                   type: GENERATE_TIMESTAMP
-              country: *ref_12
-              domain: *ref_13
-              transaction_id: *ref_14
+              country: *ref_13
+              domain: *ref_14
+              transaction_id: *ref_15
               message_id:
                 operation:
                   type: READ
@@ -5944,10 +6007,10 @@ path:
             dict:
               bpp_uri: ../../mobility.yaml#/server/bpp_uri
               bpp_id: ../../mobility.yaml#/security/subscriber_id
-              city_code: *ref_15
-              bap_id: *ref_16
-              bap_uri: *ref_17
-              txn_id: *ref_18
+              city_code: *ref_16
+              bap_id: *ref_17
+              bap_uri: *ref_18
+              txn_id: *ref_19
               msg_id:
                 operation:
                   type: GENERATE_UUID
@@ -5956,9 +6019,9 @@ path:
               timestamp:
                 operation:
                   type: GENERATE_TIMESTAMP
-              country: *ref_19
-              domain: *ref_20
-              transaction_id: *ref_21
+              country: *ref_20
+              domain: *ref_21
+              transaction_id: *ref_22
               message_id:
                 operation:
                   type: READ
@@ -5971,7 +6034,7 @@ path:
         uri:
           $ref: ''
         delay: 300
-        payload: *ref_0
+        payload: *ref_7
       metro:
         condition:
           operation:
@@ -6518,10 +6581,10 @@ path:
             dict:
               bpp_uri: ../../mobility.yaml#/server/bpp_uri
               bpp_id: ../../mobility.yaml#/security/subscriber_id
-              city_code: *ref_1
-              bap_id: *ref_2
-              bap_uri: *ref_3
-              txn_id: *ref_4
+              city_code: *ref_0
+              bap_id: *ref_1
+              bap_uri: *ref_2
+              txn_id: *ref_3
               msg_id:
                 operation:
                   type: GENERATE_UUID
@@ -6530,9 +6593,9 @@ path:
               timestamp:
                 operation:
                   type: GENERATE_TIMESTAMP
-              country: *ref_5
-              domain: *ref_6
-              transaction_id: *ref_7
+              country: *ref_4
+              domain: *ref_5
+              transaction_id: *ref_6
               message_id:
                 operation:
                   type: READ
