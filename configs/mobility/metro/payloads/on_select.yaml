@@ -1,6 +1,6 @@
 context:
   transaction_id: '{{transaction_id}}'
-  action: on_init
+  action: on_select
   timestamp: '{{timestamp}}'
   message_id: '{{message_id}}'
 metro_items:
