@@ -38,3 +38,7 @@ path:
   status:
     callbacks:
       $ref: ./status.yaml
+
+  cancel:
+    callbacks:
+      $ref: ./cancel.yaml

@@ -1,6 +1,6 @@
 template:
     data:
-      $ref: "../payloads/on_cancel.yaml"
+      $ref: "../payloads/on_cancel_soft.yaml"
     dict:
       bpp_uri: ../../mobility.yaml#/server/bpp_uri
       bpp_id: ../../mobility.yaml#/security/subscriber_id

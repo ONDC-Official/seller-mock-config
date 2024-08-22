@@ -5294,7 +5294,7 @@ path:
         uri:
           $ref: ''
         delay: 300
-        payload:
+        payload: &ref_23
           template:
             data:
               context:
@@ -7147,3 +7147,133 @@ path:
                   type: READ
                   input:
                     value: req_body.context.message_id
+  cancel:
+    callbacks:
+      default:
+        callback: on_cancel
+        uri:
+          $ref: ''
+        delay: 300
+        payload: *ref_7
+      cancel_ticket_metro_soft:
+        condition:
+          operation:
+            type: AND
+            input:
+              value:
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.message.order_id
+                        - ORDER_ID_1_METRO
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.message.descriptor.code
+                        - SOFT_CANCEL
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.domain
+                        - ONDC:TRV11
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.location.city.code
+                        - std:011
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.version
+                        - 2.0.0
+        callback: on_confirm
+        uri:
+          $ref: ''
+        delay: 300
+        payload: *ref_23
+      cancel_ticket_metro_confirm:
+        condition:
+          operation:
+            type: AND
+            input:
+              value:
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.message.order_id
+                        - ORDER_ID_1_METRO
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.message.descriptor.code
+                        - CONFIRM_CANCEL
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.domain
+                        - ONDC:TRV11
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.location.city.code
+                        - std:011
+                - operation:
+                    type: EQUAL
+                    title: Check search message code
+                    input:
+                      value:
+                        - operation:
+                            type: READ
+                            input:
+                              value: req_body.context.version
+                        - 2.0.0
+        callback: on_confirm
+        uri:
+          $ref: ''
+        delay: 300
+        payload: *ref_23
