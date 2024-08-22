@@ -63,12 +63,12 @@ cancel_ticket_metro_soft:
                       input:
                         value: "req_body.context.version"
                   - 2.0.0
-  callback: "on_confirm"
+  callback: "on_cancel"
   uri:
     $ref: ""
   delay: 300
   payload:
-    $ref: "./metro/template/on_confirm.yaml"
+    $ref: "./metro/template/on_cancel_soft.yaml"
 
 
 cancel_ticket_metro_confirm:
@@ -127,9 +127,9 @@ cancel_ticket_metro_confirm:
                       input:
                         value: "req_body.context.version"
                   - 2.0.0
-  callback: "on_confirm"
+  callback: "on_cancel"
   uri:
     $ref: ""
   delay: 300
   payload:
-    $ref: "./metro/template/on_confirm.yaml"
+    $ref: "./metro/template/on_cancel_confirm.yaml"
