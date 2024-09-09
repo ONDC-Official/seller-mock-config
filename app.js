@@ -32,9 +32,11 @@
       let config = await baseYMLFile(indexYamlPath)
       config = config?.configs
       if(!args){ // run all flows
+        let path= {flows:[]};
         for (const flow of config){
-          outputBuild(flow.filename,flow.path)
+          path.flows.push(flow.path.flows)
         }
+        outputBuild("build.json",path)
       }else{ // run only specific flow
         const flow = config.find((element)=>args===element.domain)
         outputBuild(flow.filename,flow.path)
