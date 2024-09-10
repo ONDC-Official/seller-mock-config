@@ -34,6 +34,7 @@
       if(!args){ // run all flows
         let path= {flows:[]};
         for (const flow of config){
+          outputBuild(flow.filename,flow.path)
           path.flows.push(flow.path.flows)
         }
         outputBuild("build.json",path)
