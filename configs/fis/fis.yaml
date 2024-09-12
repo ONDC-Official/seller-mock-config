@@ -1,3 +1,4 @@
+flows:
   - summary: Invoice seller main flow
     id: invoice-loan-seller-flow-1
     shouldDispaly: true

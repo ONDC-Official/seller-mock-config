@@ -11,6 +11,10 @@ By leveraging seller-mock-config, seller mock engine can pull latest config file
   - `build.json`  - build output
 - `app.js`  - code to convert yamls into build.js
 
+# Config Folder Structure
+There are two types of config json
+- `/build.json`  - All configs combined into one
+- `/<domainname>.json` - Contains json only specific to that domain
 
 # Steps to setup protocol servel in local environment
 
