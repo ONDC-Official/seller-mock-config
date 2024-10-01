@@ -263,8 +263,6 @@ recon_selector:
         value: "recon"
       - key: "recon_send"
         value: "recon_send"
-      - key: "NIL"
-        value: "NIL"
     errorText: "Please select a field"
     required: false
     summary: This attribute refers to whether kyc is accepted or not.
