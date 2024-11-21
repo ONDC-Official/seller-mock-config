@@ -411,7 +411,7 @@ on_recon:
     type: "text"
     errorText: "diff_value_withholding_amount is required"
     defaultValue: "100"
-    required: true
+    required: false
     summary: This attribute is diff_value_withholding_amount.
 
   - name: "diff_value_tcs"
@@ -419,7 +419,7 @@ on_recon:
     type: "text"
     errorText: "diff_value_tcs is required"
     defaultValue: "100"
-    required: true
+    required: false
     summary: This attribute is diff_value_tcs.
 
   - name: "diff_value_tds"
@@ -427,7 +427,7 @@ on_recon:
     type: "text"
     errorText: "diff_value_tds is required"
     defaultValue: "100"
-    required: true
+    required: false
     summary: This attribute is diff_value_tds.
 
 settle:
@@ -470,7 +470,7 @@ recon_send:
     type: "text"
     errorText: "withholding_amount is required"
     defaultValue: "100" 
-    required: true
+    required: false
     summary: This attribute is withholding_amount.
 
   - name: "tcs_amount"
@@ -478,7 +478,7 @@ recon_send:
     type: "text"
     errorText: "tcs_amount is required"
     defaultValue: "100" 
-    required: true
+    required: false
     summary: This attribute is tcs_amount.
 
   - name: "tds_amount"
@@ -486,7 +486,7 @@ recon_send:
     type: "text"
     errorText: "tds_amount is required"
     defaultValue: "100" 
-    required: true
+    required: false
     summary: This attribute is tds_amount.
 
   - name: "settlement_ref_no"
