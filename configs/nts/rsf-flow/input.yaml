@@ -398,13 +398,13 @@ on_recon:
     required: true
     summary: This attribute is diff_value_amount.
 
-  - name: "diff_value_commision"
-    key: "diff_value_commision"
+  - name: "diff_value_commission"
+    key: "diff_value_commission"
     type: "text"
-    errorText: "diff_value_commision is required"
+    errorText: "diff_value_commission is required"
     defaultValue: "100" 
     required: true
-    summary: This attribute is diff_value_commision.
+    summary: This attribute is diff_value_commission.
 
   - name: "diff_value_withholding_amount"
     key: "diff_value_withholding_amount"
