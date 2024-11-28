@@ -31,6 +31,7 @@ on_settle:
     defaultValue: "1238683618634"
     required: true
     summary: This attribute is reference_no.
+
   - name: "error_code"
     key: "error_code"
     type: "select"
@@ -97,9 +98,10 @@ on_settle:
         value: "503"
     required: false
     summary: This attribute is reference_no.
+
   - name: "error message"
     key: "error_message"
-    type: "select"
+    type: "text"
     required: false
     summary: This attribute is reference_no.
 
@@ -456,6 +458,20 @@ recon_send:
     defaultValue: "100" 
     required: true
     summary: This attribute is payment_id.
+
+  - name: "status"
+    key: "status"
+    type: "select"
+    defaultOptions:
+      - key: "SETTLED"
+        value: "SETTLED"
+      - key: "PENDING"
+        value: "PENDING"
+      - key: "TO_BE_INITIATED"
+        value: "TO_BE_INITIATED"
+    required: false
+    summary: This attribute is settlement status.
+
 
   - name: "settlement_amount"
     key: "settlement_amount"
