@@ -472,6 +472,13 @@ recon_send:
     required: false
     summary: This attribute is settlement status.
 
+  - name: "total_order_amount"
+    key: "total_order_amount"
+    type: "text"
+    errorText: "total_order_amount is required"
+    defaultValue: "0" 
+    required: true
+    summary: This attribute is total_order_amount.
 
   - name: "settlement_amount"
     key: "settlement_amount"
