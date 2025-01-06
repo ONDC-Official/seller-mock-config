@@ -1,0 +1,356 @@
+issue:
+  
+  # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
+  - name: "description_code"
+    key: "actions_description.code"
+    type: "select"
+    defaultValue: "OPEN"
+
+    defaultOptions:
+      - key: "OPEN"
+        value: "OPEN"
+      - key: "INFO_REQUESTED"
+        value: "INFO_REQUESTED"
+      - key: "INFO_PROVIDED"
+        value: "INFO_PROVIDED"
+      - key: "RESOLVED"
+        value: "RESOLVED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+    errorText: "Please select a field"
+    required: true
+    summary: This attribute is description_code.
+
+  - name: "short_desc"
+    key: "actions_description.short_desc"
+    type: "text"
+    errorText: "short_desc is required"
+    defaultValue: "OPEN"
+    required: true
+    summary: This attribute is short_desc.
+  
+  
+  - name: "actor_type"
+    key: "actor_detail.name"
+    type: "text"
+    defaultValue: "Sam Manuel"
+    required: false
+    summary: This attribute is Actor_Name.
+
+issue2:
+  - name: "id"
+    key: "id"
+    type: "text"
+    defaultValue: "0"
+
+  # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
+  - name: "description_code"
+    key: "actions_description.code"
+    type: "select"
+    defaultValue: "OPEN"
+
+    defaultOptions:
+      - key: "OPEN"
+        value: "OPEN"
+      - key: "INFO_REQUESTED"
+        value: "INFO_REQUESTED"
+      - key: "INFO_PROVIDED"
+        value: "INFO_PROVIDED"
+      - key: "RESOLVED"
+        value: "RESOLVED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+    errorText: "Please select a field"
+    required: true
+    summary: This attribute is description_code.
+
+  - name: "short_desc"
+    key: "actions_description.short_desc"
+    type: "text"
+    errorText: "short_desc is required"
+    defaultValue: "OPEN"
+    required: true
+    summary: This attribute is short_desc.
+  
+  - name: "actor_type"
+    key: "actor_detail.name"
+    type: "text"
+    defaultValue: "Sam Manuel"
+    required: false
+    summary: This attribute is Actor_Name.
+  
+  - name: "actor_name"
+    key: "actor_detail.name"
+    type: "text"
+    defaultValue: "Sam Manuel"
+    required: false
+    summary: This attribute is Actor_Name.
+  
+issue3:
+  - name: "id"
+    key: "id"
+    type: "text"
+    defaultValue: "0"
+
+  # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
+  - name: "description_code"
+    key: "actions_description.code"
+    type: "select"
+    defaultValue: "OPEN"
+
+    defaultOptions:
+      - key: "OPEN"
+        value: "OPEN"
+      - key: "INFO_REQUESTED"
+        value: "INFO_REQUESTED"
+      - key: "INFO_PROVIDED"
+        value: "INFO_PROVIDED"
+      - key: "RESOLVED"
+        value: "RESOLVED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+    errorText: "Please select a field"
+    required: true
+    summary: This attribute is description_code.
+
+  - name: "short_desc"
+    key: "actions_description.short_desc"
+    type: "text"
+    errorText: "short_desc is required"
+    defaultValue: "OPEN"
+    required: true
+    summary: This attribute is short_desc.
+  
+  - name: "actor_type"
+    key: "actor_detail.name"
+    type: "text"
+    defaultValue: "Sam Manuel"
+    required: false
+    summary: This attribute is Actor_Name.
+  
+  - name: "actor_name"
+    key: "actor_detail.name"
+    type: "text"
+    defaultValue: "Sam Manuel"
+    required: false
+    summary: This attribute is Actor_Name.
+
+issue4:
+  - name: "id"
+    key: "id"
+    type: "text"
+    defaultValue: "0"
+
+  # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
+  - name: "description_code"
+    key: "actions_description.code"
+    type: "select"
+    defaultValue: "OPEN"
+
+    defaultOptions:
+      - key: "OPEN"
+        value: "OPEN"
+      - key: "INFO_REQUESTED"
+        value: "INFO_REQUESTED"
+      - key: "INFO_PROVIDED"
+        value: "INFO_PROVIDED"
+      - key: "RESOLVED"
+        value: "RESOLVED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+    errorText: "Please select a field"
+    required: true
+    summary: This attribute is description_code.
+
+  - name: "short_desc"
+    key: "actions_description.short_desc"
+    type: "text"
+    errorText: "short_desc is required"
+    defaultValue: "OPEN"
+    required: true
+    summary: This attribute is short_desc.
+  
+  - name: "actor_type"
+    key: "actor_detail.name"
+    type: "text"
+    defaultValue: "Sam Manuel"
+    required: false
+    summary: This attribute is Actor_Name.
+  
+  - name: "actor_name"  
+
+issue5:
+  - name: "id"
+    key: "id"
+    type: "text"
+    defaultValue: "0"
+
+  # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
+  - name: "description_code"
+    key: "actions_description.code"
+    type: "select"
+    defaultValue: "OPEN"
+
+    defaultOptions:
+      - key: "OPEN"
+        value: "OPEN"
+      - key: "INFO_REQUESTED"
+        value: "INFO_REQUESTED"
+      - key: "INFO_PROVIDED"
+        value: "INFO_PROVIDED"
+      - key: "RESOLVED"
+        value: "RESOLVED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+    errorText: "Please select a field"
+    required: true
+    summary: This attribute is description_code.
+
+  - name: "short_desc"
+    key: "actions_description.short_desc"
+    type: "text"
+    errorText: "short_desc is required"
+    defaultValue: "OPEN"
+    required: true
+    summary: This attribute is short_desc.
+  
+  - name: "actor_type"
+    key: "actor_detail.name"
+    type: "text"
+    defaultValue: "Sam Manuel"
+    required: false
+    summary: This attribute is Actor_Name.
+  
+  - name: "actor_name"
+
+issue6:
+  - name: "id"
+    key: "id"
+    type: "text"
+    defaultValue: "0"
+
+  # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
+  - name: "description_code"
+    key: "actions_description.code"
+    type: "select"
+    defaultValue: "OPEN"
+
+    defaultOptions:
+      - key: "OPEN"
+        value: "OPEN"
+      - key: "INFO_REQUESTED"
+        value: "INFO_REQUESTED"
+      - key: "INFO_PROVIDED"
+        value: "INFO_PROVIDED"
+      - key: "RESOLVED"
+        value: "RESOLVED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+    errorText: "Please select a field"
+    required: true
+    summary: This attribute is description_code.
+
+  - name: "short_desc"
+    key: "actions_description.short_desc"
+    type: "text"
+    errorText: "short_desc is required"
+    defaultValue: "OPEN"
+    required: true
+    summary: This attribute is short_desc.
+  
+  - name: "actor_type"
+    key: "actor_detail.name"
+    type: "text"
+    defaultValue: "Sam Manuel"
+    required: false
+    summary: This attribute is Actor_Name.
+  
+  - name: "actor_name"
+
+issue7:
+  - name: "id"
+    key: "id"
+    type: "text"
+    defaultValue: "0"
+
+  # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
+  - name: "description_code"
+    key: "actions_description.code"
+    type: "select"
+    defaultValue: "OPEN"
+
+    defaultOptions:
+      - key: "OPEN"
+        value: "OPEN"
+      - key: "INFO_REQUESTED"
+        value: "INFO_REQUESTED"
+      - key: "INFO_PROVIDED"
+        value: "INFO_PROVIDED"
+      - key: "RESOLVED"
+        value: "RESOLVED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+    errorText: "Please select a field"
+    required: true
+    summary: This attribute is description_code.
+
+  - name: "short_desc"
+    key: "actions_description.short_desc"
+    type: "text"
+    errorText: "short_desc is required"
+    defaultValue: "OPEN"
+    required: true
+    summary: This attribute is short_desc.
+  
+  - name: "actor_type"
+    key: "actor_detail.name"
+    type: "text"
+    defaultValue: "Sam Manuel"
+    required: false
+    summary: This attribute is Actor_Name.
+  
+  - name: "actor_name"
+
+issue8:
+  - name: "id"
+    key: "id"
+    type: "text"
+    defaultValue: "0"
+
+  # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
+  - name: "description_code"
+    key: "actions_description.code"
+    type: "select"
+    defaultValue: "OPEN"
+
+    defaultOptions:
+      - key: "OPEN"
+        value: "OPEN"
+      - key: "INFO_REQUESTED"
+        value: "INFO_REQUESTED"
+      - key: "INFO_PROVIDED"
+        value: "INFO_PROVIDED"
+      - key: "RESOLVED"
+        value: "RESOLVED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+    errorText: "Please select a field"
+    required: true
+    summary: This attribute is description_code.
+
+  - name: "short_desc"
+    key: "actions_description.short_desc"
+    type: "text"
+    errorText: "short_desc is required"
+    defaultValue: "OPEN"
+    required: true
+    summary: This attribute is short_desc.
+  
+  - name: "actor_type"
+    key: "actor_detail.name"
+    type: "text"
+    defaultValue: "Sam Manuel"
+    required: false
+    summary: This attribute is Actor_Name.
+  
+  - name: "actor_name"
