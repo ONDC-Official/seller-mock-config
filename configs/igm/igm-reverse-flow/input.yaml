@@ -72,12 +72,6 @@ issue2:
     required: true
     summary: This attribute is short_desc.
   
-  - name: "actor_type"
-    key: "actor_detail.name"
-    type: "text"
-    defaultValue: "Sam Manuel"
-    required: false
-    summary: This attribute is Actor_Name.
   
   - name: "actor_name"
     key: "actor_detail.name"
@@ -121,12 +115,6 @@ issue3:
     required: true
     summary: This attribute is short_desc.
   
-  - name: "actor_type"
-    key: "actor_detail.name"
-    type: "text"
-    defaultValue: "Sam Manuel"
-    required: false
-    summary: This attribute is Actor_Name.
   
   - name: "actor_name"
     key: "actor_detail.name"
@@ -170,14 +158,13 @@ issue4:
     required: true
     summary: This attribute is short_desc.
   
-  - name: "actor_type"
+  
+  - name: "actor_name"
     key: "actor_detail.name"
     type: "text"
     defaultValue: "Sam Manuel"
     required: false
     summary: This attribute is Actor_Name.
-  
-  - name: "actor_name"  
 
 issue5:
   - name: "id"
@@ -214,14 +201,12 @@ issue5:
     required: true
     summary: This attribute is short_desc.
   
-  - name: "actor_type"
+  - name: "actor_name"
     key: "actor_detail.name"
     type: "text"
     defaultValue: "Sam Manuel"
     required: false
     summary: This attribute is Actor_Name.
-  
-  - name: "actor_name"
 
 issue6:
   - name: "id"
@@ -258,14 +243,12 @@ issue6:
     required: true
     summary: This attribute is short_desc.
   
-  - name: "actor_type"
+  - name: "actor_name"
     key: "actor_detail.name"
     type: "text"
     defaultValue: "Sam Manuel"
     required: false
     summary: This attribute is Actor_Name.
-  
-  - name: "actor_name"
 
 issue7:
   - name: "id"
@@ -302,14 +285,12 @@ issue7:
     required: true
     summary: This attribute is short_desc.
   
-  - name: "actor_type"
+  - name: "actor_name"
     key: "actor_detail.name"
     type: "text"
     defaultValue: "Sam Manuel"
     required: false
     summary: This attribute is Actor_Name.
-  
-  - name: "actor_name"
 
 issue8:
   - name: "id"
@@ -346,11 +327,9 @@ issue8:
     required: true
     summary: This attribute is short_desc.
   
-  - name: "actor_type"
+  - name: "actor_name"
     key: "actor_detail.name"
     type: "text"
     defaultValue: "Sam Manuel"
     required: false
     summary: This attribute is Actor_Name.
-  
-  - name: "actor_name"
