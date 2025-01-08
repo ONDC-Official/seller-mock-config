@@ -1,5 +1,5 @@
 on_issue:
-  - name: "id"
+  - name: "action_id"
     key: "id"
     type: "text"
     defaultValue: "0"
@@ -83,26 +83,31 @@ on_issue:
     type: "select"
     defaultValue: false
     defaultOptions:
-      - key: "true"
-        value: true
+      - key: "Proposed"
+        value: "proposed"
+      - key: "Replacement"
+        value: "replacement"
+      - key: "Refund"
+        value: "refund"
       - key: "false"
         value: false
     
   - name: "info_requested_code"
-    key: "info_requested_code"
+    key: "actions_description.name"
     type: "select"
-    defaultValue: 0
+    defaultValue: false
     defaultOptions:
       - key: "INFO0001"
-        value: 0
+        value: "INFO0001"
       - key: "INFO0002"
-        value: 1
+        value: "INFO0002"
       - key: "INFO0003"
-        value: 2
-
+        value: "INFO0003"
+      - key: "false"
+        value: false
 
 on_issue2:
-  - name: "id"
+  - name: "action_id"
     key: "id"
     type: "text"
     defaultValue: "0"
@@ -186,26 +191,31 @@ on_issue2:
     type: "select"
     defaultValue: false
     defaultOptions:
-      - key: "true"
-        value: true
+      - key: "Proposed"
+        value: "proposed"
+      - key: "Replacement"
+        value: "replacement"
+      - key: "Refund"
+        value: "refund"
       - key: "false"
         value: false
 
   - name: "info_requested_code"
-    key: "info_requested_code"
+    key: "actions_description.name"
     type: "select"
-    defaultValue: "INFO0001"
+    defaultValue: false
     defaultOptions:
       - key: "INFO0001"
-        value: 0
+        value: "INFO0001"
       - key: "INFO0002"
-        value: 1
+        value: "INFO0002"
       - key: "INFO0003"
-        value: 2
-    
-
+        value: "INFO0003"
+      - key: "false"
+        value: false
+   
 on_issue3:
-  - name: "id"
+  - name: "action_id"
     key: "id"
     type: "text"
     defaultValue: "0"
@@ -291,25 +301,31 @@ on_issue3:
     type: "select"
     defaultValue: false
     defaultOptions:
-      - key: "true"
-        value: true"
+      - key: "Proposed"
+        value: "proposed"
+      - key: "Replacement"
+        value: "replacement"
+      - key: "Refund"
+        value: "refund"
       - key: "false"
         value: false
 
   - name: "info_requested_code"
-    key: "info_requested_code"
+    key: "actions_description.name"
     type: "select"
-    defaultValue: "INFO0001"
+    defaultValue: false
     defaultOptions:
       - key: "INFO0001"
-        value: 0
+        value: "INFO0001"
       - key: "INFO0002"
-        value: 1
+        value: "INFO0002"
       - key: "INFO0003"
-        value: 2
+        value: "INFO0003"
+      - key: "false"
+        value: false
 
 on_issue4:
-  - name: "id"
+  - name: "action_id"
     key: "id"
     type: "text"
     defaultValue: "0"
@@ -393,25 +409,31 @@ on_issue4:
     type: "select"
     defaultValue: false
     defaultOptions:
-      - key: "true"
-        value: true
+      - key: "Proposed"
+        value: "proposed"
+      - key: "Replacement"
+        value: "replacement"
+      - key: "Refund"
+        value: "refund"
       - key: "false"
         value: false
 
   - name: "info_requested_code"
-    key: "info_requested_code"
+    key: "actions_description.name"
     type: "select"
-    defaultValue: "INFO0001"
+    defaultValue: false
     defaultOptions:
       - key: "INFO0001"
-        value: 0
+        value: "INFO0001"
       - key: "INFO0002"
-        value: 1
+        value: "INFO0002"
       - key: "INFO0003"
-        value: 2
+        value: "INFO0003"
+      - key: "false"
+        value: false
 
 on_issue5:
-  - name: "id"
+  - name: "action_id"
     key: "id"
     type: "text"
     defaultValue: "0"
@@ -496,25 +518,31 @@ on_issue5:
     type: "select"
     defaultValue: false
     defaultOptions:
-      - key: "true"
-        value: true
+      - key: "Proposed"
+        value: "proposed"
+      - key: "Replacement"
+        value: "replacement"
+      - key: "Refund"
+        value: "refund"
       - key: "false"
         value: false
 
   - name: "info_requested_code"
-    key: "info_requested_code"
+    key: "actions_description.name"
     type: "select"
-    defaultValue: "INFO0001"
+    defaultValue: false
     defaultOptions:
       - key: "INFO0001"
-        value: 0
+        value: "INFO0001"
       - key: "INFO0002"
-        value: 1
+        value: "INFO0002"
       - key: "INFO0003"
-        value: 2
+        value: "INFO0003"
+      - key: "false"
+        value: false
 
 on_issue6:
-  - name: "id"
+  - name: "action_id"
     key: "id"
     type: "text"
     defaultValue: "0"
@@ -598,25 +626,31 @@ on_issue6:
     type: "select"
     defaultValue: false
     defaultOptions:
-      - key: "true"
-        value: true
+      - key: "Proposed"
+        value: "proposed"
+      - key: "Replacement"
+        value: "replacement"
+      - key: "Refund"
+        value: "refund"
       - key: "false"
         value: false
   
   - name: "info_requested_code"
-    key: "info_requested_code"
+    key: "actions_description.name"
     type: "select"
-    defaultValue: "INFO0001"
+    defaultValue: false
     defaultOptions:
       - key: "INFO0001"
-        value: 0
+        value: "INFO0001"
       - key: "INFO0002"
-        value: 1
+        value: "INFO0002"
       - key: "INFO0003"
-        value: 2
+        value: "INFO0003"
+      - key: "false"
+        value: false
 
 on_issue7:
-  - name: "id"
+  - name: "action_id"
     key: "id"
     type: "text"
     defaultValue: "0"
@@ -701,25 +735,31 @@ on_issue7:
     type: "select"
     defaultValue: false
     defaultOptions:
-      - key: "true"
-        value: true
+      - key: "Proposed"
+        value: "proposed"
+      - key: "Replacement"
+        value: "replacement"
+      - key: "Refund"
+        value: "refund"
       - key: "false"
         value: false
 
   - name: "info_requested_code"
-    key: "info_requested_code"
+    key: "actions_description.name"
     type: "select"
-    defaultValue: "INFO0001"
+    defaultValue: false
     defaultOptions:
       - key: "INFO0001"
-        value: 0
+        value: "INFO0001"
       - key: "INFO0002"
-        value: 1
+        value: "INFO0002"
       - key: "INFO0003"
-        value: 2
+        value: "INFO0003"
+      - key: "false"
+        value: false
 
 on_issue8:
-  - name: "id"
+  - name: "action_id"
     key: "id"
     type: "text"
     defaultValue: "0"
@@ -804,25 +844,31 @@ on_issue8:
     type: "select"
     defaultValue: false
     defaultOptions:
-      - key: "true"
-        value: true
+      - key: "Proposed"
+        value: "proposed"
+      - key: "Replacement"
+        value: "replacement"
+      - key: "Refund"
+        value: "refund"
       - key: "false"
         value: false
   
   - name: "info_requested_code"
-    key: "info_requested_code"
+    key: "actions_description.name"
     type: "select"
-    defaultValue: "INFO0001"
+    defaultValue: false
     defaultOptions:
       - key: "INFO0001"
-        value: 0
+        value: "INFO0001"
       - key: "INFO0002"
-        value: 1
+        value: "INFO0002"
       - key: "INFO0003"
-        value: 2
+        value: "INFO0003"
+      - key: "false"
+        value: false
 
 on_issue9:
-  - name: "id"
+  - name: "action_id"
     key: "id"
     type: "text"
     defaultValue: "0"
@@ -906,25 +952,31 @@ on_issue9:
     type: "select"
     defaultValue: false
     defaultOptions:
-      - key: "true"
-        value: true
+      - key: "Proposed"
+        value: "proposed"
+      - key: "Replacement"
+        value: "replacement"
+      - key: "Refund"
+        value: "refund"
       - key: "false"
         value: false
 
   - name: "info_requested_code"
-    key: "info_requested_code"
+    key: "actions_description.name"
     type: "select"
-    defaultValue: "INFO0001"
+    defaultValue: false
     defaultOptions:
       - key: "INFO0001"
-        value: 0
+        value: "INFO0001"
       - key: "INFO0002"
-        value: 1
+        value: "INFO0002"
       - key: "INFO0003"
-        value: 2
+        value: "INFO0003"
+      - key: "false"
+        value: false
 
 on_issue10:
-  - name: "id"
+  - name: "action_id"
     key: "id"
     type: "text"
     defaultValue: "0"
@@ -1009,19 +1061,26 @@ on_issue10:
     type: "select"
     defaultValue: false
     defaultOptions:
-      - key: "true"
-        value: true
+      - key: "Proposed"
+        value: "proposed"
+      - key: "Replacement"
+        value: "replacement"
+      - key: "Refund"
+        value: "refund"
       - key: "false"
         value: false
 
   - name: "info_requested_code"
-    key: "info_requested_code"
+    key: "actions_description.name"
     type: "select"
-    defaultValue: "INFO0001"
+    defaultValue: false
     defaultOptions:
       - key: "INFO0001"
-        value: 0
+        value: "INFO0001"
       - key: "INFO0002"
-        value: 1
+        value: "INFO0002"
       - key: "INFO0003"
-        value: 2
+        value: "INFO0003"
+      - key: "false"
+        value: false
+      

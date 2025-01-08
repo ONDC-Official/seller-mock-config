@@ -37,8 +37,33 @@ issue:
     required: false
     summary: This attribute is Actor_Name.
 
+  - name: "item_ref_id"
+    key: "ref.ITEM"
+    type: "text"
+    errorText: "item_ref_id is required"
+    required: true
+    summary: This attribute is item_ref_id.
+  
+  - name: "provider_ref_id"
+    key: "ref.PROVIDER"
+    type: "text"
+
+    summary: This attribute is provider_ref_id.
+
+  - name: "fulfillment_ref_id"
+    key: "ref.FULFILLMENt"
+    type: "text"
+
+    summary: This attribute is fulfillment_ref_id.
+  
+  - name: "transaction_ref_id"
+    key: "ref.TRANSACTION"
+    type: "text"
+
+    summary: This attribute is transaction_ref_id.
+
 issue2:
-  - name: "id"
+  - name: "action_id"
     key: "id"
     type: "text"
     defaultValue: "0"
@@ -81,7 +106,7 @@ issue2:
     summary: This attribute is Actor_Name.
   
 issue3:
-  - name: "id"
+  - name: "action_id"
     key: "id"
     type: "text"
     defaultValue: "0"
@@ -124,7 +149,7 @@ issue3:
     summary: This attribute is Actor_Name.
 
 issue4:
-  - name: "id"
+  - name: "action_id"
     key: "id"
     type: "text"
     defaultValue: "0"
@@ -167,7 +192,7 @@ issue4:
     summary: This attribute is Actor_Name.
 
 issue5:
-  - name: "id"
+  - name: "action_id"
     key: "id"
     type: "text"
     defaultValue: "0"
@@ -209,7 +234,7 @@ issue5:
     summary: This attribute is Actor_Name.
 
 issue6:
-  - name: "id"
+  - name: "action_id"
     key: "id"
     type: "text"
     defaultValue: "0"
@@ -251,7 +276,7 @@ issue6:
     summary: This attribute is Actor_Name.
 
 issue7:
-  - name: "id"
+  - name: "action_id"
     key: "id"
     type: "text"
     defaultValue: "0"
@@ -293,7 +318,7 @@ issue7:
     summary: This attribute is Actor_Name.
 
 issue8:
-  - name: "id"
+  - name: "action_id"
     key: "id"
     type: "text"
     defaultValue: "0"
