@@ -1,5 +1,9 @@
 issue:
-  
+  - name: "action_id"
+    key: "id"
+    type: "text"
+    defaultValue: ""
+    
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
   - name: "description_code"
     key: "actions_description.code"
@@ -66,7 +70,7 @@ issue2:
   - name: "action_id"
     key: "id"
     type: "text"
-    defaultValue: "0"
+    defaultValue: ""
 
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
   - name: "description_code"
