@@ -16,7 +16,7 @@ default:
     </head>
 
     <body>
-      <form action="/seller-engine/form/personal-loan/old_submission/bank-account-mandate" method="POST">
+      <form action="/seller-engine/form/personal-loan/old/submission/bank-account-mandate" method="POST">
         <label for="adhrNo">Aadhaar Number </label>
         <input type="text" id="adhrNo" name="adhrNo" />
         <label for="tnc">I agree to fetch the necessary information using my Aadhaar</a></label>
