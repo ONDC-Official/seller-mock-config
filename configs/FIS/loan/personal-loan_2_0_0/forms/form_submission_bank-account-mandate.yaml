@@ -1,7 +1,7 @@
 default:
-  callback: "on_status"
+  callback: "undefined"
   uri:
     $ref: ""
   delay: 300
   payload:
-    $ref: "../template/on_status_emandate.yaml"
+    $ref: "../payloads/form_submission_bank-account-mandate.yaml"
