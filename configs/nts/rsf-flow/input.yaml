@@ -13,16 +13,41 @@ on_settle:
     key: "status"
     type: "select"
     defaultValue: "SETTLED"
-
     defaultOptions:
       - key: "SETTLED"
         value: "SETTLED"
       - key: "NOT_SETTLED"
         value: "NOT_SETTLED"
-
     errorText: "Please select a field"
     required: false
     summary: This attribute refers to status of the settlement.
+
+  - name: "interparticipant status"
+    key: "inter_participant_status"
+    type: "select"
+    defaultValue: "SETTLED"
+    defaultOptions:
+      - key: "SETTLED"
+        value: "SETTLED"
+      - key: "NOT_SETTLED"
+        value: "NOT_SETTLED"
+    errorText: "Please select a field"
+    required: false
+    summary: This attribute refers to inter_participant.status of the settlement order.
+
+  - name: "self status"
+    key: "self_status"
+    type: "select"
+    defaultValue: "SETTLED"
+    defaultOptions:
+      - key: "SETTLED"
+        value: "SETTLED"
+      - key: "NOT_SETTLED"
+        value: "NOT_SETTLED"
+    errorText: "Please select a field"
+    required: false
+    summary: This attribute refers to self.status of the settlement orders.
+
 
   - name: "reference_no"
     key: "reference_no"
@@ -165,6 +190,34 @@ on_settle_provider:
     defaultValue: "1238683618634"
     required: yes
     summary: This attribute is provider_reference_no.
+  
+  - name: "interparticipant status"
+    key: "inter_participant_status"
+    type: "select"
+    defaultValue: "SETTLED"
+    defaultOptions:
+      - key: "SETTLED"
+        value: "SETTLED"
+      - key: "NOT_SETTLED"
+        value: "NOT_SETTLED"
+    errorText: "Please select a field"
+    required: false
+    summary: This attribute refers to inter_participant.status of the settlement order.
+
+  - name: "self status"
+    key: "self_status"
+    type: "select"
+    defaultValue: "SETTLED"
+    defaultOptions:
+      - key: "SETTLED"
+        value: "SETTLED"
+      - key: "NOT_SETTLED"
+        value: "NOT_SETTLED"
+    errorText: "Please select a field"
+    required: false
+    summary: This attribute refers to self.status of the settlement orders.
+
+
   - name: "error_code"
     key: "error_code"
     type: "select"
