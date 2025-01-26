@@ -52,12 +52,12 @@ issue:
     required: false
     summary: This attribute is Actor_Name.
 
-  - name: "item_ref_id"
-    key: "ref.ITEM"
+  - name: "order_ref_id"
+    key: "ref.ORDER"
     type: "text"
-    errorText: "item_ref_id is required"
+    errorText: "order_ref_id is required"
     required: true
-    summary: This attribute is item_ref_id.
+    summary: This attribute is order_ref_id.
   
   - name: "provider_ref_id"
     key: "ref.PROVIDER"
