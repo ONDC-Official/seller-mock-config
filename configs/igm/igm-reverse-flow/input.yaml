@@ -21,6 +21,8 @@ issue:
         value: "RESOLVED"
       - key: "PROCESSING"
         value: "PROCESSING"
+      - key: "RESOLUTION_ACCEPTED"
+        value: "RESOLUTION_ACCEPTED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -33,18 +35,6 @@ issue:
     required: true
     summary: This attribute is short_desc.
   
-  - name: "Accept_Resolution"
-    key: Resolution
-    type: "select"
-    defaultValue: false
-    defaultOptions:
-      - key: "Replacement"
-        value: "R1"
-      - key: "Refund"
-        value: "R2"
-      - key: "false"
-        value: false
-
   - name: "actor_type"
     key: "actor_detail.name"
     type: "text"
@@ -77,10 +67,6 @@ issue:
 
     summary: This attribute is transaction_ref_id.
   
-  - name: "images"
-    key: "images"
-    type: "text"
-    summary: This attribute is images
 
   - name: "description_code_category/subcategory"
     key: category
@@ -249,6 +235,8 @@ issue2:
         value: "RESOLVED"
       - key: "PROCESSING"
         value: "PROCESSING"
+      - key: "RESOLUTION_ACCEPTED"
+        value: "RESOLUTION_ACCEPTED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -449,6 +437,8 @@ issue3:
         value: "RESOLVED"
       - key: "PROCESSING"
         value: "PROCESSING"
+      - key: "RESOLUTION_ACCEPTED"
+        value: "RESOLUTION_ACCEPTED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -649,6 +639,8 @@ issue4:
         value: "RESOLVED"
       - key: "PROCESSING"
         value: "PROCESSING"
+      - key: "RESOLUTION_ACCEPTED"
+        value: "RESOLUTION_ACCEPTED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -850,6 +842,8 @@ issue5:
         value: "RESOLVED"
       - key: "PROCESSING"
         value: "PROCESSING"
+      - key: "RESOLUTION_ACCEPTED"
+        value: "RESOLUTION_ACCEPTED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -1048,6 +1042,8 @@ issue6:
         value: "RESOLVED"
       - key: "PROCESSING"
         value: "PROCESSING"
+      - key: "RESOLUTION_ACCEPTED"
+        value: "RESOLUTION_ACCEPTED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -1247,6 +1243,8 @@ issue7:
         value: "RESOLVED"
       - key: "PROCESSING"
         value: "PROCESSING"
+      - key: "RESOLUTION_ACCEPTED"
+        value: "RESOLUTION_ACCEPTED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -1446,6 +1444,8 @@ issue8:
         value: "RESOLVED"
       - key: "PROCESSING"
         value: "PROCESSING"
+      - key: "RESOLUTION_ACCEPTED"
+        value: "RESOLUTION_ACCEPTED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
