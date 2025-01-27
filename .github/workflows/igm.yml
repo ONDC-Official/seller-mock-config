@@ -1,0 +1,28 @@
+name: Trigger Pipeline for Config Updates
+
+on:
+  push:
+    paths:
+      - 'configs/igm_build.json'
+  pull_request:
+    paths:
+      - 'configs/igm_build.json'
+
+jobs:
+  config-update-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository to get access to the files
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Example: Run a script or build command based on the updated file
+      - name: Determine Updated File
+        run: |
+          echo "The following config files are updated:"
+          git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E 'configs/(igm_build\.json|nts_build\.json)' || echo "No relevant changes"
+          
+      # Add other build/deployment steps based on your requirements
+      - name: Example Build Step
+        run: echo "Performing build based on updated config..."
