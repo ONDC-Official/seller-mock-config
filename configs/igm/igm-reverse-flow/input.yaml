@@ -49,6 +49,13 @@ issue:
     required: true
     summary: This attribute is order_ref_id.
   
+  - name: "item_ref_id"
+    key: "ref.ITEM"
+    type: "text"
+    errorText: "item_ref_id is required"
+    required: false
+    summary: This attribute is item_ref_id.
+    
   - name: "provider_ref_id"
     key: "ref.PROVIDER"
     type: "text"
