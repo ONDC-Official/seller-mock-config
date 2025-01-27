@@ -66,7 +66,6 @@ on_issue:
   - name: "action_by"
     key: "action_by"
 
-    
     defaultValue: "NP1"
     required: true
     summary: This attribute is Action_by.
@@ -91,7 +90,9 @@ on_issue:
         value: "refund"
       - key: "false"
         value: false
-    
+    summary: This attribute refers which resolution to send.
+  
+  
   - name: "info_requested_code"
     key: "actions_description.name"
     type: "select"
