@@ -3,10 +3,10 @@ name: Trigger Pipeline for Config Updates
 on:
   push:
     paths:
-      - 'configs/igm_build.json'
+      - 'build/igm_build.json'
   pull_request:
     paths:
-      - 'configs/igm_build.json'
+      - 'build/igm_build.json'
 
 jobs:
   config-update-pipeline:
