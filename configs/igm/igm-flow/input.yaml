@@ -90,7 +90,7 @@ on_issue:
         value: "refund"
       - key: "false"
         value: false
-    summary: This attribute refers which resolution to send.
+    summary: This attribute refers which resoluton.
   
   
   - name: "info_requested_code"
