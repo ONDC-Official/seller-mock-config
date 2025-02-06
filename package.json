@@ -2,5 +2,9 @@
   "dependencies": {
     "js-yaml": "^4.1.0",
     "json-schema-ref-parser": "^9.0.9"
+  },
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node app igm && node app nts && node app fis && node app trv && node app"
   }
 }
