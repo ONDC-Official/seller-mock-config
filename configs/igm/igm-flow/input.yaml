@@ -270,7 +270,7 @@ on_issue3:
       - key: "OPEN"
         value: "OPEN"
       - key: "INFO_REQUESTED"
-        value: "info_code"
+        value: "INFO_REQUESTED"
       - key: "INFO_PROVIDED"
         value: "INFO_PROVIDED"
       - key: "RESOLVED"
