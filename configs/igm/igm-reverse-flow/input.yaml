@@ -25,6 +25,8 @@ issue:
         value: "CLOSED"
       - key: "RESOLUTION_ACCEPTED"
         value: "RESOLUTION_ACCEPTED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -245,6 +247,9 @@ issue2:
         value: "CLOSED"
       - key: "RESOLUTION_ACCEPTED"
         value: "RESOLUTION_ACCEPTED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
+        
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -449,6 +454,8 @@ issue3:
         value: "CLOSED"
       - key: "RESOLUTION_ACCEPTED"
         value: "RESOLUTION_ACCEPTED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -653,6 +660,8 @@ issue4:
         value: "CLOSED"
       - key: "RESOLUTION_ACCEPTED"
         value: "RESOLUTION_ACCEPTED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -858,6 +867,8 @@ issue5:
         value: "CLOSED"
       - key: "RESOLUTION_ACCEPTED"
         value: "RESOLUTION_ACCEPTED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -1060,6 +1071,8 @@ issue6:
         value: "CLOSED"
       - key: "RESOLUTION_ACCEPTED"
         value: "RESOLUTION_ACCEPTED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -1263,6 +1276,8 @@ issue7:
         value: "CLOSED"
       - key: "RESOLUTION_ACCEPTED"
         value: "RESOLUTION_ACCEPTED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -1466,6 +1481,8 @@ issue8:
         value: "CLOSED"
       - key: "RESOLUTION_ACCEPTED"
         value: "RESOLUTION_ACCEPTED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
