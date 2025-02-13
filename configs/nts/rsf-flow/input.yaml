@@ -54,7 +54,7 @@ on_settle:
     type: "text"
     errorText: "reference_no is required"
     defaultValue: "1238683618634"
-    required: true
+    required: false
     summary: This attribute is reference_no.
 
   - name: "error_code"
@@ -122,6 +122,7 @@ on_settle:
       - key: "503"
         value: "503"
     required: false
+
     summary: This attribute is reference_no.
 
   - name: "error message"
@@ -172,8 +173,9 @@ on_settle_provider:
     type: "text"
     errorText: "reference_no is required"
     defaultValue: "1238683618634"
-    required: yes
+    required: false
     summary: This attribute is reference_no.
+
   - name: "provider_status"
     key: "provider_status"
     type: "select"
@@ -186,12 +188,13 @@ on_settle_provider:
     errorText: "Please select a field"
     required: false
     summary: This attribute refers to provider_status of the settlement.
+
   - name: "provider_reference_no"
     key: "provider_reference_no"
     type: "text"
     errorText: "provider_reference_no is required"
     defaultValue: "1238683618634"
-    required: yes
+    required: false
     summary: This attribute is provider_reference_no.
   
   - name: "interparticipant status"
@@ -287,12 +290,13 @@ on_settle_provider:
         value: "70027"
       - key: "503"
         value: "503"
-    summary: This attribute is reference_no.
+    summary: This attribute is error_code.
+
   - name: "error message"
     key: "provider_error.message"
     type: "text"
     defaultValue: ""
-    summary: This attribute is reference_no.
+    summary: This attribute is error_code.
 
 on_settle_nil:
 
@@ -338,8 +342,9 @@ on_report:
     type: "text"
     errorText: "reference_no is required"
     defaultValue: "1238683618634"
-    required: true
+    required: false
     summary: This attribute is reference_no.
+
   - name: "provider_status"
     key: "provider_status"
     type: "select"
@@ -359,6 +364,7 @@ on_report:
     defaultValue: "1238683618634"
     required: false
     summary: This attribute is provider_reference_no.
+
   - name: "error_code"
     key: "error_code"
     type: "select"
@@ -424,15 +430,15 @@ on_report:
         value: "70027"
       - key: "503"
         value: "503"
-
     required: false
-    summary: This attribute is reference_no.
+    summary: This attribute is error_code.
+
   - name: "error message"
     key: "error_message"
     type: "text"
     defaultValue: ""
     required: false
-    summary: This attribute is reference_no.
+    summary: This attribute is error_message.
 
 on_recon:
   - name: "recon_accord"
