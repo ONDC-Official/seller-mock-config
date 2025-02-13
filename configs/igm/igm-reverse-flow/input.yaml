@@ -269,6 +269,21 @@ issue2:
     defaultValue: "Sam Manuel"
     required: false
     summary: This attribute is Actor_Name.
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+
   
   - name: "Accept_Resolution"
     key: Resolution
@@ -477,7 +492,21 @@ issue3:
     defaultValue: "Sam Manuel"
     required: false
     summary: This attribute is Actor_Name.
-  
+    
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+
   - name: "Accept_Resolution"
     key: Resolution
     type: "select"
@@ -684,6 +713,21 @@ issue4:
     defaultValue: "Sam Manuel"
     required: false
     summary: This attribute is Actor_Name.
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+
   
   - name: "Accept_Resolution"
     key: Resolution
@@ -891,6 +935,21 @@ issue5:
     defaultValue: "Sam Manuel"
     required: false
     summary: This attribute is Actor_Name.
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+
   
   - name: "Accept_Resolution"
     key: Resolution
@@ -1098,6 +1157,21 @@ issue6:
     defaultValue: "Sam Manuel"
     required: false
     summary: This attribute is Actor_Name.
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+
   
   - name: "Accept_Resolution"
     key: Resolution
@@ -1305,6 +1379,21 @@ issue7:
     defaultValue: "Sam Manuel"
     required: false
     summary: This attribute is Actor_Name.
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+
   
   - name: "Accept_Resolution"
     key: Resolution
@@ -1512,6 +1601,21 @@ issue9:
     defaultValue: "Sam Manuel"
     required: false
     summary: This attribute is Actor_Name.
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+
   
   - name: "Accept_Resolution"
     key: Resolution
