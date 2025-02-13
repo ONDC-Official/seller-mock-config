@@ -28,8 +28,6 @@ on_issue:
         value: "RESOLVED"
       - key: "PROCESSING"
         value: "PROCESSING"
-      - key: "CLOSED"
-        value: "CLOSED"
       
 
     errorText: "Please select a field"
@@ -141,8 +139,6 @@ on_issue2:
         value: "RESOLVED"
       - key: "PROCESSING"
         value: "PROCESSING"
-      - key: "CLOSED"
-        value: "CLOSED"
       
 
     errorText: "Please select a field"
@@ -253,8 +249,6 @@ on_issue3:
         value: "RESOLVED"
       - key: "PROCESSING"
         value: "PROCESSING"
-      - key: "CLOSED"
-        value: "CLOSED"
       
 
     errorText: "Please select a field"
@@ -367,8 +361,6 @@ on_issue4:
         value: "RESOLVED"
       - key: "PROCESSING"
         value: "PROCESSING"
-      - key: "CLOSED"
-        value: "CLOSED"
       
 
     errorText: "Please select a field"
@@ -479,8 +471,6 @@ on_issue5:
         value: "RESOLVED"
       - key: "PROCESSING"
         value: "PROCESSING"
-      - key: "CLOSED"
-        value: "CLOSED"
       
 
     errorText: "Please select a field"
@@ -592,8 +582,6 @@ on_issue6:
         value: "RESOLVED"
       - key: "PROCESSING"
         value: "PROCESSING"
-      - key: "CLOSED"
-        value: "CLOSED"
       
 
     errorText: "Please select a field"
@@ -704,8 +692,6 @@ on_issue7:
         value: "RESOLVED"
       - key: "PROCESSING"
         value: "PROCESSING"
-      - key: "CLOSED"
-        value: "CLOSED"
       
 
     errorText: "Please select a field"
@@ -817,8 +803,6 @@ on_issue8:
         value: "RESOLVED"
       - key: "PROCESSING"
         value: "PROCESSING"
-      - key: "CLOSED"
-        value: "CLOSED"
       
 
     errorText: "Please select a field"
@@ -930,8 +914,6 @@ on_issue9:
         value: "RESOLVED"
       - key: "PROCESSING"
         value: "PROCESSING"
-      - key: "CLOSED"
-        value: "CLOSED"
       
 
     errorText: "Please select a field"
@@ -1042,8 +1024,6 @@ on_issue10:
         value: "RESOLVED"
       - key: "PROCESSING"
         value: "PROCESSING"
-      - key: "CLOSED"
-        value: "CLOSED"
       
 
     errorText: "Please select a field"
