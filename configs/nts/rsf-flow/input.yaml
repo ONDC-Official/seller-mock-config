@@ -348,8 +348,10 @@ on_report:
   - name: "provider_status"
     key: "provider_status"
     type: "select"
-    defaultValue: "SETTLED"
+    defaultValue: ""
     defaultOptions:
+      - key: ""
+        value: ""
       - key: "SETTLED"
         value: "SETTLED"
       - key: "NOT_SETTLED"
@@ -361,7 +363,7 @@ on_report:
     key: "provider_reference_no"
     type: "text"
     errorText: "provider_reference_no is required"
-    defaultValue: "1238683618634"
+    defaultValue: ""
     required: false
     summary: This attribute is provider_reference_no.
 
