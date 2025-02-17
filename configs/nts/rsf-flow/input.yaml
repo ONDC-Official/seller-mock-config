@@ -362,7 +362,6 @@ on_report:
   - name: "provider_reference_no"
     key: "provider_reference_no"
     type: "text"
-    errorText: "provider_reference_no is required"
     defaultValue: ""
     required: false
     summary: This attribute is provider_reference_no.
