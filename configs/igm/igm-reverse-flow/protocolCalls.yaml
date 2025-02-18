@@ -10,6 +10,28 @@ session-builder:
   isCollapsed: false
   current: session-builder
 
+issue_status:
+  type: "issue_status"
+  category: "sender"
+  target: "NP"
+  executed: false
+  shouldRender: true
+  config: "issue_status" #name of the call
+  nextRequest: "on_issue_status"
+  preRequest: session-builder
+  isCollapsed: false
+
+on_issue_status:
+  type: "on_issue_status"
+  category: "reciever"
+  target: "NP"
+  executed: false
+  shouldRender: false
+  config: "on_issue_status" #name of the call
+  nextRequest: "issue"
+  preRequest: issue_status
+  isCollapsed: false
+  current: on_issue_status
 
 issue:
   type: "issue"
