@@ -64,7 +64,7 @@ issue:
     summary: This attribute is provider_ref_id.
 
   - name: "fulfillment_ref_id"
-    key: "ref.FULFILLMENt"
+    key: "ref.FULFILMENT"
     type: "text"
 
     summary: This attribute is fulfillment_ref_id.
