@@ -9,7 +9,7 @@ on_issue:
     #     value: "PROCESSING"
     #   - key: "OPEN"
     #     value: "OPEN"
-
+ 
     errorText: "Please select a field"
     required: true
     summary: This attribute refers to id of the action.
@@ -20,14 +20,18 @@ on_issue:
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "OPEN"
-        value: "OPEN"
-      - key: "CLOSED"
-        value: "CLOSED"
+      - key: "PROCESSING" 
+        value: "PROCESSING"
+      - key: "INFO_REQUESTED"
+        value: "INFO_REQUESTED"
+      - key: "INFO_PROVIDED"
+        value: "INFO_PROVIDED"
+      - key: "RESOLUTION_PROPOSED"
+        value: "RESOLUTION_PROPOSED"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "PROCESSING"
-        value: "PROCESSING"
+      - key: "CASCADED"
+        value: "CASCADED"
       
 
     errorText: "Please select a field"
@@ -131,14 +135,18 @@ on_issue2:
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "OPEN"
-        value: "OPEN"
-      - key: "CLOSED"
-        value: "CLOSED"
+      - key: "PROCESSING" 
+        value: "PROCESSING"
+      - key: "INFO_REQUESTED"
+        value: "INFO_REQUESTED"
+      - key: "INFO_PROVIDED"
+        value: "INFO_PROVIDED"
+      - key: "RESOLUTION_PROPOSED"
+        value: "RESOLUTION_PROPOSED"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "PROCESSING"
-        value: "PROCESSING"
+      - key: "CASCADED"
+        value: "CASCADED"
       
 
     errorText: "Please select a field"
@@ -241,14 +249,18 @@ on_issue3:
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "OPEN"
-        value: "OPEN"
-      - key: "CLOSED"
-        value: "CLOSED"
+      - key: "PROCESSING" 
+        value: "PROCESSING"
+      - key: "INFO_REQUESTED"
+        value: "INFO_REQUESTED"
+      - key: "INFO_PROVIDED"
+        value: "INFO_PROVIDED"
+      - key: "RESOLUTION_PROPOSED"
+        value: "RESOLUTION_PROPOSED"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "PROCESSING"
-        value: "PROCESSING"
+      - key: "CASCADED"
+        value: "CASCADED"
       
 
     errorText: "Please select a field"
@@ -353,14 +365,18 @@ on_issue4:
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "OPEN"
-        value: "OPEN"
-      - key: "CLOSED"
-        value: "CLOSED"
+      - key: "PROCESSING" 
+        value: "PROCESSING"
+      - key: "INFO_REQUESTED"
+        value: "INFO_REQUESTED"
+      - key: "INFO_PROVIDED"
+        value: "INFO_PROVIDED"
+      - key: "RESOLUTION_PROPOSED"
+        value: "RESOLUTION_PROPOSED"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "PROCESSING"
-        value: "PROCESSING"
+      - key: "CASCADED"
+        value: "CASCADED"
       
 
     errorText: "Please select a field"
@@ -463,14 +479,18 @@ on_issue5:
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "OPEN"
-        value: "OPEN"
-      - key: "CLOSED"
-        value: "CLOSED"
+      - key: "PROCESSING" 
+        value: "PROCESSING"
+      - key: "INFO_REQUESTED"
+        value: "INFO_REQUESTED"
+      - key: "INFO_PROVIDED"
+        value: "INFO_PROVIDED"
+      - key: "RESOLUTION_PROPOSED"
+        value: "RESOLUTION_PROPOSED"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "PROCESSING"
-        value: "PROCESSING"
+      - key: "CASCADED"
+        value: "CASCADED"
       
 
     errorText: "Please select a field"
@@ -574,14 +594,18 @@ on_issue6:
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "OPEN"
-        value: "OPEN"
-      - key: "CLOSED"
-        value: "CLOSED"
+      - key: "PROCESSING" 
+        value: "PROCESSING"
+      - key: "INFO_REQUESTED"
+        value: "INFO_REQUESTED"
+      - key: "INFO_PROVIDED"
+        value: "INFO_PROVIDED"
+      - key: "RESOLUTION_PROPOSED"
+        value: "RESOLUTION_PROPOSED"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "PROCESSING"
-        value: "PROCESSING"
+      - key: "CASCADED"
+        value: "CASCADED"
       
 
     errorText: "Please select a field"
@@ -684,14 +708,18 @@ on_issue7:
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "OPEN"
-        value: "OPEN"
-      - key: "CLOSED"
-        value: "CLOSED"
+      - key: "PROCESSING" 
+        value: "PROCESSING"
+      - key: "INFO_REQUESTED"
+        value: "INFO_REQUESTED"
+      - key: "INFO_PROVIDED"
+        value: "INFO_PROVIDED"
+      - key: "RESOLUTION_PROPOSED"
+        value: "RESOLUTION_PROPOSED"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "PROCESSING"
-        value: "PROCESSING"
+      - key: "CASCADED"
+        value: "CASCADED"
       
 
     errorText: "Please select a field"
@@ -795,14 +823,18 @@ on_issue8:
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "OPEN"
-        value: "OPEN"
-      - key: "CLOSED"
-        value: "CLOSED"
+      - key: "PROCESSING" 
+        value: "PROCESSING"
+      - key: "INFO_REQUESTED"
+        value: "INFO_REQUESTED"
+      - key: "INFO_PROVIDED"
+        value: "INFO_PROVIDED"
+      - key: "RESOLUTION_PROPOSED"
+        value: "RESOLUTION_PROPOSED"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "PROCESSING"
-        value: "PROCESSING"
+      - key: "CASCADED"
+        value: "CASCADED"
       
 
     errorText: "Please select a field"
@@ -906,14 +938,18 @@ on_issue9:
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "OPEN"
-        value: "OPEN"
-      - key: "CLOSED"
-        value: "CLOSED"
+      - key: "PROCESSING" 
+        value: "PROCESSING"
+      - key: "INFO_REQUESTED"
+        value: "INFO_REQUESTED"
+      - key: "INFO_PROVIDED"
+        value: "INFO_PROVIDED"
+      - key: "RESOLUTION_PROPOSED"
+        value: "RESOLUTION_PROPOSED"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "PROCESSING"
-        value: "PROCESSING"
+      - key: "CASCADED"
+        value: "CASCADED"
       
 
     errorText: "Please select a field"
@@ -1016,14 +1052,18 @@ on_issue10:
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "OPEN"
-        value: "OPEN"
-      - key: "CLOSED"
-        value: "CLOSED"
+      - key: "PROCESSING" 
+        value: "PROCESSING"
+      - key: "INFO_REQUESTED"
+        value: "INFO_REQUESTED"
+      - key: "INFO_PROVIDED"
+        value: "INFO_PROVIDED"
+      - key: "RESOLUTION_PROPOSED"
+        value: "RESOLUTION_PROPOSED"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "PROCESSING"
-        value: "PROCESSING"
+      - key: "CASCADED"
+        value: "CASCADED"
       
 
     errorText: "Please select a field"
