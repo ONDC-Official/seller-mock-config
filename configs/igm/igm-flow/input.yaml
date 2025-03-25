@@ -57,6 +57,8 @@ on_issue:
         value: "PROCESSING"
       - key: "CLOSED"
         value: "CLOSED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -172,6 +174,9 @@ on_issue2:
         value: "PROCESSING"
       - key: "CLOSED"
         value: "CLOSED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
+
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -295,6 +300,8 @@ on_issue3:
         value: "PROCESSING"
       - key: "CLOSED"
         value: "CLOSED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -402,6 +409,8 @@ on_issue4:
         value: "PROCESSING"
       - key: "CLOSED"
         value: "CLOSED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -516,6 +525,8 @@ on_issue5:
         value: "PROCESSING"
       - key: "CLOSED"
         value: "CLOSED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -631,6 +642,8 @@ on_issue6:
         value: "PROCESSING"
       - key: "CLOSED"
         value: "CLOSED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -745,6 +758,8 @@ on_issue7:
         value: "PROCESSING"
       - key: "CLOSED"
         value: "CLOSED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -860,6 +875,8 @@ on_issue8:
         value: "PROCESSING"
       - key: "CLOSED"
         value: "CLOSED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -975,6 +992,8 @@ on_issue9:
         value: "PROCESSING"
       - key: "CLOSED"
         value: "CLOSED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -1089,6 +1108,8 @@ on_issue10:
         value: "PROCESSING"
       - key: "CLOSED"
         value: "CLOSED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.

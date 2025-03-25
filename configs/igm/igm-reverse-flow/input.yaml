@@ -23,6 +23,8 @@ issue:
         value: "RESOLUTION_ACCEPTED"
       - key: "RESOLUTION_REJECTED"
         value: "RESOLUTION_REJECTED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -241,6 +243,8 @@ issue2:
         value: "RESOLUTION_ACCEPTED"
       - key: "RESOLUTION_REJECTED"
         value: "RESOLUTION_REJECTED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
         
     errorText: "Please select a field"
     required: true
@@ -460,6 +464,8 @@ issue3:
         value: "RESOLUTION_ACCEPTED"
       - key: "RESOLUTION_REJECTED"
         value: "RESOLUTION_REJECTED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
         
     errorText: "Please select a field"
     required: true
@@ -677,6 +683,8 @@ issue4:
         value: "RESOLUTION_ACCEPTED"
       - key: "RESOLUTION_REJECTED"
         value: "RESOLUTION_REJECTED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
         
     errorText: "Please select a field"
     required: true
@@ -895,6 +903,8 @@ issue5:
         value: "RESOLUTION_ACCEPTED"
       - key: "RESOLUTION_REJECTED"
         value: "RESOLUTION_REJECTED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
         
     errorText: "Please select a field"
     required: true
@@ -1113,6 +1123,8 @@ issue6:
         value: "RESOLUTION_ACCEPTED"
       - key: "RESOLUTION_REJECTED"
         value: "RESOLUTION_REJECTED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
         
     errorText: "Please select a field"
     required: true
@@ -1331,6 +1343,8 @@ issue7:
         value: "RESOLUTION_ACCEPTED"
       - key: "RESOLUTION_REJECTED"
         value: "RESOLUTION_REJECTED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
         
     errorText: "Please select a field"
     required: true
@@ -1549,6 +1563,8 @@ issue9:
         value: "RESOLUTION_ACCEPTED"
       - key: "RESOLUTION_REJECTED"
         value: "RESOLUTION_REJECTED"
+      - key: "ESCALATED"
+        value: "ESCALATED"
         
     errorText: "Please select a field"
     required: true
