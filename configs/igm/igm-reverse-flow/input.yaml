@@ -5,11 +5,11 @@ issue:
     defaultValue: "action_id"
     
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "description_code"
+  - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
     defaultValue: "OPEN"
-
+#  OPEN, INFO_REQUESTED, INFO_PROVIDED, INFO_NOT_AVAILABLE, RESOLUTION_ACCEPTED, RESOLUTION_REJECTED, CLOSED
     defaultOptions:
       - key: "OPEN"
         value: "OPEN"
@@ -23,8 +23,8 @@ issue:
         value: "RESOLUTION_ACCEPTED"
       - key: "RESOLUTION_REJECTED"
         value: "RESOLUTION_REJECTED"
-      - key: "ESCALATED"
-        value: "ESCALATED"
+      - key: "INFO_NOT_AVAILABLE"
+        value: "INFO_NOT_AVAILABLE"
     errorText: "Please select a field"
     required: true
     summary: This attribute is description_code.
@@ -225,7 +225,7 @@ issue2:
     defaultValue: "action_id"
 
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "description_code"
+  - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
     defaultValue: "OPEN"
@@ -243,8 +243,8 @@ issue2:
         value: "RESOLUTION_ACCEPTED"
       - key: "RESOLUTION_REJECTED"
         value: "RESOLUTION_REJECTED"
-      - key: "ESCALATED"
-        value: "ESCALATED"
+      - key: "INFO_NOT_AVAILABLE"
+        value: "INFO_NOT_AVAILABLE"
         
     errorText: "Please select a field"
     required: true
@@ -294,7 +294,7 @@ issue2:
         value: false
   
   - name: "images"
-    key: "actions_description.images[0]"
+    key: "actions_description.images[0].url"
     type: "text"
     summary: This attribute is images
 
@@ -446,7 +446,7 @@ issue3:
     defaultValue: "action_id"
 
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "description_code"
+  - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
     defaultValue: "OPEN"
@@ -464,8 +464,8 @@ issue3:
         value: "RESOLUTION_ACCEPTED"
       - key: "RESOLUTION_REJECTED"
         value: "RESOLUTION_REJECTED"
-      - key: "ESCALATED"
-        value: "ESCALATED"
+      - key: "INFO_NOT_AVAILABLE"
+        value: "INFO_NOT_AVAILABLE"
         
     errorText: "Please select a field"
     required: true
@@ -514,7 +514,7 @@ issue3:
         value: false
   
   - name: "images"
-    key: "actions_description.images[0]"
+    key: "actions_description.images[0].url"
     type: "text"
     summary: This attribute is images
 
@@ -665,7 +665,7 @@ issue4:
     defaultValue: "action_id"
 
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "description_code"
+  - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
     defaultValue: "OPEN"
@@ -683,8 +683,8 @@ issue4:
         value: "RESOLUTION_ACCEPTED"
       - key: "RESOLUTION_REJECTED"
         value: "RESOLUTION_REJECTED"
-      - key: "ESCALATED"
-        value: "ESCALATED"
+      - key: "INFO_NOT_AVAILABLE"
+        value: "INFO_NOT_AVAILABLE"
         
     errorText: "Please select a field"
     required: true
@@ -734,7 +734,7 @@ issue4:
         value: false
   
   - name: "images"
-    key: "actions_description.images[0]"
+    key: "actions_description.images[0].url"
     type: "text"
     summary: This attribute is images
 
@@ -885,7 +885,7 @@ issue5:
     defaultValue: "action_id"
 
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "description_code"
+  - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
     defaultValue: "OPEN"
@@ -903,8 +903,8 @@ issue5:
         value: "RESOLUTION_ACCEPTED"
       - key: "RESOLUTION_REJECTED"
         value: "RESOLUTION_REJECTED"
-      - key: "ESCALATED"
-        value: "ESCALATED"
+      - key: "INFO_NOT_AVAILABLE"
+        value: "INFO_NOT_AVAILABLE"
         
     errorText: "Please select a field"
     required: true
@@ -954,7 +954,7 @@ issue5:
         value: false
   
   - name: "images"
-    key: "actions_description.images[0]"
+    key: "actions_description.images[0].url"
     type: "text"
     summary: This attribute is images
 
@@ -1105,7 +1105,7 @@ issue6:
     defaultValue: "action_id"
 
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "description_code"
+  - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
     defaultValue: "OPEN"
@@ -1123,8 +1123,8 @@ issue6:
         value: "RESOLUTION_ACCEPTED"
       - key: "RESOLUTION_REJECTED"
         value: "RESOLUTION_REJECTED"
-      - key: "ESCALATED"
-        value: "ESCALATED"
+      - key: "INFO_NOT_AVAILABLE"
+        value: "INFO_NOT_AVAILABLE"
         
     errorText: "Please select a field"
     required: true
@@ -1174,7 +1174,7 @@ issue6:
         value: false
   
   - name: "images"
-    key: "actions_description.images[0]"
+    key: "actions_description.images[0].url"
     type: "text"
     summary: This attribute is images
 
@@ -1325,7 +1325,7 @@ issue7:
     defaultValue: "action_id"
 
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "description_code"
+  - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
     defaultValue: "OPEN"
@@ -1343,8 +1343,8 @@ issue7:
         value: "RESOLUTION_ACCEPTED"
       - key: "RESOLUTION_REJECTED"
         value: "RESOLUTION_REJECTED"
-      - key: "ESCALATED"
-        value: "ESCALATED"
+      - key: "INFO_NOT_AVAILABLE"
+        value: "INFO_NOT_AVAILABLE"
         
     errorText: "Please select a field"
     required: true
@@ -1394,7 +1394,7 @@ issue7:
         value: false
   
   - name: "images"
-    key: "actions_description.images[0]"
+    key: "actions_description.images[0].url"
     type: "text"
     summary: This attribute is images
 
@@ -1545,7 +1545,7 @@ issue9:
     defaultValue: "action_id"
 
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "description_code"
+  - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
     defaultValue: "OPEN"
@@ -1563,8 +1563,8 @@ issue9:
         value: "RESOLUTION_ACCEPTED"
       - key: "RESOLUTION_REJECTED"
         value: "RESOLUTION_REJECTED"
-      - key: "ESCALATED"
-        value: "ESCALATED"
+      - key: "INFO_NOT_AVAILABLE"
+        value: "INFO_NOT_AVAILABLE"
         
     errorText: "Please select a field"
     required: true
@@ -1614,7 +1614,7 @@ issue9:
         value: false
   
   - name: "images"
-    key: "actions_description.images[0]"
+    key: "actions_description.images[0].url"
     type: "text"
     summary: This attribute is images
 
