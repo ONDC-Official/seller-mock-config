@@ -119,6 +119,21 @@ on_issue:
         value: false
 
   
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+  
   - name: "info_requested_code"
     key: "actions_description.name"
     type: "select"
@@ -261,6 +276,21 @@ on_issue2:
       - key: "false"
         value: false
 
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+  
   - name: "info_requested_code"
     key: "actions_description.name"
     type: "select"
@@ -404,6 +434,21 @@ on_issue3:
       - key: "false"
         value: false
 
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+  
   - name: "info_requested_code"
     key: "actions_description.name"
     type: "select"
@@ -545,6 +590,21 @@ on_issue4:
       - key: "false"
         value: false
 
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+  
   - name: "info_requested_code"
     key: "actions_description.name"
     type: "select"
@@ -687,6 +747,21 @@ on_issue5:
       - key: "false"
         value: false
 
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+  
   - name: "info_requested_code"
     key: "actions_description.name"
     type: "select"
@@ -827,6 +902,21 @@ on_issue6:
         value: "NOT_RECONCILED"
       - key: "false"
         value: false
+  
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
   
   - name: "info_requested_code"
     key: "actions_description.name"
@@ -973,6 +1063,21 @@ on_issue7:
       - key: "false"
         value: false
 
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+  
   - name: "info_requested_code"
     key: "actions_description.name"
     type: "select"
@@ -1115,6 +1220,21 @@ on_issue8:
       - key: "false"
         value: false
   
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+  
   - name: "info_requested_code"
     key: "actions_description.name"
     type: "select"
@@ -1256,6 +1376,21 @@ on_issue9:
       - key: "false"
         value: false
 
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+  
   - name: "info_requested_code"
     key: "actions_description.name"
     type: "select"
@@ -1398,6 +1533,21 @@ on_issue10:
       - key: "false"
         value: false
 
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+  
   - name: "info_requested_code"
     key: "actions_description.name"
     type: "select"
