@@ -4,7 +4,7 @@ server:
   sync_mode: false
   bpp_uri: https://mobility-staging.ondc.org/seller/
   protocol_server:
-    uri: http://localhost:5500/createPayload
+    uri: http://172.17.0.1:5503/createPayload
 security:
   subscriber_id: mock-api-service
   ukId: 584
