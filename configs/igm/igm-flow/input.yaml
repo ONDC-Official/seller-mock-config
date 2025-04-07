@@ -3,12 +3,6 @@ on_issue:
     key: "id"
     type: "text"
     defaultValue: "0"
-  
-    # defaultOptions:
-    #   - key: "PROCESSING"
-    #     value: "PROCESSING"
-    #   - key: "OPEN"
-    #     value: "OPEN"
  
     errorText: "Please select a field"
     required: true
@@ -20,18 +14,14 @@ on_issue:
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "PROCESSING" 
-        value: "PROCESSING"
-      - key: "INFO_REQUESTED"
-        value: "INFO_REQUESTED"
-      - key: "INFO_PROVIDED"
-        value: "INFO_PROVIDED"
-      - key: "RESOLUTION_PROPOSED"
-        value: "RESOLUTION_PROPOSED"
+      - key: "OPEN"
+        value: "OPEN"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "CASCADED"
-        value: "CASCADED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+      - key: "CLOSED"
+        value: "CLOSED"
       
 
     errorText: "Please select a field"
@@ -39,29 +29,27 @@ on_issue:
     summary: This attribute refers to status of the settlement.
   
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "description_code"
+  - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "OPEN"
-        value: "OPEN"
+      - key: "PROCESSING"
+        value: "PROCESSING"
       - key: "INFO_REQUESTED"
         value: "INFO_REQUESTED"
       - key: "INFO_PROVIDED"
         value: "INFO_PROVIDED"
+      - key: "INFO_NOT_AVAILABLE"
+        value: "INFO_NOT_AVAILABLE"      
+      - key: "RESOLUTION_PROPOSED"
+        value: "RESOLUTION_PROPOSED"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "PROCESSING"
-        value: "PROCESSING"
-      - key: "CLOSED"
-        value: "CLOSED"
-      - key: "ESCALATED"
-        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
-    summary: This attribute is description_code.
+    summary: This attribute is actions_description_code.
 
   - name: "short_desc"
     key: "actions_description.short_desc"
@@ -86,20 +74,65 @@ on_issue:
     summary: This attribute is Actor_Name.
   
   - name: "send_resolution"
+# REFUND, REPLACEMENT, CANCEL, NO_ACTION, NOW_VISIBLE, RECONCILED, NOT_RECONCILED
     key: "send_resolution"
     type: "select"
     defaultValue: false
     defaultOptions:
-      - key: "Proposed"
-        value: "proposed"
-      - key: "Replacement"
-        value: "replacement"
-      - key: "Refund"
-        value: "refund"
+      - key: "REFUND"
+        value: "REFUND"
+      - key: "REPLACEMENT"
+        value: "REPLACEMENT"
+      - key: "CANCEL"
+        value: "CANCEL"
+      - key: "NO_ACTION"
+        value: "NO_ACTION"
+      - key: "NOW_VISIBLE"
+        value: "NOW_VISIBLE"
+      - key: "RECONCILED"
+        value: "RECONCILED"
+      - key: "NOT_RECONCILED"
+        value: "NOT_RECONCILED"
       - key: "false"
         value: false
-    summary: This attribute refers which resoluton.
+
+  - name: "send_resolution"
+    key: "send_resolution2"
+    type: "select"
+    defaultValue: false
+    defaultOptions:
+      - key: "REFUND"
+        value: "REFUND"
+      - key: "REPLACEMENT"
+        value: "REPLACEMENT"
+      - key: "CANCEL"
+        value: "CANCEL"
+      - key: "NO_ACTION"
+        value: "NO_ACTION"
+      - key: "NOW_VISIBLE"
+        value: "NOW_VISIBLE"
+      - key: "RECONCILED"
+        value: "RECONCILED"
+      - key: "NOT_RECONCILED"
+        value: "NOT_RECONCILED"
+      - key: "false"
+        value: false
+
   
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
   
   - name: "info_requested_code"
     key: "actions_description.name"
@@ -137,18 +170,14 @@ on_issue2:
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "PROCESSING" 
-        value: "PROCESSING"
-      - key: "INFO_REQUESTED"
-        value: "INFO_REQUESTED"
-      - key: "INFO_PROVIDED"
-        value: "INFO_PROVIDED"
-      - key: "RESOLUTION_PROPOSED"
-        value: "RESOLUTION_PROPOSED"
+      - key: "OPEN"
+        value: "OPEN"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "CASCADED"
-        value: "CASCADED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+      - key: "CLOSED"
+        value: "CLOSED"
       
 
     errorText: "Please select a field"
@@ -156,30 +185,28 @@ on_issue2:
     summary: This attribute refers to status of the settlement.
   
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "description_code"
+  - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "OPEN"
-        value: "OPEN"
+      - key: "PROCESSING"
+        value: "PROCESSING"
       - key: "INFO_REQUESTED"
         value: "INFO_REQUESTED"
       - key: "INFO_PROVIDED"
         value: "INFO_PROVIDED"
+      - key: "INFO_NOT_AVAILABLE"
+        value: "INFO_NOT_AVAILABLE"      
+      - key: "RESOLUTION_PROPOSED"
+        value: "RESOLUTION_PROPOSED"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "PROCESSING"
-        value: "PROCESSING"
-      - key: "CLOSED"
-        value: "CLOSED"
-      - key: "ESCALATED"
-        value: "ESCALATED"
 
     errorText: "Please select a field"
     required: true
-    summary: This attribute is description_code.
+    summary: This attribute is actions_description_code.
 
   - name: "short_desc"
     key: "actions_description.short_desc"
@@ -205,19 +232,65 @@ on_issue2:
     summary: This attribute is Actor_Name.
 
   - name: "send_resolution"
+# REFUND, REPLACEMENT, CANCEL, NO_ACTION, NOW_VISIBLE, RECONCILED, NOT_RECONCILED
     key: "send_resolution"
     type: "select"
     defaultValue: false
     defaultOptions:
-      - key: "Proposed"
-        value: "proposed"
-      - key: "Replacement"
-        value: "replacement"
-      - key: "Refund"
-        value: "refund"
+      - key: "REFUND"
+        value: "REFUND"
+      - key: "REPLACEMENT"
+        value: "REPLACEMENT"
+      - key: "CANCEL"
+        value: "CANCEL"
+      - key: "NO_ACTION"
+        value: "NO_ACTION"
+      - key: "NOW_VISIBLE"
+        value: "NOW_VISIBLE"
+      - key: "RECONCILED"
+        value: "RECONCILED"
+      - key: "NOT_RECONCILED"
+        value: "NOT_RECONCILED"
       - key: "false"
         value: false
 
+  - name: "send_resolution"
+    key: "send_resolution2"
+    type: "select"
+    defaultValue: false
+    defaultOptions:
+      - key: "REFUND"
+        value: "REFUND"
+      - key: "REPLACEMENT"
+        value: "REPLACEMENT"
+      - key: "CANCEL"
+        value: "CANCEL"
+      - key: "NO_ACTION"
+        value: "NO_ACTION"
+      - key: "NOW_VISIBLE"
+        value: "NOW_VISIBLE"
+      - key: "RECONCILED"
+        value: "RECONCILED"
+      - key: "NOT_RECONCILED"
+        value: "NOT_RECONCILED"
+      - key: "false"
+        value: false
+
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+  
   - name: "info_requested_code"
     key: "actions_description.name"
     type: "select"
@@ -254,18 +327,14 @@ on_issue3:
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "PROCESSING" 
-        value: "PROCESSING"
-      - key: "INFO_REQUESTED"
-        value: "INFO_REQUESTED"
-      - key: "INFO_PROVIDED"
-        value: "INFO_PROVIDED"
-      - key: "RESOLUTION_PROPOSED"
-        value: "RESOLUTION_PROPOSED"
+      - key: "OPEN"
+        value: "OPEN"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "CASCADED"
-        value: "CASCADED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+      - key: "CLOSED"
+        value: "CLOSED"
       
 
     errorText: "Please select a field"
@@ -282,29 +351,27 @@ on_issue3:
     required: true
     summary: This attribute is short_desc.
 
-  - name: "description_code"
+  - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "OPEN"
-        value: "OPEN"
+      - key: "PROCESSING"
+        value: "PROCESSING"
       - key: "INFO_REQUESTED"
         value: "INFO_REQUESTED"
       - key: "INFO_PROVIDED"
         value: "INFO_PROVIDED"
+      - key: "INFO_NOT_AVAILABLE"
+        value: "INFO_NOT_AVAILABLE"      
+      - key: "RESOLUTION_PROPOSED"
+        value: "RESOLUTION_PROPOSED"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "PROCESSING"
-        value: "PROCESSING"
-      - key: "CLOSED"
-        value: "CLOSED"
-      - key: "ESCALATED"
-        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
-    summary: This attribute is description_code.
+    summary: This attribute is actions_description_code.
   
   - name: "action_by"
     key: "action_by"
@@ -323,19 +390,65 @@ on_issue3:
     summary: This attribute is Actor_Name.
 
   - name: "send_resolution"
+# REFUND, REPLACEMENT, CANCEL, NO_ACTION, NOW_VISIBLE, RECONCILED, NOT_RECONCILED
     key: "send_resolution"
     type: "select"
     defaultValue: false
     defaultOptions:
-      - key: "Proposed"
-        value: "proposed"
-      - key: "Replacement"
-        value: "replacement"
-      - key: "Refund"
-        value: "refund"
+      - key: "REFUND"
+        value: "REFUND"
+      - key: "REPLACEMENT"
+        value: "REPLACEMENT"
+      - key: "CANCEL"
+        value: "CANCEL"
+      - key: "NO_ACTION"
+        value: "NO_ACTION"
+      - key: "NOW_VISIBLE"
+        value: "NOW_VISIBLE"
+      - key: "RECONCILED"
+        value: "RECONCILED"
+      - key: "NOT_RECONCILED"
+        value: "NOT_RECONCILED"
       - key: "false"
         value: false
 
+  - name: "send_resolution"
+    key: "send_resolution2"
+    type: "select"
+    defaultValue: false
+    defaultOptions:
+      - key: "REFUND"
+        value: "REFUND"
+      - key: "REPLACEMENT"
+        value: "REPLACEMENT"
+      - key: "CANCEL"
+        value: "CANCEL"
+      - key: "NO_ACTION"
+        value: "NO_ACTION"
+      - key: "NOW_VISIBLE"
+        value: "NOW_VISIBLE"
+      - key: "RECONCILED"
+        value: "RECONCILED"
+      - key: "NOT_RECONCILED"
+        value: "NOT_RECONCILED"
+      - key: "false"
+        value: false
+
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+  
   - name: "info_requested_code"
     key: "actions_description.name"
     type: "select"
@@ -372,18 +485,14 @@ on_issue4:
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "PROCESSING" 
-        value: "PROCESSING"
-      - key: "INFO_REQUESTED"
-        value: "INFO_REQUESTED"
-      - key: "INFO_PROVIDED"
-        value: "INFO_PROVIDED"
-      - key: "RESOLUTION_PROPOSED"
-        value: "RESOLUTION_PROPOSED"
+      - key: "OPEN"
+        value: "OPEN"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "CASCADED"
-        value: "CASCADED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+      - key: "CLOSED"
+        value: "CLOSED"
       
 
     errorText: "Please select a field"
@@ -391,29 +500,27 @@ on_issue4:
     summary: This attribute refers to status of the settlement.
   
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "description_code"
+  - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "OPEN"
-        value: "OPEN"
+      - key: "PROCESSING"
+        value: "PROCESSING"
       - key: "INFO_REQUESTED"
         value: "INFO_REQUESTED"
       - key: "INFO_PROVIDED"
         value: "INFO_PROVIDED"
+      - key: "INFO_NOT_AVAILABLE"
+        value: "INFO_NOT_AVAILABLE"      
+      - key: "RESOLUTION_PROPOSED"
+        value: "RESOLUTION_PROPOSED"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "PROCESSING"
-        value: "PROCESSING"
-      - key: "CLOSED"
-        value: "CLOSED"
-      - key: "ESCALATED"
-        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
-    summary: This attribute is description_code.
+    summary: This attribute is actions_description_code.
 
   - name: "short_desc"
     key: "actions_description.short_desc"
@@ -439,19 +546,65 @@ on_issue4:
     summary: This attribute is Actor_Name.
   
   - name: "send_resolution"
+# REFUND, REPLACEMENT, CANCEL, NO_ACTION, NOW_VISIBLE, RECONCILED, NOT_RECONCILED
     key: "send_resolution"
     type: "select"
     defaultValue: false
     defaultOptions:
-      - key: "Proposed"
-        value: "proposed"
-      - key: "Replacement"
-        value: "replacement"
-      - key: "Refund"
-        value: "refund"
+      - key: "REFUND"
+        value: "REFUND"
+      - key: "REPLACEMENT"
+        value: "REPLACEMENT"
+      - key: "CANCEL"
+        value: "CANCEL"
+      - key: "NO_ACTION"
+        value: "NO_ACTION"
+      - key: "NOW_VISIBLE"
+        value: "NOW_VISIBLE"
+      - key: "RECONCILED"
+        value: "RECONCILED"
+      - key: "NOT_RECONCILED"
+        value: "NOT_RECONCILED"
       - key: "false"
         value: false
 
+  - name: "send_resolution"
+    key: "send_resolution2"
+    type: "select"
+    defaultValue: false
+    defaultOptions:
+      - key: "REFUND"
+        value: "REFUND"
+      - key: "REPLACEMENT"
+        value: "REPLACEMENT"
+      - key: "CANCEL"
+        value: "CANCEL"
+      - key: "NO_ACTION"
+        value: "NO_ACTION"
+      - key: "NOW_VISIBLE"
+        value: "NOW_VISIBLE"
+      - key: "RECONCILED"
+        value: "RECONCILED"
+      - key: "NOT_RECONCILED"
+        value: "NOT_RECONCILED"
+      - key: "false"
+        value: false
+
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+  
   - name: "info_requested_code"
     key: "actions_description.name"
     type: "select"
@@ -488,18 +641,14 @@ on_issue5:
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "PROCESSING" 
-        value: "PROCESSING"
-      - key: "INFO_REQUESTED"
-        value: "INFO_REQUESTED"
-      - key: "INFO_PROVIDED"
-        value: "INFO_PROVIDED"
-      - key: "RESOLUTION_PROPOSED"
-        value: "RESOLUTION_PROPOSED"
+      - key: "OPEN"
+        value: "OPEN"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "CASCADED"
-        value: "CASCADED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+      - key: "CLOSED"
+        value: "CLOSED"
       
 
     errorText: "Please select a field"
@@ -507,29 +656,27 @@ on_issue5:
     summary: This attribute refers to status of the settlement.
   
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "description_code"
+  - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "OPEN"
-        value: "OPEN"
+      - key: "PROCESSING"
+        value: "PROCESSING"
       - key: "INFO_REQUESTED"
         value: "INFO_REQUESTED"
       - key: "INFO_PROVIDED"
         value: "INFO_PROVIDED"
+      - key: "INFO_NOT_AVAILABLE"
+        value: "INFO_NOT_AVAILABLE"      
+      - key: "RESOLUTION_PROPOSED"
+        value: "RESOLUTION_PROPOSED"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "PROCESSING"
-        value: "PROCESSING"
-      - key: "CLOSED"
-        value: "CLOSED"
-      - key: "ESCALATED"
-        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
-    summary: This attribute is description_code.
+    summary: This attribute is actions_description_code.
 
   - name: "short_desc"
     key: "actions_description.short_desc"
@@ -556,19 +703,65 @@ on_issue5:
     summary: This attribute is Actor_Name.
   
   - name: "send_resolution"
+# REFUND, REPLACEMENT, CANCEL, NO_ACTION, NOW_VISIBLE, RECONCILED, NOT_RECONCILED
     key: "send_resolution"
     type: "select"
     defaultValue: false
     defaultOptions:
-      - key: "Proposed"
-        value: "proposed"
-      - key: "Replacement"
-        value: "replacement"
-      - key: "Refund"
-        value: "refund"
+      - key: "REFUND"
+        value: "REFUND"
+      - key: "REPLACEMENT"
+        value: "REPLACEMENT"
+      - key: "CANCEL"
+        value: "CANCEL"
+      - key: "NO_ACTION"
+        value: "NO_ACTION"
+      - key: "NOW_VISIBLE"
+        value: "NOW_VISIBLE"
+      - key: "RECONCILED"
+        value: "RECONCILED"
+      - key: "NOT_RECONCILED"
+        value: "NOT_RECONCILED"
       - key: "false"
         value: false
 
+  - name: "send_resolution"
+    key: "send_resolution2"
+    type: "select"
+    defaultValue: false
+    defaultOptions:
+      - key: "REFUND"
+        value: "REFUND"
+      - key: "REPLACEMENT"
+        value: "REPLACEMENT"
+      - key: "CANCEL"
+        value: "CANCEL"
+      - key: "NO_ACTION"
+        value: "NO_ACTION"
+      - key: "NOW_VISIBLE"
+        value: "NOW_VISIBLE"
+      - key: "RECONCILED"
+        value: "RECONCILED"
+      - key: "NOT_RECONCILED"
+        value: "NOT_RECONCILED"
+      - key: "false"
+        value: false
+
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+  
   - name: "info_requested_code"
     key: "actions_description.name"
     type: "select"
@@ -605,18 +798,14 @@ on_issue6:
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "PROCESSING" 
-        value: "PROCESSING"
-      - key: "INFO_REQUESTED"
-        value: "INFO_REQUESTED"
-      - key: "INFO_PROVIDED"
-        value: "INFO_PROVIDED"
-      - key: "RESOLUTION_PROPOSED"
-        value: "RESOLUTION_PROPOSED"
+      - key: "OPEN"
+        value: "OPEN"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "CASCADED"
-        value: "CASCADED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+      - key: "CLOSED"
+        value: "CLOSED"
       
 
     errorText: "Please select a field"
@@ -624,29 +813,27 @@ on_issue6:
     summary: This attribute refers to status of the settlement.
   
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "description_code"
+  - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "OPEN"
-        value: "OPEN"
+      - key: "PROCESSING"
+        value: "PROCESSING"
       - key: "INFO_REQUESTED"
         value: "INFO_REQUESTED"
       - key: "INFO_PROVIDED"
         value: "INFO_PROVIDED"
+      - key: "INFO_NOT_AVAILABLE"
+        value: "INFO_NOT_AVAILABLE"      
+      - key: "RESOLUTION_PROPOSED"
+        value: "RESOLUTION_PROPOSED"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "PROCESSING"
-        value: "PROCESSING"
-      - key: "CLOSED"
-        value: "CLOSED"
-      - key: "ESCALATED"
-        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
-    summary: This attribute is description_code.
+    summary: This attribute is actions_description_code.
 
   - name: "short_desc"
     key: "actions_description.short_desc"
@@ -672,18 +859,64 @@ on_issue6:
     summary: This attribute is Actor_Name.
 
   - name: "send_resolution"
+# REFUND, REPLACEMENT, CANCEL, NO_ACTION, NOW_VISIBLE, RECONCILED, NOT_RECONCILED
     key: "send_resolution"
     type: "select"
     defaultValue: false
     defaultOptions:
-      - key: "Proposed"
-        value: "proposed"
-      - key: "Replacement"
-        value: "replacement"
-      - key: "Refund"
-        value: "refund"
+      - key: "REFUND"
+        value: "REFUND"
+      - key: "REPLACEMENT"
+        value: "REPLACEMENT"
+      - key: "CANCEL"
+        value: "CANCEL"
+      - key: "NO_ACTION"
+        value: "NO_ACTION"
+      - key: "NOW_VISIBLE"
+        value: "NOW_VISIBLE"
+      - key: "RECONCILED"
+        value: "RECONCILED"
+      - key: "NOT_RECONCILED"
+        value: "NOT_RECONCILED"
       - key: "false"
         value: false
+
+  - name: "send_resolution"
+    key: "send_resolution2"
+    type: "select"
+    defaultValue: false
+    defaultOptions:
+      - key: "REFUND"
+        value: "REFUND"
+      - key: "REPLACEMENT"
+        value: "REPLACEMENT"
+      - key: "CANCEL"
+        value: "CANCEL"
+      - key: "NO_ACTION"
+        value: "NO_ACTION"
+      - key: "NOW_VISIBLE"
+        value: "NOW_VISIBLE"
+      - key: "RECONCILED"
+        value: "RECONCILED"
+      - key: "NOT_RECONCILED"
+        value: "NOT_RECONCILED"
+      - key: "false"
+        value: false
+  
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
   
   - name: "info_requested_code"
     key: "actions_description.name"
@@ -721,48 +954,45 @@ on_issue7:
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "PROCESSING" 
+      - key: "PROCESSING"
         value: "PROCESSING"
       - key: "INFO_REQUESTED"
         value: "INFO_REQUESTED"
       - key: "INFO_PROVIDED"
         value: "INFO_PROVIDED"
+      - key: "INFO_NOT_AVAILABLE"
+        value: "INFO_NOT_AVAILABLE"      
       - key: "RESOLUTION_PROPOSED"
         value: "RESOLUTION_PROPOSED"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "CASCADED"
-        value: "CASCADED"
-      
 
     errorText: "Please select a field"
     required: false
     summary: This attribute refers to status of the settlement.
   
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "description_code"
+  - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "OPEN"
-        value: "OPEN"
+      - key: "PROCESSING"
+        value: "PROCESSING"
       - key: "INFO_REQUESTED"
         value: "INFO_REQUESTED"
       - key: "INFO_PROVIDED"
         value: "INFO_PROVIDED"
+      - key: "INFO_NOT_AVAILABLE"
+        value: "INFO_NOT_AVAILABLE"      
+      - key: "RESOLUTION_PROPOSED"
+        value: "RESOLUTION_PROPOSED"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "PROCESSING"
-        value: "PROCESSING"
-      - key: "CLOSED"
-        value: "CLOSED"
-      - key: "ESCALATED"
-        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
-    summary: This attribute is description_code.
+    summary: This attribute is actions_description_code.
 
   - name: "short_desc"
     key: "actions_description.short_desc"
@@ -789,19 +1019,65 @@ on_issue7:
     summary: This attribute is Actor_Name.
 
   - name: "send_resolution"
+# REFUND, REPLACEMENT, CANCEL, NO_ACTION, NOW_VISIBLE, RECONCILED, NOT_RECONCILED
     key: "send_resolution"
     type: "select"
     defaultValue: false
     defaultOptions:
-      - key: "Proposed"
-        value: "proposed"
-      - key: "Replacement"
-        value: "replacement"
-      - key: "Refund"
-        value: "refund"
+      - key: "REFUND"
+        value: "REFUND"
+      - key: "REPLACEMENT"
+        value: "REPLACEMENT"
+      - key: "CANCEL"
+        value: "CANCEL"
+      - key: "NO_ACTION"
+        value: "NO_ACTION"
+      - key: "NOW_VISIBLE"
+        value: "NOW_VISIBLE"
+      - key: "RECONCILED"
+        value: "RECONCILED"
+      - key: "NOT_RECONCILED"
+        value: "NOT_RECONCILED"
       - key: "false"
         value: false
 
+  - name: "send_resolution"
+    key: "send_resolution2"
+    type: "select"
+    defaultValue: false
+    defaultOptions:
+      - key: "REFUND"
+        value: "REFUND"
+      - key: "REPLACEMENT"
+        value: "REPLACEMENT"
+      - key: "CANCEL"
+        value: "CANCEL"
+      - key: "NO_ACTION"
+        value: "NO_ACTION"
+      - key: "NOW_VISIBLE"
+        value: "NOW_VISIBLE"
+      - key: "RECONCILED"
+        value: "RECONCILED"
+      - key: "NOT_RECONCILED"
+        value: "NOT_RECONCILED"
+      - key: "false"
+        value: false
+
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+  
   - name: "info_requested_code"
     key: "actions_description.name"
     type: "select"
@@ -838,18 +1114,14 @@ on_issue8:
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "PROCESSING" 
-        value: "PROCESSING"
-      - key: "INFO_REQUESTED"
-        value: "INFO_REQUESTED"
-      - key: "INFO_PROVIDED"
-        value: "INFO_PROVIDED"
-      - key: "RESOLUTION_PROPOSED"
-        value: "RESOLUTION_PROPOSED"
+      - key: "OPEN"
+        value: "OPEN"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "CASCADED"
-        value: "CASCADED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+      - key: "CLOSED"
+        value: "CLOSED"
       
 
     errorText: "Please select a field"
@@ -857,29 +1129,27 @@ on_issue8:
     summary: This attribute refers to status of the settlement.
   
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "description_code"
+  - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "OPEN"
-        value: "OPEN"
+      - key: "PROCESSING"
+        value: "PROCESSING"
       - key: "INFO_REQUESTED"
         value: "INFO_REQUESTED"
       - key: "INFO_PROVIDED"
         value: "INFO_PROVIDED"
+      - key: "INFO_NOT_AVAILABLE"
+        value: "INFO_NOT_AVAILABLE"      
+      - key: "RESOLUTION_PROPOSED"
+        value: "RESOLUTION_PROPOSED"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "PROCESSING"
-        value: "PROCESSING"
-      - key: "CLOSED"
-        value: "CLOSED"
-      - key: "ESCALATED"
-        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
-    summary: This attribute is description_code.
+    summary: This attribute is actions_description_code.
 
   - name: "short_desc"
     key: "actions_description.short_desc"
@@ -906,18 +1176,64 @@ on_issue8:
     summary: This attribute is Actor_Name.
 
   - name: "send_resolution"
+# REFUND, REPLACEMENT, CANCEL, NO_ACTION, NOW_VISIBLE, RECONCILED, NOT_RECONCILED
     key: "send_resolution"
     type: "select"
     defaultValue: false
     defaultOptions:
-      - key: "Proposed"
-        value: "proposed"
-      - key: "Replacement"
-        value: "replacement"
-      - key: "Refund"
-        value: "refund"
+      - key: "REFUND"
+        value: "REFUND"
+      - key: "REPLACEMENT"
+        value: "REPLACEMENT"
+      - key: "CANCEL"
+        value: "CANCEL"
+      - key: "NO_ACTION"
+        value: "NO_ACTION"
+      - key: "NOW_VISIBLE"
+        value: "NOW_VISIBLE"
+      - key: "RECONCILED"
+        value: "RECONCILED"
+      - key: "NOT_RECONCILED"
+        value: "NOT_RECONCILED"
       - key: "false"
         value: false
+
+  - name: "send_resolution"
+    key: "send_resolution2"
+    type: "select"
+    defaultValue: false
+    defaultOptions:
+      - key: "REFUND"
+        value: "REFUND"
+      - key: "REPLACEMENT"
+        value: "REPLACEMENT"
+      - key: "CANCEL"
+        value: "CANCEL"
+      - key: "NO_ACTION"
+        value: "NO_ACTION"
+      - key: "NOW_VISIBLE"
+        value: "NOW_VISIBLE"
+      - key: "RECONCILED"
+        value: "RECONCILED"
+      - key: "NOT_RECONCILED"
+        value: "NOT_RECONCILED"
+      - key: "false"
+        value: false
+  
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
   
   - name: "info_requested_code"
     key: "actions_description.name"
@@ -955,18 +1271,14 @@ on_issue9:
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "PROCESSING" 
-        value: "PROCESSING"
-      - key: "INFO_REQUESTED"
-        value: "INFO_REQUESTED"
-      - key: "INFO_PROVIDED"
-        value: "INFO_PROVIDED"
-      - key: "RESOLUTION_PROPOSED"
-        value: "RESOLUTION_PROPOSED"
+      - key: "OPEN"
+        value: "OPEN"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "CASCADED"
-        value: "CASCADED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+      - key: "CLOSED"
+        value: "CLOSED"
       
 
     errorText: "Please select a field"
@@ -974,29 +1286,27 @@ on_issue9:
     summary: This attribute refers to status of the settlement.
   
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "description_code"
+  - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "OPEN"
-        value: "OPEN"
+      - key: "PROCESSING"
+        value: "PROCESSING"
       - key: "INFO_REQUESTED"
         value: "INFO_REQUESTED"
       - key: "INFO_PROVIDED"
         value: "INFO_PROVIDED"
+      - key: "INFO_NOT_AVAILABLE"
+        value: "INFO_NOT_AVAILABLE"      
+      - key: "RESOLUTION_PROPOSED"
+        value: "RESOLUTION_PROPOSED"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "PROCESSING"
-        value: "PROCESSING"
-      - key: "CLOSED"
-        value: "CLOSED"
-      - key: "ESCALATED"
-        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
-    summary: This attribute is description_code.
+    summary: This attribute is actions_description_code.
 
   - name: "short_desc"
     key: "actions_description.short_desc"
@@ -1022,19 +1332,65 @@ on_issue9:
     summary: This attribute is Actor_Name.
 
   - name: "send_resolution"
+# REFUND, REPLACEMENT, CANCEL, NO_ACTION, NOW_VISIBLE, RECONCILED, NOT_RECONCILED
     key: "send_resolution"
     type: "select"
     defaultValue: false
     defaultOptions:
-      - key: "Proposed"
-        value: "proposed"
-      - key: "Replacement"
-        value: "replacement"
-      - key: "Refund"
-        value: "refund"
+      - key: "REFUND"
+        value: "REFUND"
+      - key: "REPLACEMENT"
+        value: "REPLACEMENT"
+      - key: "CANCEL"
+        value: "CANCEL"
+      - key: "NO_ACTION"
+        value: "NO_ACTION"
+      - key: "NOW_VISIBLE"
+        value: "NOW_VISIBLE"
+      - key: "RECONCILED"
+        value: "RECONCILED"
+      - key: "NOT_RECONCILED"
+        value: "NOT_RECONCILED"
       - key: "false"
         value: false
 
+  - name: "send_resolution"
+    key: "send_resolution2"
+    type: "select"
+    defaultValue: false
+    defaultOptions:
+      - key: "REFUND"
+        value: "REFUND"
+      - key: "REPLACEMENT"
+        value: "REPLACEMENT"
+      - key: "CANCEL"
+        value: "CANCEL"
+      - key: "NO_ACTION"
+        value: "NO_ACTION"
+      - key: "NOW_VISIBLE"
+        value: "NOW_VISIBLE"
+      - key: "RECONCILED"
+        value: "RECONCILED"
+      - key: "NOT_RECONCILED"
+        value: "NOT_RECONCILED"
+      - key: "false"
+        value: false
+
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+  
   - name: "info_requested_code"
     key: "actions_description.name"
     type: "select"
@@ -1071,18 +1427,14 @@ on_issue10:
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "PROCESSING" 
-        value: "PROCESSING"
-      - key: "INFO_REQUESTED"
-        value: "INFO_REQUESTED"
-      - key: "INFO_PROVIDED"
-        value: "INFO_PROVIDED"
-      - key: "RESOLUTION_PROPOSED"
-        value: "RESOLUTION_PROPOSED"
+      - key: "OPEN"
+        value: "OPEN"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "CASCADED"
-        value: "CASCADED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+      - key: "CLOSED"
+        value: "CLOSED"
       
 
     errorText: "Please select a field"
@@ -1090,29 +1442,27 @@ on_issue10:
     summary: This attribute refers to status of the settlement.
   
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "description_code"
+  - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
     defaultValue: "OPEN"
 
     defaultOptions:
-      - key: "OPEN"
-        value: "OPEN"
+      - key: "PROCESSING"
+        value: "PROCESSING"
       - key: "INFO_REQUESTED"
         value: "INFO_REQUESTED"
       - key: "INFO_PROVIDED"
         value: "INFO_PROVIDED"
+      - key: "INFO_NOT_AVAILABLE"
+        value: "INFO_NOT_AVAILABLE"      
+      - key: "RESOLUTION_PROPOSED"
+        value: "RESOLUTION_PROPOSED"
       - key: "RESOLVED"
         value: "RESOLVED"
-      - key: "PROCESSING"
-        value: "PROCESSING"
-      - key: "CLOSED"
-        value: "CLOSED"
-      - key: "ESCALATED"
-        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
-    summary: This attribute is description_code.
+    summary: This attribute is actions_description_code.
 
   - name: "short_desc"
     key: "actions_description.short_desc"
@@ -1139,19 +1489,65 @@ on_issue10:
     summary: This attribute is Actor_Name.
 
   - name: "send_resolution"
+# REFUND, REPLACEMENT, CANCEL, NO_ACTION, NOW_VISIBLE, RECONCILED, NOT_RECONCILED
     key: "send_resolution"
     type: "select"
     defaultValue: false
     defaultOptions:
-      - key: "Proposed"
-        value: "proposed"
-      - key: "Replacement"
-        value: "replacement"
-      - key: "Refund"
-        value: "refund"
+      - key: "REFUND"
+        value: "REFUND"
+      - key: "REPLACEMENT"
+        value: "REPLACEMENT"
+      - key: "CANCEL"
+        value: "CANCEL"
+      - key: "NO_ACTION"
+        value: "NO_ACTION"
+      - key: "NOW_VISIBLE"
+        value: "NOW_VISIBLE"
+      - key: "RECONCILED"
+        value: "RECONCILED"
+      - key: "NOT_RECONCILED"
+        value: "NOT_RECONCILED"
       - key: "false"
         value: false
 
+  - name: "send_resolution"
+    key: "send_resolution2"
+    type: "select"
+    defaultValue: false
+    defaultOptions:
+      - key: "REFUND"
+        value: "REFUND"
+      - key: "REPLACEMENT"
+        value: "REPLACEMENT"
+      - key: "CANCEL"
+        value: "CANCEL"
+      - key: "NO_ACTION"
+        value: "NO_ACTION"
+      - key: "NOW_VISIBLE"
+        value: "NOW_VISIBLE"
+      - key: "RECONCILED"
+        value: "RECONCILED"
+      - key: "NOT_RECONCILED"
+        value: "NOT_RECONCILED"
+      - key: "false"
+        value: false
+
+
+  - name: "ref_id"
+    key: "ref_id"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_id in the actions.
+
+  - name: "ref_type"
+    key: "ref_type"
+    type: "text"
+    defaultValue: ""
+    required: false
+    summary: This attribute is ref_type in the actions.
+  
   - name: "info_requested_code"
     key: "actions_description.name"
     type: "select"
