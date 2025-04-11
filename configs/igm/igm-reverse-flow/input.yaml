@@ -51,6 +51,8 @@ issue:
         value: "RESOLUTION_REJECTED"
       - key: "INFO_NOT_AVAILABLE"
         value: "INFO_NOT_AVAILABLE"
+      - key: "ESCALATED"
+        value: "ESCALATED"
     errorText: "Please select a field"
     required: true
     summary: used to refer other id/object of the payload example - resolution object or info provided tagging.
@@ -291,6 +293,8 @@ issue2:
         value: "RESOLUTION_REJECTED"
       - key: "INFO_NOT_AVAILABLE"
         value: "INFO_NOT_AVAILABLE"
+      - key: "ESCALATED"
+        value: "ESCALATED"
         
     errorText: "Please select a field"
     required: true
@@ -532,6 +536,8 @@ issue3:
         value: "RESOLUTION_REJECTED"
       - key: "INFO_NOT_AVAILABLE"
         value: "INFO_NOT_AVAILABLE"
+      - key: "ESCALATED"
+        value: "ESCALATED"
         
     errorText: "Please select a field"
     required: true
@@ -771,6 +777,8 @@ issue4:
         value: "RESOLUTION_REJECTED"
       - key: "INFO_NOT_AVAILABLE"
         value: "INFO_NOT_AVAILABLE"
+      - key: "ESCALATED"
+        value: "ESCALATED"
         
     errorText: "Please select a field"
     required: true
@@ -1011,6 +1019,8 @@ issue5:
         value: "RESOLUTION_REJECTED"
       - key: "INFO_NOT_AVAILABLE"
         value: "INFO_NOT_AVAILABLE"
+      - key: "ESCALATED"
+        value: "ESCALATED"
         
     errorText: "Please select a field"
     required: true
@@ -1251,6 +1261,8 @@ issue6:
         value: "RESOLUTION_REJECTED"
       - key: "INFO_NOT_AVAILABLE"
         value: "INFO_NOT_AVAILABLE"
+      - key: "ESCALATED"
+        value: "ESCALATED"
         
     errorText: "Please select a field"
     required: true
@@ -1491,6 +1503,8 @@ issue7:
         value: "RESOLUTION_REJECTED"
       - key: "INFO_NOT_AVAILABLE"
         value: "INFO_NOT_AVAILABLE"
+      - key: "ESCALATED"
+        value: "ESCALATED"
         
     errorText: "Please select a field"
     required: true
@@ -1731,6 +1745,8 @@ issue9:
         value: "RESOLUTION_REJECTED"
       - key: "INFO_NOT_AVAILABLE"
         value: "INFO_NOT_AVAILABLE"
+      - key: "ESCALATED"
+        value: "ESCALATED"
         
     errorText: "Please select a field"
     required: true
