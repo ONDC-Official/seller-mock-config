@@ -3,7 +3,33 @@ issue:
     key: "id"
     type: "text"
     defaultValue: "action_id"
-    
+
+  - name: "status"
+    key: "status"
+    type: "select"
+    defaultValue: "OPEN"
+
+    defaultOptions:
+      - key: "OPEN"
+        value: "OPEN"
+      - key: "RESOLVED"
+        value: "RESOLVED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+      - key: "CLOSED"
+        value: "CLOSED"
+      
+
+    errorText: "Please select a field"
+    required: false
+    summary: This attribute refers to status of the settlement.
+
+
+  - name: "issue_id"
+    key: "issueId"
+    type: "text"
+    defaultValue: "ISSUE-1"
+
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
   - name: "actions_description_code"
     key: "actions_description.code"
@@ -27,7 +53,7 @@ issue:
         value: "INFO_NOT_AVAILABLE"
     errorText: "Please select a field"
     required: true
-    summary: This attribute is description_code.
+    summary: used to refer other id/object of the payload example - resolution object or info provided tagging.
 
   - name: "short_desc"
     key: "actions_description.short_desc"
@@ -224,6 +250,26 @@ issue2:
     type: "text"
     defaultValue: "action_id"
 
+  - name: "status"
+    key: "status"
+    type: "select"
+    defaultValue: "OPEN"
+
+    defaultOptions:
+      - key: "OPEN"
+        value: "OPEN"
+      - key: "RESOLVED"
+        value: "RESOLVED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+      - key: "CLOSED"
+        value: "CLOSED"
+      
+
+    errorText: "Please select a field"
+    required: false
+    summary: This attribute refers to status of the settlement.
+
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
   - name: "actions_description_code"
     key: "actions_description.code"
@@ -248,7 +294,7 @@ issue2:
         
     errorText: "Please select a field"
     required: true
-    summary: This attribute is description_code.
+    summary: used to refer other id/object of the payload example - resolution object or info provided tagging.
 
   - name: "short_desc"
     key: "actions_description.short_desc"
@@ -445,6 +491,26 @@ issue3:
     type: "text"
     defaultValue: "action_id"
 
+  - name: "status"
+    key: "status"
+    type: "select"
+    defaultValue: "OPEN"
+
+    defaultOptions:
+      - key: "OPEN"
+        value: "OPEN"
+      - key: "RESOLVED"
+        value: "RESOLVED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+      - key: "CLOSED"
+        value: "CLOSED"
+      
+
+    errorText: "Please select a field"
+    required: false
+    summary: This attribute refers to status of the settlement.
+
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
   - name: "actions_description_code"
     key: "actions_description.code"
@@ -469,7 +535,7 @@ issue3:
         
     errorText: "Please select a field"
     required: true
-    summary: This attribute is description_code.
+    summary: used to refer other id/object of the payload example - resolution object or info provided tagging.
 
   - name: "short_desc"
     key: "actions_description.short_desc"
@@ -664,6 +730,26 @@ issue4:
     type: "text"
     defaultValue: "action_id"
 
+  - name: "status"
+    key: "status"
+    type: "select"
+    defaultValue: "OPEN"
+
+    defaultOptions:
+      - key: "OPEN"
+        value: "OPEN"
+      - key: "RESOLVED"
+        value: "RESOLVED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+      - key: "CLOSED"
+        value: "CLOSED"
+      
+
+    errorText: "Please select a field"
+    required: false
+    summary: This attribute refers to status of the settlement.
+
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
   - name: "actions_description_code"
     key: "actions_description.code"
@@ -688,7 +774,7 @@ issue4:
         
     errorText: "Please select a field"
     required: true
-    summary: This attribute is description_code.
+    summary: used to refer other id/object of the payload example - resolution object or info provided tagging.
 
   - name: "short_desc"
     key: "actions_description.short_desc"
@@ -884,6 +970,26 @@ issue5:
     type: "text"
     defaultValue: "action_id"
 
+  - name: "status"
+    key: "status"
+    type: "select"
+    defaultValue: "OPEN"
+
+    defaultOptions:
+      - key: "OPEN"
+        value: "OPEN"
+      - key: "RESOLVED"
+        value: "RESOLVED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+      - key: "CLOSED"
+        value: "CLOSED"
+      
+
+    errorText: "Please select a field"
+    required: false
+    summary: This attribute refers to status of the settlement.
+
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
   - name: "actions_description_code"
     key: "actions_description.code"
@@ -908,7 +1014,7 @@ issue5:
         
     errorText: "Please select a field"
     required: true
-    summary: This attribute is description_code.
+    summary: used to refer other id/object of the payload example - resolution object or info provided tagging.
 
   - name: "short_desc"
     key: "actions_description.short_desc"
@@ -1104,6 +1210,26 @@ issue6:
     type: "text"
     defaultValue: "action_id"
 
+  - name: "status"
+    key: "status"
+    type: "select"
+    defaultValue: "OPEN"
+
+    defaultOptions:
+      - key: "OPEN"
+        value: "OPEN"
+      - key: "RESOLVED"
+        value: "RESOLVED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+      - key: "CLOSED"
+        value: "CLOSED"
+      
+
+    errorText: "Please select a field"
+    required: false
+    summary: This attribute refers to status of the settlement.
+
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
   - name: "actions_description_code"
     key: "actions_description.code"
@@ -1128,7 +1254,7 @@ issue6:
         
     errorText: "Please select a field"
     required: true
-    summary: This attribute is description_code.
+    summary: used to refer other id/object of the payload example - resolution object or info provided tagging.
 
   - name: "short_desc"
     key: "actions_description.short_desc"
@@ -1324,6 +1450,26 @@ issue7:
     type: "text"
     defaultValue: "action_id"
 
+  - name: "status"
+    key: "status"
+    type: "select"
+    defaultValue: "OPEN"
+
+    defaultOptions:
+      - key: "OPEN"
+        value: "OPEN"
+      - key: "RESOLVED"
+        value: "RESOLVED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+      - key: "CLOSED"
+        value: "CLOSED"
+      
+
+    errorText: "Please select a field"
+    required: false
+    summary: This attribute refers to status of the settlement.
+
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
   - name: "actions_description_code"
     key: "actions_description.code"
@@ -1348,7 +1494,7 @@ issue7:
         
     errorText: "Please select a field"
     required: true
-    summary: This attribute is description_code.
+    summary: used to refer other id/object of the payload example - resolution object or info provided tagging.
 
   - name: "short_desc"
     key: "actions_description.short_desc"
@@ -1544,6 +1690,26 @@ issue9:
     type: "text"
     defaultValue: "action_id"
 
+  - name: "status"
+    key: "status"
+    type: "select"
+    defaultValue: "OPEN"
+
+    defaultOptions:
+      - key: "OPEN"
+        value: "OPEN"
+      - key: "RESOLVED"
+        value: "RESOLVED"
+      - key: "PROCESSING"
+        value: "PROCESSING"
+      - key: "CLOSED"
+        value: "CLOSED"
+      
+
+    errorText: "Please select a field"
+    required: false
+    summary: This attribute refers to status of the settlement.
+
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
   - name: "actions_description_code"
     key: "actions_description.code"
@@ -1568,7 +1734,7 @@ issue9:
         
     errorText: "Please select a field"
     required: true
-    summary: This attribute is description_code.
+    summary: used to refer other id/object of the payload example - resolution object or info provided tagging.
 
   - name: "short_desc"
     key: "actions_description.short_desc"
