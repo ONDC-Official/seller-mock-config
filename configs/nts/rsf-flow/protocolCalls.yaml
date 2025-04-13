@@ -40,6 +40,8 @@ on_settle:
      nextRequest: "on_settle_provider"
    - condition: session.settle_condition === "NIL"
      nextRequest: "on_settle_nil"
+   - condition: session.settle_condition === "MISC"
+     nextRequest: "on_settle_misc"
   current: on_settle
 
 on_settle_provider:
@@ -54,6 +56,17 @@ on_settle_provider:
   isCollapsed: false
   current: on_settle_provider
 
+on_settle_misc:
+  type: "on_settle"
+  category: "sender"
+  target: "NP"
+  executed: false
+  shouldRender: false
+  config: "on_settle_misc" #name of the call
+  nextRequest: "report"
+  preRequest: settle
+  isCollapsed: false
+  current: on_settle_misc
 
 on_settle_nil:
   type: "on_settle"
