@@ -545,6 +545,19 @@ recon_selector:
 
 
 recon_send:
+  - name: "NP TYPE "
+    key: "NP_TYPE"
+    type: "select"
+    defaultValue: "buyer"
+    defaultOptions:
+      - key: "buyer"
+        value: "buyer"
+      - key: "seller"
+        value: "seller"
+    required: true
+    errorText: "Please select respond_at field"
+    summary: This attribute is a select dropdown to send on_recon at provided bap/bpp uri.
+
   - name: "payment id"
     key: "payment_id"
     type: "text"
