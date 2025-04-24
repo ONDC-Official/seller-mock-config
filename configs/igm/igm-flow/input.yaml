@@ -32,7 +32,7 @@ on_issue:
   - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
-    defaultValue: "OPEN"
+    defaultValue: "PROCESSING"
 
     defaultOptions:
       - key: "PROCESSING"
@@ -192,7 +192,7 @@ on_issue2:
   - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
-    defaultValue: "OPEN"
+    defaultValue: "PROCESSING"
 
     defaultOptions:
       - key: "PROCESSING"
@@ -362,7 +362,7 @@ on_issue3:
   - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
-    defaultValue: "OPEN"
+    defaultValue: "PROCESSING"
 
     defaultOptions:
       - key: "PROCESSING"
@@ -515,7 +515,7 @@ on_issue4:
   - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
-    defaultValue: "OPEN"
+    defaultValue: "PROCESSING"
 
     defaultOptions:
       - key: "PROCESSING"
@@ -675,7 +675,7 @@ on_issue5:
   - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
-    defaultValue: "OPEN"
+    defaultValue: "PROCESSING"
 
     defaultOptions:
       - key: "PROCESSING"
@@ -836,7 +836,7 @@ on_issue6:
   - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
-    defaultValue: "OPEN"
+    defaultValue: "PROCESSING"
 
     defaultOptions:
       - key: "PROCESSING"
@@ -995,7 +995,7 @@ on_issue7:
   - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
-    defaultValue: "OPEN"
+    defaultValue: "PROCESSING"
 
     defaultOptions:
       - key: "PROCESSING"
@@ -1156,7 +1156,7 @@ on_issue8:
   - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
-    defaultValue: "OPEN"
+    defaultValue: "PROCESSING"
 
     defaultOptions:
       - key: "PROCESSING"
@@ -1317,7 +1317,7 @@ on_issue9:
   - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
-    defaultValue: "OPEN"
+    defaultValue: "PROCESSING"
 
     defaultOptions:
       - key: "PROCESSING"
@@ -1477,7 +1477,7 @@ on_issue10:
   - name: "actions_description_code"
     key: "actions_description.code"
     type: "select"
-    defaultValue: "OPEN"
+    defaultValue: "PROCESSING"
 
     defaultOptions:
       - key: "PROCESSING"
