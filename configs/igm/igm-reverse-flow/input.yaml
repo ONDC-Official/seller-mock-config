@@ -31,8 +31,8 @@ issue:
     defaultValue: "ISSUE-1"
 
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "actions_description_code"
-    key: "actions_description.code"
+  - name: "actions_descriptor_code"
+    key: "actions_descriptor.code"
     type: "select"
     defaultValue: "OPEN"
 #  OPEN, INFO_REQUESTED, INFO_PROVIDED, INFO_NOT_AVAILABLE, RESOLUTION_ACCEPTED, RESOLUTION_REJECTED, CLOSED
@@ -58,7 +58,7 @@ issue:
     summary: used to refer other id/object of the payload example - resolution object or info provided tagging.
 
   - name: "short_desc"
-    key: "actions_description.short_desc"
+    key: "actions_descriptor.short_desc"
     type: "text"
     errorText: "short_desc is required"
     defaultValue: "OPEN"
@@ -273,8 +273,8 @@ issue2:
     summary: This attribute refers to status of the settlement.
 
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "actions_description_code"
-    key: "actions_description.code"
+  - name: "actions_descriptor_code"
+    key: "actions_descriptor.code"
     type: "select"
     defaultValue: "OPEN"
 
@@ -301,7 +301,7 @@ issue2:
     summary: used to refer other id/object of the payload example - resolution object or info provided tagging.
 
   - name: "short_desc"
-    key: "actions_description.short_desc"
+    key: "actions_descriptor.short_desc"
     type: "text"
     errorText: "short_desc is required"
     defaultValue: "OPEN"
@@ -344,7 +344,7 @@ issue2:
         value: false
   
   - name: "images"
-    key: "actions_description.images[0].url"
+    key: "actions_descriptor.images[0].url"
     type: "text"
     summary: This attribute is images
 
@@ -516,8 +516,8 @@ issue3:
     summary: This attribute refers to status of the settlement.
 
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "actions_description_code"
-    key: "actions_description.code"
+  - name: "actions_descriptor_code"
+    key: "actions_descriptor.code"
     type: "select"
     defaultValue: "OPEN"
 
@@ -544,7 +544,7 @@ issue3:
     summary: used to refer other id/object of the payload example - resolution object or info provided tagging.
 
   - name: "short_desc"
-    key: "actions_description.short_desc"
+    key: "actions_descriptor.short_desc"
     type: "text"
     errorText: "short_desc is required"
     defaultValue: "OPEN"
@@ -586,7 +586,7 @@ issue3:
         value: false
   
   - name: "images"
-    key: "actions_description.images[0].url"
+    key: "actions_descriptor.images[0].url"
     type: "text"
     summary: This attribute is images
 
@@ -757,8 +757,8 @@ issue4:
     summary: This attribute refers to status of the settlement.
 
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "actions_description_code"
-    key: "actions_description.code"
+  - name: "actions_descriptor_code"
+    key: "actions_descriptor.code"
     type: "select"
     defaultValue: "OPEN"
 
@@ -785,7 +785,7 @@ issue4:
     summary: used to refer other id/object of the payload example - resolution object or info provided tagging.
 
   - name: "short_desc"
-    key: "actions_description.short_desc"
+    key: "actions_descriptor.short_desc"
     type: "text"
     errorText: "short_desc is required"
     defaultValue: "OPEN"
@@ -828,7 +828,7 @@ issue4:
         value: false
   
   - name: "images"
-    key: "actions_description.images[0].url"
+    key: "actions_descriptor.images[0].url"
     type: "text"
     summary: This attribute is images
 
@@ -999,8 +999,8 @@ issue5:
     summary: This attribute refers to status of the settlement.
 
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "actions_description_code"
-    key: "actions_description.code"
+  - name: "actions_descriptor_code"
+    key: "actions_descriptor.code"
     type: "select"
     defaultValue: "OPEN"
 
@@ -1027,7 +1027,7 @@ issue5:
     summary: used to refer other id/object of the payload example - resolution object or info provided tagging.
 
   - name: "short_desc"
-    key: "actions_description.short_desc"
+    key: "actions_descriptor.short_desc"
     type: "text"
     errorText: "short_desc is required"
     defaultValue: "OPEN"
@@ -1070,7 +1070,7 @@ issue5:
         value: false
   
   - name: "images"
-    key: "actions_description.images[0].url"
+    key: "actions_descriptor.images[0].url"
     type: "text"
     summary: This attribute is images
 
@@ -1241,8 +1241,8 @@ issue6:
     summary: This attribute refers to status of the settlement.
 
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "actions_description_code"
-    key: "actions_description.code"
+  - name: "actions_descriptor_code"
+    key: "actions_descriptor.code"
     type: "select"
     defaultValue: "OPEN"
 
@@ -1269,7 +1269,7 @@ issue6:
     summary: used to refer other id/object of the payload example - resolution object or info provided tagging.
 
   - name: "short_desc"
-    key: "actions_description.short_desc"
+    key: "actions_descriptor.short_desc"
     type: "text"
     errorText: "short_desc is required"
     defaultValue: "OPEN"
@@ -1312,7 +1312,7 @@ issue6:
         value: false
   
   - name: "images"
-    key: "actions_description.images[0].url"
+    key: "actions_descriptor.images[0].url"
     type: "text"
     summary: This attribute is images
 
@@ -1483,8 +1483,8 @@ issue7:
     summary: This attribute refers to status of the settlement.
 
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "actions_description_code"
-    key: "actions_description.code"
+  - name: "actions_descriptor_code"
+    key: "actions_descriptor.code"
     type: "select"
     defaultValue: "OPEN"
 
@@ -1511,7 +1511,7 @@ issue7:
     summary: used to refer other id/object of the payload example - resolution object or info provided tagging.
 
   - name: "short_desc"
-    key: "actions_description.short_desc"
+    key: "actions_descriptor.short_desc"
     type: "text"
     errorText: "short_desc is required"
     defaultValue: "OPEN"
@@ -1554,7 +1554,7 @@ issue7:
         value: false
   
   - name: "images"
-    key: "actions_description.images[0].url"
+    key: "actions_descriptor.images[0].url"
     type: "text"
     summary: This attribute is images
 
@@ -1725,8 +1725,8 @@ issue9:
     summary: This attribute refers to status of the settlement.
 
   # OPEN,PROCESSING,INFO_REQUESTED,INFO_PROVIDED, RESOLVED
-  - name: "actions_description_code"
-    key: "actions_description.code"
+  - name: "actions_descriptor_code"
+    key: "actions_descriptor.code"
     type: "select"
     defaultValue: "OPEN"
 
@@ -1753,7 +1753,7 @@ issue9:
     summary: used to refer other id/object of the payload example - resolution object or info provided tagging.
 
   - name: "short_desc"
-    key: "actions_description.short_desc"
+    key: "actions_descriptor.short_desc"
     type: "text"
     errorText: "short_desc is required"
     defaultValue: "OPEN"
@@ -1796,7 +1796,7 @@ issue9:
         value: false
   
   - name: "images"
-    key: "actions_description.images[0].url"
+    key: "actions_descriptor.images[0].url"
     type: "text"
     summary: This attribute is images
 
